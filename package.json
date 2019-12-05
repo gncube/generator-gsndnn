@@ -76,10 +76,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gncube"
+    "url": "git+https://github.com/gncube/generator-gsndnn.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gncube"
+    "url": "https://github.com/gncube/generator-gsndnn/issues"
   }
 }
