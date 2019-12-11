@@ -6,7 +6,7 @@
       <description>
         <![CDATA[<p><%= description %></p>]]>
       </description>
-      <iconFile>DesktopModules/MVC/<%= fullNamespace %>/Images/logo.png</iconFile>
+      <iconFile>DesktopModules/MVC/<%= namespace %>/<%= fullNamespace %>/Images/logo.png</iconFile>
       <owner>
         <name><%= namespace %></name>
         <organization><%= namespace %></organization>
@@ -22,7 +22,7 @@
       <components>
         <component type="Script">
           <scripts>
-            <basePath>DesktopModules\MVC\<%= fullNamespace %></basePath>
+            <basePath>DesktopModules\MVC\<%= namespace %>\<%= fullNamespace %></basePath>
             <script type="Install">
               <path>Providers\DataProviders\SqlDataProvider</path>
               <name>01.00.00.SqlDataProvider</name>
@@ -105,7 +105,7 @@
 
         <component type="ResourceFile">
           <resourceFiles>
-            <basePath>DesktopModules/MVC/<%= fullNamespace %></basePath>
+            <basePath>DesktopModules/MVC/<%= namespace %>/<%= fullNamespace %></basePath>
             <resourceFile>
               <name>Resources.zip</name>
             </resourceFile>
