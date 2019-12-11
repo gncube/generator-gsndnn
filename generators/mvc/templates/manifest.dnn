@@ -10,8 +10,8 @@
       <owner>
         <name><%= namespace %></name>
         <organization><%= namespace %></organization>
-        <url><![CDATA[<a href="<%= companyUrl %>" target="_blank"><%= companyUrl %></a>]]></url>
-        <email><![CDATA[<a href="mailto:<%= emailAddy %>" target="_blank"><%= emailAddy %></a>]]></email>
+        <url><%= companyUrl %></url>
+        <email><%= emailAddy %></email>
       </owner>
       <license src="License.txt" />
       <releaseNotes src="ReleaseNotes.txt" />
