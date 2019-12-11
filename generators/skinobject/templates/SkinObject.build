@@ -1,6 +1,6 @@
 ﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <ModulePath><%= extensionName %></ModulePath>
+    <ModulePath><%= namespace %>\<%= extensionName %></ModulePath>
     <DNNFileName><%= extensionName %></DNNFileName>
     <PackageName><%= namespace %>.<%= extensionName %></PackageName>
     <Extension>zip</Extension>
