@@ -105,7 +105,7 @@
 
         <component type="ResourceFile">
           <resourceFiles>
-            <basePath>DesktopModules/MVC/<%= namespace %>/<%= fullNamespace %></basePath>
+            <basePath>DesktopModules/MVC/<%= namespace %>/<%= extensionName %></basePath>
             <resourceFile>
               <name>Resources.zip</name>
             </resourceFile>
