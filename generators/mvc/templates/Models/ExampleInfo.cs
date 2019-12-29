@@ -5,21 +5,21 @@ using System.Web.Caching;
 
 namespace <%= fullNamespace %>.Models
 {
-    [TableName("<%= objectPrefix %>_Example")]
+    [TableName("<%= objectPrefix %>_<%= extensionName %>")]
     //setup the primary key for table
-    [PrimaryKey("ExampleId", AutoIncrement = true)]
+    [PrimaryKey("<%= extensionName %>Id", AutoIncrement = true)]
     //configure caching using PetaPoco
-    [Cacheable("ExampleInfo", CacheItemPriority.Default, 20)]
+    [Cacheable("<%= extensionName %>Info", CacheItemPriority.Default, 20)]
     //scope the objects to the ModuleId of a module on a page (or copy of a module on a page)
     [Scope("ModuleId")]
-    public class ExampleInfo : IExampleInfo
+    public class <%= extensionName %>Info : I<%= extensionName %>Info
     {
-        public ExampleInfo()
+        public <%= extensionName %>Info()
         {
-            ExampleId = -1;
+            <%= extensionName %>Id = -1;
         }
 
-        public int ExampleId { get; set; }
+        public int <%= extensionName %>Id { get; set; }
 
         public int ModuleId { get; set; }
 
