@@ -1,4 +1,4 @@
-﻿@inherits DotNetNuke.Web.Mvc.Framework.DnnWebViewPage <IEnumerable<<%= fullNamespace %>.Models.<%= extensionName %>Info>> 
+﻿@inherits DotNetNuke.Web.Mvc.Framework.DnnWebViewPage <IEnumerable<<%= fullNamespace %>.Models.ExampleInfo>> 
 
 @using System.Text.RegularExpressions
 @using DotNetNuke.Web.Mvc.Helpers 
@@ -20,8 +20,8 @@
                         if (Dnn.ModuleContext.IsEditable) 
 						{ 
 							<div>
-								<a href="@Url.Action("Edit", "<%= extensionName %>", new {ctl = "Edit", itemId = item.<%= extensionName %>Id})">@Dnn.LocalizeString("EditItem")</a>  
-								<a href="@Url.Action("Delete", "<%= extensionName %>", new {itemId = item.<%= extensionName %>Id})">@Dnn.LocalizeString("DeleteItem")</a>  
+								<a href="@Url.Action("Edit", "Example", new {ctl = "Edit", itemId = item.ExampleId})">@Dnn.LocalizeString("EditItem")</a>  
+								<a href="@Url.Action("Delete", "Example", new {itemId = item.ExampleId})">@Dnn.LocalizeString("DeleteItem")</a>  
 							</div> 
                         }
                     } 

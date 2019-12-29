@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\generators",
+    "\\generators\\mvc",
+    "\\generators\\mvc\\templates",
+    "\\generators\\mvc\\templates\\Controllers",
+    "\\generators\\mvc\\templates\\Data"
+  ],
+  "SelectedNode": "\\generators\\mvc\\templates\\Data\\ExampleInfoRepository.cs",
+  "PreviewInSolutionExplorer": false
+}
