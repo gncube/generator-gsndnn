@@ -33,6 +33,8 @@ GO
 CREATE NONCLUSTERED INDEX [IX_{objectQualifier}<%= objectPrefix %>_Example_ModuleId] ON {databaseOwner}[{objectQualifier}<%= objectPrefix %>_Example] ([ModuleId]);
 GO
 
+CREATE NONCLUSTERED INDEX [IX_{objectQualifier}<%= objectPrefix %>_Example_CodeCampId_ModuleId] ON {databaseOwner}[{objectQualifier}<%= objectPrefix %>_Example] ([ExampleId],[ModuleId]);
+GO
 
 CREATE NONCLUSTERED INDEX [IX_{objectQualifier}<%= objectPrefix %>_Example_CreatedByUser] ON {databaseOwner}[{objectQualifier}<%= objectPrefix %>_Example] ([CreatedByUserId]);
 GO

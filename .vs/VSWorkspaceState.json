@@ -4,9 +4,14 @@
     "\\generators",
     "\\generators\\mvc",
     "\\generators\\mvc\\templates",
-    "\\generators\\mvc\\templates\\Controllers",
-    "\\generators\\mvc\\templates\\Data"
+    "\\generators\\mvc\\templates\\App_LocalResources",
+    "\\generators\\mvc\\templates\\Providers",
+    "\\generators\\mvc\\templates\\Providers\\DataProviders",
+    "\\generators\\mvc\\templates\\Providers\\DataProviders\\SqlDataProvider",
+    "\\generators\\mvc\\templates\\Views",
+    "\\generators\\mvc\\templates\\Views\\Example",
+    "\\generators\\mvc\\templates\\Views\\Shared"
   ],
-  "SelectedNode": "\\generators\\mvc\\templates\\Data\\ExampleInfoRepository.cs",
+  "SelectedNode": "\\generators\\mvc\\templates\\Module.build",
   "PreviewInSolutionExplorer": false
 }
