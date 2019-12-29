@@ -1,4 +1,3 @@
-
 using DotNetNuke.Data;
 using DotNetNuke.Framework;
 using System.Collections.Generic;
@@ -7,77 +6,76 @@ using <%= fullNamespace %>.Models;
 
 namespace <%= fullNamespace %>.Data
 {
-    public interface I<%= extensionName %>InfoRepository
+    public interface IExampleInfoRepository
     {
-        void CreateItem(<%= extensionName %>Info t);
-        void DeleteItem(int itemId, int moduleId);
-        void DeleteItem(<%= extensionName %>Info t);
-        IEnumerable<<%= extensionName %>Info> GetItems(int moduleId);
-                <%= extensionName %>Info GetItem(int itemId, int moduleId);
-        void UpdateItem(<%= extensionName %>Info t);
-        }
+      void CreateItem(ExampleInfo t);
+      void DeleteItem(int itemId, int moduleId);
+      void DeleteItem(ExampleInfo t);
+      IEnumerable<ExampleInfo> GetItems(int moduleId);
+      ExampleInfo GetItem(int itemId, int moduleId);
+      void UpdateItem(ExampleInfo t);
+    }
 
-        public class <%= extensionName %>InfoRepository : ServiceLocator<I<%= extensionName %>InfoRepository, <%= extensionName %>InfoRepository>, I<%= extensionName %>InfoRepository
+    public class ExampleInfoRepository : ServiceLocator<IExampleInfoRepository, ExampleInfoRepository>, IExampleInfoRepository
+    {
+      public void CreateItem(ExampleInfo t)
+      {
+        using (IDataContext ctx = DataContext.Instance())
         {
-                public void CreateItem(<%= extensionName %>Info t)
-        {
-            using (IDataContext ctx = DataContext.Instance())
-            {
-                var rep = ctx.GetRepository <<%= extensionName %>Info > ();
-                rep.Insert(t);
-            }
+          var rep = ctx.GetRepository<ExampleInfo>();
+          rep.Insert(t);
         }
+      }
 
-        public void DeleteItem(int itemId, int moduleId)
+      public void DeleteItem(int itemId, int moduleId)
+      {
+        var t = GetItem(itemId, moduleId);
+        DeleteItem(t);
+      }
+
+      public void DeleteItem(ExampleInfo t)
+      {
+        using (IDataContext ctx = DataContext.Instance())
         {
-            var t = GetItem(itemId, moduleId);
-            DeleteItem(t);
+          var rep = ctx.GetRepository<ExampleInfo>();
+          rep.Delete(t);
         }
+      }
 
-        public void DeleteItem(<%= extensionName %>Info t)
+      public IEnumerable<ExampleInfo> GetItems(int moduleId)
+      {
+        IEnumerable<ExampleInfo> t;
+        using (IDataContext ctx = DataContext.Instance())
         {
-            using (IDataContext ctx = DataContext.Instance())
-            {
-                var rep = ctx.GetRepository <<%= extensionName %>Info > ();
-                rep.Delete(t);
-            }
+          var rep = ctx.GetRepository<ExampleInfo>();
+          t = rep.Get(moduleId);
         }
+        return t;
+      }
 
-        public IEnumerable<<%= extensionName %>Info> GetItems(int moduleId)
+      public ExampleInfo GetItem(int itemId, int moduleId)
+      {
+        ExampleInfo t;
+        using (IDataContext ctx = DataContext.Instance())
         {
-            IEnumerable <<%= extensionName %>Info > t;
-            using (IDataContext ctx = DataContext.Instance())
-            {
-                var rep = ctx.GetRepository <<%= extensionName %>Info > ();
-                t = rep.Get(moduleId);
-            }
-            return t;
+          var rep = ctx.GetRepository<ExampleInfo>();
+          t = rep.GetById(itemId, moduleId);
         }
+        return t;
+      }
 
-        public <%= extensionName %>Info GetItem(int itemId, int moduleId)
+      public void UpdateItem(ExampleInfo t)
+      {
+        using (IDataContext ctx = DataContext.Instance())
         {
-                    <%= extensionName %>Info t;
-            using (IDataContext ctx = DataContext.Instance())
-            {
-                var rep = ctx.GetRepository <<%= extensionName %>Info > ();
-                t = rep.GetById(itemId, moduleId);
-            }
-            return t;
+          var rep = ctx.GetRepository<ExampleInfo>();
+          rep.Update(t);
         }
+      }
 
-        public void UpdateItem(<%= extensionName %>Info t)
-        {
-            using (IDataContext ctx = DataContext.Instance())
-            {
-                var rep = ctx.GetRepository <<%= extensionName %>Info > ();
-                rep.Update(t);
-            }
-        }
-
-        protected override System.Func<I<%= extensionName %>InfoRepository> GetFactory()
-        {
-            return () => new <%= extensionName %>InfoRepository();
-        }
-
+      protected override System.Func<IExampleInfoRepository> GetFactory()
+      {
+        return () => new ExampleInfoRepository();
+      }
     }
 }
