@@ -6,12 +6,12 @@
       <description>
         <![CDATA[<p><%= description %></p>]]>
       </description>
-      <iconFile>DesktopModules/MVC/<%= fullNamespace %>/Images/logo.png</iconFile>
+      <iconFile>DesktopModules/MVC/<%= namespace %>/<%= extensionName %>/Images/logo.png</iconFile>
       <owner>
         <name><%= namespace %></name>
         <organization><%= namespace %></organization>
-        <url><![CDATA[<a href="<%= companyUrl %>" target="_blank"><%= companyUrl %></a>]]></url>
-        <email><![CDATA[<a href="mailto:<%= emailAddy %>" target="_blank"><%= emailAddy %></a>]]></email>
+        <url><%= companyUrl %></url>
+        <email><%= emailAddy %></email>
       </owner>
       <license src="License.txt" />
       <releaseNotes src="ReleaseNotes.txt" />
@@ -22,7 +22,7 @@
       <components>
         <component type="Script">
           <scripts>
-            <basePath>DesktopModules\MVC\<%= fullNamespace %></basePath>
+            <basePath>DesktopModules\MVC\<%= namespace %>\<%= extensionName %></basePath>
             <script type="Install">
               <path>Providers\DataProviders\SqlDataProvider</path>
               <name>01.00.00.SqlDataProvider</name>
@@ -39,7 +39,7 @@
         <component type="Module">
           <desktopModule>
             <moduleName><%= extensionName %> Module</moduleName>
-            <foldername><%= fullNamespace %></foldername>
+            <foldername><%= extensionName %></foldername>
             <businessControllerClass><%= fullNamespace %>.Components.<%= extensionName %>Controller, <%= fullNamespace %></businessControllerClass>
             <supportedFeatures />
             <moduleDefinitions>
@@ -105,7 +105,7 @@
 
         <component type="ResourceFile">
           <resourceFiles>
-            <basePath>DesktopModules/MVC/<%= fullNamespace %></basePath>
+            <basePath>DesktopModules/MVC/<%= namespace %>/<%= extensionName %></basePath>
             <resourceFile>
               <name>Resources.zip</name>
             </resourceFile>
