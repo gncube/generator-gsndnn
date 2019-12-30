@@ -2,11 +2,11 @@
 <dotnetnuke type="Package" version="6.0">
   <packages>
     <package name="<%= fullNamespace %>" type="Module" version="01.00.00">
-      <friendlyName><%= extensionName %> Module</friendlyName>
+      <friendlyName><%= extensionName %> WF Module</friendlyName>
       <description>
         <![CDATA[<p><%= description %></p>]]>
       </description>
-      <iconFile>DesktopModules/<%= extensionName %>/Images/logo.png</iconFile>
+      <iconFile>DesktopModules/<%= namespace %>/<%= extensionName %>/Images/logo.png</iconFile>
       <owner>
         <name><%= namespace %></name>
         <organization><%= namespace %></organization>
@@ -22,7 +22,7 @@
       <components>
         <component type="Script">
           <scripts>
-            <basePath>DesktopModules\<%= extensionName %></basePath>
+            <basePath>DesktopModules\<%= namespace %>\<%= extensionName %></basePath>
             <script type="Install">
               <path>Providers\DataProviders\SqlDataProvider</path>
               <name>01.00.00.SqlDataProvider</name>
@@ -39,7 +39,7 @@
         <component type="Module">
           <desktopModule>
             <moduleName><%= extensionName %></moduleName>
-            <foldername><%= extensionName %></foldername>
+            <foldername><%= namespace %>/<%= extensionName %></foldername>
             <businessControllerClass><%= fullNamespace %>.Components.<%= extensionName %>Controller, <%= fullNamespace %></businessControllerClass>
             <supportedFeatures />
             <moduleDefinitions>
@@ -49,7 +49,7 @@
                 <moduleControls>
                   <moduleControl>
                     <controlKey />
-                    <controlSrc>DesktopModules/<%= extensionName %>/View.ascx</controlSrc>
+                    <controlSrc>DesktopModules/<%= namespace %>/<%= extensionName %>/View.ascx</controlSrc>
                     <supportsPartialRendering>False</supportsPartialRendering>
                     <controlTitle />
                     <controlType>View</controlType>
@@ -59,7 +59,7 @@
                   </moduleControl>
                   <moduleControl>
                     <controlKey>Edit</controlKey>
-                    <controlSrc>DesktopModules/<%= extensionName %>/Edit.ascx</controlSrc>
+                    <controlSrc>DesktopModules/<%= namespace %>/<%= extensionName %>/Edit.ascx</controlSrc>
                     <supportsPartialRendering>False</supportsPartialRendering>
                     <controlTitle>Edit <%= extensionName %> Content</controlTitle>
                     <controlType>Edit</controlType>
@@ -71,7 +71,7 @@
                   </moduleControl>
                   <moduleControl>
                     <controlKey>Settings</controlKey>
-                    <controlSrc>DesktopModules/<%= extensionName %>/Settings.ascx</controlSrc>
+                    <controlSrc>DesktopModules/<%= namespace %>/<%= extensionName %>/Settings.ascx</controlSrc>
                     <supportsPartialRendering>True</supportsPartialRendering>
                     <controlTitle><%= extensionName %> Settings</controlTitle>
                     <controlType>Edit</controlType>
@@ -106,7 +106,7 @@
 
         <component type="ResourceFile">
           <resourceFiles>
-            <basePath>DesktopModules\<%= extensionName %></basePath>
+            <basePath>DesktopModules\<%= namespace %>\<%= extensionName %></basePath>
             <resourceFile>
               <name>Resources.zip</name>
             </resourceFile>
