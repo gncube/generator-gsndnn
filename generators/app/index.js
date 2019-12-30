@@ -18,7 +18,7 @@ module.exports = class extends Generator {
     this.log(
       yosay(
         'Welcome to the\n' +
-          chalk.yellow('Upendo Ventures') +
+          chalk.yellow('Gerald Ncube') +
           ' ' +
           chalk.bold.blue('DNN') +
           '\nproject generator! '
@@ -34,6 +34,11 @@ module.exports = class extends Generator {
       chalk.italic.white('This tool is forked, with love, from the original ') +
         chalk.bold.blue('generator-dnn') +
         chalk.italic.white(' maintained by the most honorable Matt Rutledge.\n\n')
+    );
+    this.log(
+      chalk.italic.white('This tool is forked, with love, from the original ') +
+      chalk.bold.blue('generator-upendodnn') +
+      chalk.italic.white(' maintained by Upendo Ventures.\n\n')
     );
 
     // Does the solution already exist? then customize the wizard
