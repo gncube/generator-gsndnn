@@ -39,7 +39,7 @@
         <component type="Module">
           <desktopModule>
             <moduleName><%= extensionName %> Module</moduleName>
-            <foldername><%= extensionName %></foldername>
+            <foldername><%= namespace %>/<%= extensionName %></foldername>
             <businessControllerClass><%= fullNamespace %>.Components.<%= extensionName %>Controller, <%= fullNamespace %></businessControllerClass>
             <supportedFeatures />
             <moduleDefinitions>
