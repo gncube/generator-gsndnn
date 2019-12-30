@@ -93,8 +93,8 @@ module.exports = class extends DnnGeneratorBase {
       props.currentDate = new Date();
       props.namespace = this._pascalCaseName(props.company);
       props.moduleName = this._pascalCaseName(props.name);
-	    props.extensionType = "Modules";
-      props.fullNamespace = props.namespace + "." + props.extensionType + "." + props.moduleName;
+	    props.extensionType = 'Modules';
+      props.fullNamespace = props.namespace + '.' + props.extensionType + '.' + props.moduleName;
       props.guid = this._generateGuid();
 
       this.props = props;
@@ -106,8 +106,8 @@ module.exports = class extends DnnGeneratorBase {
       chalk.white(`Creating ${this.props.spaType} ${this.props.langType} SPA Module.`)
     );
 	
-	// mod: this follows the Upendo development/solution pattern
-	this.destinationRoot("Modules/");
+	// The mod: this follows the Upendo development/solution pattern
+	this.destinationRoot('Modules/');
 
     let spaPath = `${this.props.spaType}/${this.props.langType}`;
 
