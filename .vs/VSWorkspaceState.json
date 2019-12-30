@@ -2,13 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\generators",
-    "\\generators\\mvc",
-    "\\generators\\mvc\\templates",
-    "\\generators\\mvc\\templates\\Providers\\DataProviders",
-    "\\generators\\mvc\\templates\\Providers\\DataProviders\\SqlDataProvider",
-    "\\generators\\mvc\\templates\\Views\\Example",
-    "\\generators\\mvc\\templates\\Views\\Shared"
+    "\\generators\\lib",
+    "\\generators\\library",
+    "\\generators\\library\\templates",
+    "\\generators\\spa\\templates",
+    "\\generators\\spa\\templates\\common",
+    "\\generators\\spa\\templates\\ReactJS\\jsx",
+    "\\generators\\spa\\templates\\ReactJS\\jsx\\src",
+    "\\generators\\spa\\templates\\ReactJS\\jsx\\src\\components"
   ],
-  "SelectedNode": "\\generators\\mvc\\templates\\package.json",
+  "SelectedNode": "\\generators\\library\\templates\\library.sln",
   "PreviewInSolutionExplorer": false
 }

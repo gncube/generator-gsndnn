@@ -11,13 +11,12 @@
       "organization":"<%= namespace %>", 
       "url":"<%= companyUrl %>.org", 
       "email":"<%= emailAddy %>"
-    }, 
+    },
     "module": {
-      "packageName":"<%= fullNamespace %>", 
-      "folderName":"<%= extensionName %>", 
-      "azureCompatible":"true", 
-      "iconFile":
-        "DesktopModules\\<%= extensionName %>\\Images\\logo.png"
+      "packageName": "<%= fullNamespace %>",
+      "folderName": "<%= extensionName %>",
+      "azureCompatible": "true",
+      "iconFile": "DesktopModules\\<%= namespace %>\\<%= extensionName %>\\Images\\logo.png"
     }, 
     "tempPath":"./package", 
     "packagesPath":"./_Packages", 

@@ -21,7 +21,7 @@
       <components>
         <component type="ResourceFile">
           <resourceFiles>
-            <basePath></basePath>
+            <basePath><%= namespace %>/<%= extensionName %></basePath>
             <resourceFile>
               <name>Resources.zip</name>
             </resourceFile>
