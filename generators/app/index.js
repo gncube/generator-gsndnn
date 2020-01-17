@@ -77,6 +77,7 @@ module.exports = class extends Generator {
           { name: 'Module: SPA', value: 'spa' },
           { name: 'Persona Bar', value: 'personabar' },
           { name: 'Skin Object', value: 'skinobject' },
+          { name: 'DNN Skin', value: 'skin' },
           { name: 'Library', value: 'library' },
           { name: 'Library: Scheduled Job', value: 'library-scheduledjob' },
           { name: 'Hotcakes Commerce Extension', value: 'hcc' }
@@ -87,7 +88,7 @@ module.exports = class extends Generator {
         type: 'input',
         name: 'dnnHost',
         message: 'What is the URL to your local DNN site? (currently only used by SPA templates)',
-        default: 'http://dnndev.me',
+        default: 'https://dnndev.me',
         store: true,
         validate: str => {
           return str.length > 0;

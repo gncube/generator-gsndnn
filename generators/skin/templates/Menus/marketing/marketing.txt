@@ -1,0 +1,33 @@
+﻿<ul class="navbar-nav ml-auto g-pb-30 g-pb-0--lg topLevel">
+	[*>NODE-TOP]
+</ul>
+
+    [>NODE-TOP]
+        <li class="nav-item[?NODE] hs-has-sub-menu [/?][?SELECTED] active [/?] g-mx-15 g-mx-3--lg g-mb-5 g-mb-0--lg">
+        [?ENABLED]
+            <a href="[=URL]" class="nav-link rounded [?SELECTED]g-brd-around g-brd-2 g-brd-primary [/?]g-color-primary--hover g-bg-transparent g-bg-main--hover g-font-weight-600 g-font-size-15 g-px-14 g-py-10">[=TEXT] [?NODE][/?]</a>
+        [?ELSE]
+            <a href="#" class="nav-link rounded g-color-primary--hover g-bg-transparent g-bg-main--hover g-font-weight-600 g-font-size-15 g-px-14 g-py-10">[=TEXT] [?NODE][/?]</a>
+        [/?]
+        [?NODE]
+            <ul class="hs-sub-menu list-unstyled u-shadow-v11 g-min-width-220 g-mt-18 subLevel">
+            [*>NODE]
+            </ul>
+        [/?]
+        </li>
+    [/>]
+
+	[>NODE]
+        <li class="dropdown-item[?NODE] hs-has-sub-menu [/?][?SELECTED] active[/?]">
+        [?ENABLED]
+            <a href="[=URL]" class="nav-link g-color-text g-font-weight-600">[=TEXT] [?NODE][/?]</a>
+        [?ELSE]
+            <a href="#" class="nav-link g-color-text g-font-weight-600">[=TEXT] [?NODE][/?]</a>
+        [/?]
+        [?NODE]
+            <ul class="hs-sub-menu list-unstyled u-shadow-v11 g-min-width-220 subLevelRight">
+            [*>NODE]
+            </ul>
+        [/?]
+        </li>
+    [/>]
