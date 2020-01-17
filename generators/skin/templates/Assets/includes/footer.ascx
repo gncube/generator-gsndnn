@@ -12,7 +12,7 @@
         <!-- End Footer - Content -->
 
         <!-- Footer - Top Section -->
-        <div class="g-brd-bottom g-brd-secondary-light-v2 <%--g-mb-30--%>">
+        <div class="g-brd-bottom g-brd-secondary-light-v2">
             <div class="row align-items-center">
                 <div class="col-md-4 g-hidden-sm-down g-mb-30">
                     <!-- Logo -->
@@ -59,12 +59,7 @@
                     <!-- End Social Icons -->
                 </div>
 
-                <%--<div class="col-md-4 text-center text-md-right g-mb-30">
-                    <!-- Subscribe Form -->
-                    <!-- TODO Subscribe Form -->
-                    <!-- End Subscribe Form -->
-                    </div>
-                </div>--%>
+
             </div>
             <!-- End Footer - Top Section -->
 
@@ -82,7 +77,7 @@
                 <div class="col-md-8 g-brd-right--md g-brd-secondary-light-v2 g-mb-30">
                     <!-- Links -->
                     <ul class="list-inline mb-0">
-                        
+
                         <li class="list-inline-item g-px-10">
                             <dnn:PRIVACY ID="dnnPrivacy" runat="server" CssClass="u-link-v5 g-color-secondary-light-v1 g-font-size-12"/>
                         </li>
@@ -97,7 +92,7 @@
                 <div class="col-md-2 g-mb-30">
                     <!-- Large Button Group -->
                     <div class="btn-group dropup float-md-right">
-                    <!--TODO Language -->
+                        <!--TODO Language -->
                     </div>
                     <!-- End Large Button Group -->
                 </div>
