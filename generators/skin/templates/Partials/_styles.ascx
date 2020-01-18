@@ -1,5 +1,5 @@
 <dnn:META ID="mobileScale" runat="server" Name="viewport" Content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<%--<dnn:DnnCssExclude runat="server" name="dnndefault" />--%>
+<dnn:DnnCssExclude runat="server" name="dnndefault" />
 
 <!-- Google Fonts -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700%7COpen+Sans:400,600,700">

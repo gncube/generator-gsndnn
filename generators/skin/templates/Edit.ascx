@@ -5,19 +5,6 @@
     <!--#include file="partials/_header-v1.ascx" -->
 
 
-<%--    <% if (string.IsNullOrEmpty(PortalSettings.ActiveTab.IconFileLarge)) { %>
-
-    <section>
-
-    </section>
-
-    <% } else { %>--%>
-
-    <!--#include file="partials/_promobanner.ascx" -->
-
-<%--    <% } %>--%>
-
-
     <!-- End : Content Areas -->
     <!-- Start : Content Pane : full width -->
     <div class="container g-pt-20 g-pb-40">
