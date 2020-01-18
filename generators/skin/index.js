@@ -89,6 +89,8 @@ module.exports = class extends DnnGeneratorBase {
             props.guid = this._generateGuid();
             props.openDirective = "%@";
             props.closeDirective = "%";
+            props.startTag = "%=";
+            props.endTag = "%";
             props.msBuildVersion = msBuildVersion;
 
             this.props = props;
