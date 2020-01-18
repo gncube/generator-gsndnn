@@ -198,6 +198,7 @@ module.exports = class extends DnnGeneratorBase {
                 'html-webpack-plugin': '^3.2.0',
                 // eslint-disable-next-line prettier/prettier
                 'marked': '^0.5.2',
+                'ejs-lint': '^1.0.1',
                 // eslint-disable-next-line prettier/prettier
                 'webpack': '^4.27.1',
                 'webpack-cli': '^3.1.2',
