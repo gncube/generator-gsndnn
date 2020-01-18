@@ -193,17 +193,7 @@
                         <i class="fa fa-search"></i>
                     </a>
 
-<%--                    <!-- Search Form -->
-                    <form id="searchform-1" class="u-searchform-v1 u-dropdown--css-animation u-dropdown--hidden g-bg-black g-pa-10 g-mt-10 g-box-shadow-none">
-                        <div class="input-group g-brd-primary--focus">
-                            <input class="form-control rounded-0 u-form-control g-brd-gray-light-v3" type="search" placeholder="Enter Your Search Here...">
 
-                            <div class="input-group-addon p-0">
-                                <button class="btn rounded-0 btn-primary btn-md g-font-size-14 g-px-18" type="submit">Go</button>
-                            </div>
-                        </div>
-                    </form>
-                    <!-- End Search Form -->--%>
                 </div>
                 <!-- End Search -->
             </div>
