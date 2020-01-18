@@ -46,39 +46,18 @@
             <div class="col-md-8 g-brd-right--md g-brd-secondary-light-v2 g-mb-30">
                 <!-- Links -->
                 <ul class="list-inline mb-0">
-<%--                    <li class="list-inline-item g-pl-0 g-pr-10">
-                        <a class="u-link-v5 g-color-secondary-light-v1 g-font-size-12" href="#!">Contact Us</a>
-                    </li>
-                    <li class="list-inline-item g-px-10">
-                        <a class="u-link-v5 g-color-secondary-light-v1 g-font-size-12" href="#!">Help</a>
-                    </li>--%>
-<%--                    <li class="list-inline-item g-px-10">
-                        <a class="u-link-v5 g-color-secondary-light-v1 g-font-size-12" href="#!">Work with Us</a>
-                    </li>
-                    <li class="list-inline-item g-px-10">
-                        <a class="u-link-v5 g-color-secondary-light-v1 g-font-size-12" href="#!">Advertise</a>
-                    </li>
-                    <li class="list-inline-item g-px-10">
-                        <a class="u-link-v5 g-color-secondary-light-v1 g-font-size-12" href="#!">Your Ad Choices</a>
-                    </li>--%>
+
                     <li class="list-inline-item g-px-10">
                         <dnn:PRIVACY id="dnnPrivacy" runat="server" CssClass="u-link-v5 g-color-secondary-light-v1 g-font-size-12" />
                     </li>
                     <li class="list-inline-item g-px-10">
                         <dnn:TERMS id="dnnTerms" CssClass="u-link-v5 g-color-secondary-light-v1 g-font-size-12" runat="server" />
                     </li>
-<%--                    <li class="list-inline-item g-px-10">
-                        <a class="u-link-v5 g-color-secondary-light-v1 g-font-size-12" href="#!">Send Feedback</a>
-                    </li>--%>
+
                 </ul>
                 <!-- End Links -->
             </div>
 
-<%--            <div class="col-md-2 g-mb-30">
-                <!-- Large Button Group -->                
-                 
-                <!-- End Large Button Group -->
-            </div>--%>
         </div>
         <!-- End Footer - Bottom Section -->
     </div>

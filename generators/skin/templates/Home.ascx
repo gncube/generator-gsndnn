@@ -1,12 +1,12 @@
-<!--#include file="partials/blogmagazine/_registers.ascx" -->
-<!--#include file="partials/blogmagazine/_styles.ascx" -->
+<!--#include file="partials/_registers.ascx" -->
+<!--#include file="partials/_styles.ascx" -->
 
 
 <main>
-    <!--#include file="partials/blogmagazine/_header.ascx" -->
+    <!--#include file="partials/_header.ascx" -->
 
     <!-- Promo Block -->
-    <!--#include file="partials/blogmagazine/_promoblock.ascx" -->
+    <!--#include file="partials/_promoblock.ascx" -->
     <!-- End Promo Block -->
 
     <!-- Start : Content Areas -->
@@ -25,7 +25,7 @@
     <!--// End : Content Pane : full width -->
 
     <!-- Footer -->
-    <!--#include file="partials/blogmagazine/_footer.ascx" -->
+    <!--#include file="partials/_footer.ascx" -->
     <!-- End Footer -->
 
 <!-- Go To -->
@@ -46,4 +46,4 @@
 
 <div class="u-outer-spaces-helper"></div>
 
-<!--#include file="partials/blogmagazine/_scripts.ascx" -->
+<!--#include file="partials/_scripts.ascx" -->

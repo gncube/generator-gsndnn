@@ -1,58 +1,39 @@
-<!--#include file="assets/includes/_registers.ascx"-->
-
-<!-- Styles Section -->
-<!--#include file="assets/includes/styles.ascx"-->
-<!-- End Styles Section -->
+<!--#include file="partials/_registers.ascx" -->
+<!--#include file="partials/_styles.ascx" -->
 
 <main>
-    <!-- Start : Header Section -->
-    <!--#include file="assets/includes/_header-nologin.ascx"-->
-    <!-- End : Header Section -->
+    <!--#include file="partials/_header-v1.ascx" -->
 
-    <!-- PageHeader Section -->
-    <!--#include file="assets/includes/pageheader.ascx"-->
-    <!-- End PageHeader Section -->
 
+    <!-- End : Content Areas -->
     <!-- Start : Content Pane : full width -->
-    <div class="container" >
+    <div class="container g-pt-20 g-pb-40">
         <div class="row">
             <div class="col-md-12" id="ContentPane" runat="server" />
-            </div>
         </div>
     </div>
-    <!--// End : Content Pane : full width -->
-
     <!-- Start : Content Areas -->
+    <!--// End : Content Pane : full width -->
+    
     <section>
-        <!--#include file = "assets/includes/_content-panes.ascx" -->
+        <!--#include file = "partials/_content-panes.ascx" -->
     </section>
-    <!-- End : Content Areas -->
 
-    <!--/contentWrapper-->
-    <!-- Footer Section -->
-    <!--#include file="assets/includes/footer.ascx"-->
-    <!-- End Footer Section -->
+    <!-- Footer -->
+    <!--#include file="partials/_footer.ascx" -->
+    <!-- End Footer -->
 
-      <!-- Go To -->
-      <a class="js-go-to u-go-to-v2" href="#!"
-         data-type="fixed"
-         data-position='{
-           "bottom": 15,
-           "right": 15
-         }'
-         data-offset-top="400"
-         data-compensation="#js-header"
-         data-show-effect="zoomIn">
+
+    <!-- Go to Top -->
+      <a class="js-go-to u-go-to-v1 g-width-40 g-height-40 g-color-primary g-bg-main-opacity-0_5 g-bg-main--hover g-bg-main--focus g-font-size-12 rounded" href="#" 
+      data-type="fixed" data-position='{
+       "bottom": 15,
+       "right": 15
+     }' data-offset-top="400" data-compensation="#js-header" data-show-effect="zoomIn">
         <i class="hs-icon hs-icon-arrow-top"></i>
       </a>
-      <!-- End Go To -->
+     <!-- End Go to Top -->
+
 </main>
 
-<div class="u-outer-spaces-helper"></div>
-
-<!-- Scripts Section -->
-<!--#include file="assets/includes/scripts.ascx"-->
-<!-- End Scripts Section -->
-
-
-
+<!--#include file="partials/_scripts.ascx" -->
