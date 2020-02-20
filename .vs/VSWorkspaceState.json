@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\generators",
-    "\\generators\\lib",
-    "\\generators\\library",
-    "\\generators\\library\\templates",
+    "\\generators\\common",
+    "\\generators\\spa",
     "\\generators\\spa\\templates",
-    "\\generators\\spa\\templates\\common",
-    "\\generators\\spa\\templates\\ReactJS\\jsx",
-    "\\generators\\spa\\templates\\ReactJS\\jsx\\src",
-    "\\generators\\spa\\templates\\ReactJS\\jsx\\src\\components"
+    "\\generators\\spa\\templates\\common\\Components",
+    "\\generators\\spa\\templates\\common\\Controllers",
+    "\\generators\\spa\\templates\\common\\src",
+    "\\generators\\spa\\templates\\common\\_BuildScripts",
+    "\\generators\\spa\\templates\\ReactJS"
   ],
-  "SelectedNode": "\\generators\\library\\templates\\library.sln",
+  "SelectedNode": "\\generators\\spa\\templates\\ReactJS\\jsx\\src\\app.jsx",
   "PreviewInSolutionExplorer": false
 }

@@ -1,4 +1,4 @@
-﻿
+
 using System;
 
 namespace <%= fullNamespace %>.Entities
@@ -9,9 +9,10 @@ namespace <%= fullNamespace %>.Entities
         int ModuleId { get; set; }
         string Title { get; set; }
         string Description { get; set; }
+        bool IsDeleted { get; set; }
         int CreatedByUserId { get; set; }
-        DateTime CreatedByDate { get; set; }
+        DateTime CreatedOnDate { get; set; }
         int LastUpdatedByUserId { get; set; }
-        DateTime LastUpdatedByDate { get; set; }
-    }
+        DateTime LastUpdatedOnDate { get; set; }
+     }
 }
