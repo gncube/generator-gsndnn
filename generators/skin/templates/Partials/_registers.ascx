@@ -1,0 +1,35 @@
+<<%= openDirective %> Control Language="C#" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.UI.Skins.Skin" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" TagName="BREADCRUMB" Src="~/Admin/Skins/Breadcrumb.ascx" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" TagName="CONTROLPANEL" Src="~/Admin/Skins/ControlPanel.ascx" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" TagName="COPYRIGHT" Src="~/Admin/Skins/Copyright.ascx" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" TagName="CURRENTDATE" Src="~/Admin/Skins/CurrentDate.ascx" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" TagName="DnnLink" Src="~/Admin/Skins/DnnLink.ascx" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" TagName="DOTNETNUKE" Src="~/Admin/Skins/DotNetNuke.ascx" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" TagName="Help" Src="~/Admin/Skins/Help.ascx" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" TagName="HOSTNAME" Src="~/Admin/Skins/HostName.ascx" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" TagName="JavaScriptLibraryInclude" Src="~/Admin/Skins/JavaScriptLibraryInclude.ascx" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" TagName="JQUERY" Src="~/Admin/Skins/jQuery.ascx" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" TagName="LANGUAGE" Src="~/Admin/Skins/Language.ascx" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" TagName="LEFTMENU" Src="~/Admin/Skins/LeftMenu.ascx" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" TagName="LINKS" Src="~/Admin/Skins/Links.ascx" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" TagName="LINKTOFULLSITE" Src="~/Admin/Skins/LinkToFullSite.ascx" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" TagName="LINKTOMOBILESITE" Src="~/Admin/Skins/LinkToMobileSite.ascx" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" TagName="LOGIN" Src="~/Admin/Skins/Login.ascx" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" TagName="LOGO" Src="~/Admin/Skins/Logo.ascx" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" TagName="MENU" src="~/DesktopModules/DDRMenu/Menu.ascx" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" TagName="META" Src="~/Admin/Skins/Meta.ascx" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" TagName="MODULEMESSAGE" Src="~/Admin/Skins/ModuleMessage.ascx" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" TagName="NAV" Src="~/Admin/Skins/Nav.ascx" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" TagName="PRIVACY" Src="~/Admin/Skins/Privacy.ascx" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" TagName="SEARCH" Src="~/Admin/Skins/Search.ascx" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" TagName="STYLES" Src="~/Admin/Skins/Styles.ascx" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" TagName="TAGS" Src="~/Admin/Skins/Tags.ascx" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" TagName="TERMS" Src="~/Admin/Skins/Terms.ascx" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" TagName="TEXT" Src="~/Admin/Skins/Text.ascx" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" TagName="TOAST" Src="~/Admin/Skins/Toast.ascx" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" TagName="TreeViewMenu" Src="~/Admin/Skins/TreeViewMenu.ascx" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" TagName="USER" Src="~/Admin/Skins/user.ascx" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" TagName="USERANDLOGIN" Src="~/Admin/Skins/UserAndLogin.ascx" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" Namespace="DotNetNuke.Web.DDRMenu.TemplateEngine" Assembly="DotNetNuke.Web.DDRMenu" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" Namespace="DotNetNuke.Web.Client.ClientResourceManagement" Assembly="DotNetNuke.Web.Client" <%= closeDirective %>>
+
