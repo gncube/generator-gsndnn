@@ -5,12 +5,8 @@
     "\\generators\\common",
     "\\generators\\spa",
     "\\generators\\spa\\templates",
-    "\\generators\\spa\\templates\\common\\Components",
-    "\\generators\\spa\\templates\\common\\Controllers",
-    "\\generators\\spa\\templates\\common\\src",
-    "\\generators\\spa\\templates\\common\\_BuildScripts",
-    "\\generators\\spa\\templates\\ReactJS"
+    "\\generators\\webforms"
   ],
-  "SelectedNode": "\\generators\\spa\\templates\\ReactJS\\jsx\\src\\app.jsx",
+  "SelectedNode": "\\generators\\common",
   "PreviewInSolutionExplorer": false
 }
