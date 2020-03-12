@@ -1,13 +1,9 @@
 {
-  "name": "generator-gsndnn",
+  "name": "@geraldn/generator-gsndnn",
   "version": "1.2.3",
   "description": "Scaffolds DNN extensions, including Modules (Webforms, SPA, and MVC), Persona Bar, Skin Object, Library, Scheduler, and Hotcakes Commerce projects (based on the generator built by Matt Rutledge).",
   "homepage": "https://github.com/gncube",
-  "author": {
-    "name": "Gerald Ncube",
-    "email": "me@geraldncube.co.uk",
-    "url": "https://geraldncube.co.uk"
-  },
+  "author": "Gerald Ncube <me@geraldncube.co.uk> (https://geraldncube.co.uk)",
   "files": [
     "generators"
   ],

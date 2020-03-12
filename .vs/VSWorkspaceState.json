@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\generators",
-    "\\generators\\common",
-    "\\generators\\spa",
     "\\generators\\spa\\templates",
-    "\\generators\\spa\\templates\\common\\Components",
-    "\\generators\\spa\\templates\\common\\Controllers",
-    "\\generators\\spa\\templates\\common\\src",
-    "\\generators\\spa\\templates\\common\\_BuildScripts",
-    "\\generators\\spa\\templates\\ReactJS"
+    "\\generators\\spa\\templates\\ReactJS",
+    "\\generators\\webforms",
+    "\\generators\\webforms\\templates",
+    "\\generators\\webforms\\templates\\Entities",
+    "\\generators\\webforms\\templates\\Entities\\Interfaces",
+    "\\generators\\webforms\\templates\\Providers\\DataProviders",
+    "\\generators\\webforms\\templates\\Providers\\DataProviders\\SqlDataProvider"
   ],
-  "SelectedNode": "\\generators\\spa\\templates\\ReactJS\\jsx\\src\\app.jsx",
+  "SelectedNode": "\\generators\\webforms\\templates\\Entities\\Interfaces\\IExampleInfo.cs",
   "PreviewInSolutionExplorer": false
 }
