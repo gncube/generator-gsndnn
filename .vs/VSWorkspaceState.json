@@ -2,15 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\generators",
-    "\\generators\\spa\\templates",
-    "\\generators\\spa\\templates\\ReactJS",
+    "\\generators\\common",
+    "\\generators\\common\\src-webforms",
     "\\generators\\webforms",
-    "\\generators\\webforms\\templates",
-    "\\generators\\webforms\\templates\\Entities",
     "\\generators\\webforms\\templates\\Entities\\Interfaces",
     "\\generators\\webforms\\templates\\Providers\\DataProviders",
     "\\generators\\webforms\\templates\\Providers\\DataProviders\\SqlDataProvider"
   ],
-  "SelectedNode": "\\generators\\webforms\\templates\\Entities\\Interfaces\\IExampleInfo.cs",
+  "SelectedNode": "\\generators\\webforms\\templates",
   "PreviewInSolutionExplorer": false
 }
