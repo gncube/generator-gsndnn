@@ -27,18 +27,18 @@ module.exports = class extends Generator {
 
     this.log(
       chalk.white(
-        'This awesome command line tool scaffolds a DNN project/solution in the current directory.\n'
+        'This command line tool scaffolds a DNN project/solution in the current directory.\n'
       )
     );
     this.log(
-      chalk.italic.white('This tool is forked, with love, from the original ') +
-        chalk.bold.blue('generator-dnn') +
-        chalk.italic.white(' maintained by the most honorable Matt Rutledge.\n\n')
+      chalk.italic.white('This tool is forked, from the original ') +
+        chalk.bold.red('generator-dnn') +
+        chalk.italic.white(' maintained by Matt Rutledge.\n')
     );
     this.log(
-      chalk.italic.white('This tool is forked, with love, from the original ') +
-      chalk.bold.blue('generator-upendodnn') +
-      chalk.italic.white(' maintained by Upendo Ventures.\n\n')
+      chalk.italic.white('This tool is forked, from the original ') +
+      chalk.bold.greenBright('generator-upendodnn') +
+      chalk.italic.white(' maintained by Upendo Ventures.\n')
     );
 
     // Does the solution already exist? then customize the wizard
