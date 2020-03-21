@@ -6,12 +6,12 @@
     <HeaderTemplate>
         <div id="pnl_<%= extensionName %>_Items">
             <div id="NoRecords" runat="server" visible="false">
-                <%=LocalizeString("NoRecords")%>
+                <<%= openDirective %>=LocalizeString("NoRecords")<%= closeDirective %>>
             </div>
     </HeaderTemplate>
     <ItemTemplate>
-        <asp:Label ID="lblTitle" runat="server" CssClass="" Text='<%#DataBinder.Eval(Container.DataItem,"Title").ToString() %>'></asp:Label>
-        <asp:Label ID="lblDescription" CssClass="" runat="server" Text='<%#DataBinder.Eval(Container.DataItem,"Description").ToString() %>'></asp:Label>
+        <asp:Label ID="lblTitle" runat="server" CssClass="" Text='<<%= openDirective %>#DataBinder.Eval(Container.DataItem,"Title").ToString() <%= closeDirective %>>'></asp:Label>
+        <asp:Label ID="lblDescription" CssClass="" runat="server" Text='<<%= openDirective %>#DataBinder.Eval(Container.DataItem,"Description").ToString() <%= closeDirective %>>'></asp:Label>
         
         <asp:Panel ID="pnlAdmin" CssClass="admin-actions" runat="server" Visible="false">
             <asp:HyperLink ID="lnkEdit" runat="server" ResourceKey="EditItem.Text" Visible="false" Enabled="false" />
