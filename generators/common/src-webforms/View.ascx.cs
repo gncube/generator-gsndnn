@@ -13,7 +13,7 @@ namespace <%= fullNamespace %>
 {
     public partial class View : <%= extensionName %>ModuleBase, IActionable
     {
-        private bool _has<%= extensionName %>;
+        private bool _has<%= extensionName %>s;
 
         #region Event Handlers
 
@@ -46,7 +46,7 @@ namespace <%= fullNamespace %>
         {
             var tc = new <%= extensionName %>InfoRepository();
             IEnumerable <<%= extensionName %>Info> items = tc.GetItems(ModuleId);
-            _has<%= extensionName %> = items.Any();
+            _has<%= extensionName %>s = items.Any();
             rpt<%= extensionName %>List.DataSource = items;
             rpt<%= extensionName %>List.DataBind();
 

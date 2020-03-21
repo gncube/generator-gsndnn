@@ -1,6 +1,7 @@
 <<%= openDirective %> Control Language="c#" AutoEventWireup="true" CodeBehind="View.ascx.cs" Inherits="<%= fullNamespace %>.View" <%= closeDirective %>>
 <<%= openDirective %> Import Namespace="DotNetNuke.Services.Localization" <%= closeDirective %>>
 <<%= openDirective %> Register TagPrefix="dnn" TagName="Label" Src="~/controls/labelcontrol.ascx" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" <%= closeDirective %>>
 
 <asp:Repeater ID="rpt<%= extensionName %>List" runat="server">
     <HeaderTemplate>
