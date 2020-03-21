@@ -2,13 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\generators",
-    "\\generators\\common",
-    "\\generators\\common\\branding",
-    "\\generators\\common\\branding\\Images",
-    "\\generators\\webforms",
-    "\\generators\\webforms\\templates\\Providers\\DataProviders",
-    "\\generators\\webforms\\templates\\Providers\\DataProviders\\SqlDataProvider"
+    "\\generators\\spa\\templates",
+    "\\generators\\spa\\templates\\common",
+    "\\generators\\spa\\templates\\ReactJS",
+    "\\generators\\spa\\templates\\ReactJS\\tsx",
+    "\\generators\\webforms"
   ],
-  "SelectedNode": "\\generators\\common\\branding\\Images\\logo.png",
+  "SelectedNode": "\\package.json",
   "PreviewInSolutionExplorer": false
 }

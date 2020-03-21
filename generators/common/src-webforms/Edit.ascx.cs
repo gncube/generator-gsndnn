@@ -37,7 +37,7 @@ namespace <%= fullNamespace %>
             if (ItemId > 0)
             {
                 t = tc.GetItem(ItemId, ModuleId);
-                t.Title = txtTitle.Description.Trim();
+                t.Title = txtTitle.Text.Trim();
                 t.Description = txtDescription.Text.Trim();
             }
             else

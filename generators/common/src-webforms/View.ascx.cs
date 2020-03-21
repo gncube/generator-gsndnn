@@ -2,6 +2,7 @@
 using DotNetNuke.Entities.Modules;
 using DotNetNuke.Entities.Modules.Actions;
 using DotNetNuke.Services.Exceptions;
+using DotNetNuke.Web.Client.ClientResourceManagement;
 using System;
 using System.Collections.Generic;
 using System.Linq;
