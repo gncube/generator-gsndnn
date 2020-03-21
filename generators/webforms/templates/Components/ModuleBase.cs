@@ -8,6 +8,17 @@ namespace <%= fullNamespace %>.Components
 {
     public abstract class <%= extensionName %>ModuleBase : PortalModuleBase
     {
+        public int ItemId
+        {
+            get
+            {
+              var qs = Request.QueryString["tid"];
+              if (qs != null)
+                return Convert.ToInt32(qs);
+              return -1;
+            }
+
+        }
 
         #region Localization
         protected string GetLocalizedString(string LocalizationKey)

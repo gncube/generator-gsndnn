@@ -3,12 +3,12 @@
     "",
     "\\generators",
     "\\generators\\common",
-    "\\generators\\common\\src-webforms",
+    "\\generators\\common\\branding",
+    "\\generators\\common\\branding\\Images",
     "\\generators\\webforms",
-    "\\generators\\webforms\\templates\\Entities\\Interfaces",
     "\\generators\\webforms\\templates\\Providers\\DataProviders",
     "\\generators\\webforms\\templates\\Providers\\DataProviders\\SqlDataProvider"
   ],
-  "SelectedNode": "\\generators\\webforms\\templates",
+  "SelectedNode": "\\generators\\common\\branding\\Images\\logo.png",
   "PreviewInSolutionExplorer": false
 }

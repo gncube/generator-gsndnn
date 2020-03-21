@@ -1,6 +1,7 @@
 <<%= openDirective %> Control Language="C#" AutoEventWireup="true" CodeBehind="Edit.ascx.cs" Inherits="<%= fullNamespace %>.Edit" <%= closeDirective %>>
 <<%= openDirective %> Import Namespace="DotNetNuke.Services.Localization" <%= closeDirective %>>
 <<%= openDirective %> Register TagPrefix="dnn" TagName="Label" Src="~/controls/labelcontrol.ascx" <%= closeDirective %>>
+<<%= openDirective %> Register TagPrefix="dnn" Assembly="DotNetNuke.Web" Namespace="DotNetNuke.Web.UI.WebControls" <%= closeDirective %>>
 
   <div class="dnnForm">
         <asp:Label runat="server" CssClass="dnnFormMessage dnnFormInfo" ResourceKey="Intro" />

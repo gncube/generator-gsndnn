@@ -1,0 +1,9 @@
+.dnnForm input.dnnFormRequired, .dnnForm textarea.dnnFormRequired, .dnnForm select.dnnFormRequired {
+  border-left: 5px #F00 solid;
+}
+
+.dnnFormItem.dnnFormHelp p.dnnFormRequired {
+  float: right;
+  margin: 0;
+  padding: 0;
+}

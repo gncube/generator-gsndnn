@@ -3,6 +3,7 @@ using DotNetNuke.Services.Exceptions;
 using DotNetNuke.Web.Client.ClientResourceManagement;
 using System;
 using <%= fullNamespace %>.Components;
+using <%= fullNamespace %>.Entities;
 
 namespace <%= fullNamespace %>
 {
