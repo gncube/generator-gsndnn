@@ -1,5 +1,6 @@
 
 using DotNetNuke.Services.Exceptions;
+using DotNetNuke.Web.Client.ClientResourceManagement;
 using System;
 using <%= fullNamespace %>.Components;
 
@@ -29,8 +30,8 @@ namespace <%= fullNamespace %>
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            var t = new ExampleInfo();
-            var tc = new ExampleInfoRepository();
+            var t = new <%= extensionName %>Info();
+            var tc = new <%= extensionName %>InfoRepository();
 
             if (ItemId > 0)
             {
@@ -40,13 +41,12 @@ namespace <%= fullNamespace %>
             }
             else
             {
-                t = new ExampleInfo()
+                t = new <%= extensionName %>Info()
                 {
                   CreatedByUserId = UserId,
                   CreatedOnDate = DateTime.Now,
                   Title = txtTitle.Text.Trim(),
                   Description = txtDescription.Text.Trim(),
-
                 };
             }
 
@@ -71,17 +71,17 @@ namespace <%= fullNamespace %>
           Response.Redirect(DotNetNuke.Common.Globals.NavigateURL());
         }
 
-  #endregion
+        #endregion
 
-  #region Helper Methods
+        #region Helper Methods
 
-  private void BindData()
+        private void BindData()
         {
             if (!Page.IsPostBack)
             {
                 if (ItemId > 0)
                 {
-                    var tc = new ExampleInfoRepository();
+                    var tc = new <%= extensionName %>InfoRepository();
 
                     var t = tc.GetItem(ItemId, ModuleId);
                     if (t != null)
