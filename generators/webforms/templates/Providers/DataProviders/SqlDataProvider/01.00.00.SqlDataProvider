@@ -1,4 +1,4 @@
-﻿/*
+/*
 
 INSTALL SQL PROVIDER SCRIPT
 
@@ -11,15 +11,15 @@ Release Notes:
 
 */
 
-IF NOT OBJECT_ID('{databaseOwner}[{objectQualifier}<%= objectPrefix %>_<%= extensionName %>]') IS NULL
-    DROP TABLE {databaseOwner}[{objectQualifier}<%= objectPrefix %>_<%= extensionName %>];
+IF NOT OBJECT_ID('{databaseOwner}[{objectQualifier}<%= objectPrefix %>_<%= extensionName %>]s') IS NULL
+    DROP TABLE {databaseOwner}[{objectQualifier}<%= objectPrefix %>_<%= extensionName %>]s;
 GO
 
-CREATE TABLE {databaseOwner}[{objectQualifier}<%= objectPrefix %>_<%= extensionName %>] (
+CREATE TABLE {databaseOwner}[{objectQualifier}<%= objectPrefix %>_<%= extensionName %>]s (
     [ItemId] INT IDENTITY(1,1) 
-        CONSTRAINT [PK_{objectQualifier}<%= objectPrefix %>_<%= extensionName %>] PRIMARY KEY CLUSTERED, 
+        CONSTRAINT [PK_{objectQualifier}<%= objectPrefix %>_<%= extensionName %>]s PRIMARY KEY CLUSTERED, 
     [ModuleId] INT NOT NULL 
-        CONSTRAINT [FK_{objectQualifier}<%= objectPrefix %>_<%= extensionName %>_ModuleId] FOREIGN KEY 
+        CONSTRAINT [FK_{objectQualifier}<%= objectPrefix %>_<%= extensionName %>s_ModuleId] FOREIGN KEY 
         REFERENCES {databaseOwner}[{objectQualifier}Modules] ([ModuleId]) ON DELETE CASCADE, 
     [Title] NVARCHAR(100) NOT NULL, 
     [Description] NVARCHAR(1000) NOT NULL, 
