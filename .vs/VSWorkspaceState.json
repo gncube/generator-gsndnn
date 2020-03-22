@@ -1,13 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\generators",
-    "\\generators\\common",
-    "\\generators\\common\\src-webforms",
-    "\\generators\\common\\src-webforms\\App_LocalResources",
-    "\\generators\\webforms",
-    "\\generators\\webforms\\templates"
+    "\\generators\\webforms"
   ],
-  "SelectedNode": "\\generators\\common\\src-webforms\\App_LocalResources\\Edit.ascx.resx",
+  "SelectedNode": "\\package.json",
   "PreviewInSolutionExplorer": false
 }
