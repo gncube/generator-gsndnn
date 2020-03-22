@@ -2,12 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\generators",
-    "\\generators\\spa\\templates",
-    "\\generators\\spa\\templates\\common",
-    "\\generators\\spa\\templates\\ReactJS",
-    "\\generators\\spa\\templates\\ReactJS\\tsx",
-    "\\generators\\webforms"
+    "\\generators\\common",
+    "\\generators\\common\\src-webforms",
+    "\\generators\\common\\src-webforms\\App_LocalResources",
+    "\\generators\\webforms",
+    "\\generators\\webforms\\templates"
   ],
-  "SelectedNode": "\\package.json",
+  "SelectedNode": "\\generators\\common\\src-webforms\\App_LocalResources\\Edit.ascx.resx",
   "PreviewInSolutionExplorer": false
 }
