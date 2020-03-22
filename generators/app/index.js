@@ -18,10 +18,10 @@ module.exports = class extends Generator {
     this.log(
       yosay(
         'Welcome to the\n' +
-          chalk.yellow('Gerald Ncube') +
+          chalk.yellow('GSN') +
           ' ' +
           chalk.bold.blue('DNN') +
-          '\nproject generator! '
+          '\nproject generator! v.2.0.8 '
       )
     );
 
