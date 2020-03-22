@@ -2,16 +2,16 @@
 <dotnetnuke type="Package" version="6.0">
   <packages>
     <package name="<%= fullNamespace %>" type="Module" version="01.00.00">
-      <friendlyName><%= namespace %>:<%= extensionName %> MVC Module</friendlyName>
+      <friendlyName><%= extensionName %> Module</friendlyName>
       <description>
         <![CDATA[<p><%= description %></p>]]>
       </description>
-      <iconFile>DesktopModules/MVC/<%= namespace %>/<%= extensionName %>/Images/logo.png</iconFile>
+      <iconFile>DesktopModules/MVC/<%= fullNamespace %>/Images/logo.png</iconFile>
       <owner>
-        <name><%= namespace %></name>
-        <organization><%= namespace %></organization>
-        <url><%= companyUrl %></url>
-        <email><%= emailAddy %></email>
+        <name><%= yourName %></name>
+        <organization><%= company %></organization>
+        <url><![CDATA[<a href="<%= companyUrl %>" target="_blank"><%= companyUrl %></a>]]></url>
+        <email><![CDATA[<a href="mailto:<%= emailAddy %>" target="_blank"><%= emailAddy %></a>]]></email>
       </owner>
       <license src="License.txt" />
       <releaseNotes src="ReleaseNotes.txt" />
@@ -22,7 +22,7 @@
       <components>
         <component type="Script">
           <scripts>
-            <basePath>DesktopModules\MVC\<%= namespace %>\<%= extensionName %></basePath>
+            <basePath>DesktopModules\MVC\<%= fullNamespace %></basePath>
             <script type="Install">
               <path>Providers\DataProviders\SqlDataProvider</path>
               <name>01.00.00.SqlDataProvider</name>
@@ -39,7 +39,7 @@
         <component type="Module">
           <desktopModule>
             <moduleName><%= extensionName %> Module</moduleName>
-            <foldername><%= namespace %>/<%= extensionName %></foldername>
+            <foldername><%= fullNamespace %></foldername>
             <businessControllerClass><%= fullNamespace %>.Components.<%= extensionName %>Controller, <%= fullNamespace %></businessControllerClass>
             <supportedFeatures />
             <moduleDefinitions>
@@ -49,7 +49,7 @@
                 <moduleControls>
                   <moduleControl>
                     <controlKey />
-                    <controlSrc><%= fullNamespace %>.Controllers/<%= extensionName %>/Index.mvc</controlSrc>
+                    <controlSrc><%= fullNamespace %>.Controllers/Example/Index.mvc</controlSrc>
                     <supportsPartialRendering>False</supportsPartialRendering>
                     <controlTitle />
                     <controlType>View</controlType>
@@ -59,7 +59,7 @@
                   </moduleControl>
                   <moduleControl>
                     <controlKey>Edit</controlKey>
-                    <controlSrc><%= fullNamespace %>.Controllers/<%= extensionName %>/Edit.mvc</controlSrc>
+                    <controlSrc><%= fullNamespace %>.Controllers/Example/Edit.mvc</controlSrc>
                     <supportsPartialRendering>False</supportsPartialRendering>
                     <controlTitle>Edit <%= extensionName %> Content</controlTitle>
                     <controlType>Edit</controlType>
@@ -105,7 +105,7 @@
 
         <component type="ResourceFile">
           <resourceFiles>
-            <basePath>DesktopModules/MVC/<%= namespace %>/<%= extensionName %></basePath>
+            <basePath>DesktopModules/MVC/<%= fullNamespace %></basePath>
             <resourceFile>
               <name>Resources.zip</name>
             </resourceFile>
