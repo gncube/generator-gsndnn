@@ -2,11 +2,11 @@
 <dotnetnuke type="Package" version="6.0">
   <packages>
     <package name="<%= fullNamespace %>" type="Module" version="01.00.00">
-      <friendlyName><%= extensionName %> Module</friendlyName>
+      <friendlyName><%= company %>: <%= extensionName %> Module</friendlyName>
       <description>
         <![CDATA[<p><%= description %></p>]]>
       </description>
-      <iconFile>DesktopModules/MVC/<%= fullNamespace %>/Images/logo.png</iconFile>
+      <iconFile>DesktopModules/MVC/<%= company %>/<%= fullNamespace %>/Images/logo.png</iconFile>
       <owner>
         <name><%= yourName %></name>
         <organization><%= company %></organization>
@@ -22,7 +22,7 @@
       <components>
         <component type="Script">
           <scripts>
-            <basePath>DesktopModules\MVC\<%= fullNamespace %></basePath>
+            <basePath>DesktopModules\MVC\<%= company %>\<%= fullNamespace %></basePath>
             <script type="Install">
               <path>Providers\DataProviders\SqlDataProvider</path>
               <name>01.00.00.SqlDataProvider</name>
@@ -39,7 +39,7 @@
         <component type="Module">
           <desktopModule>
             <moduleName><%= extensionName %> Module</moduleName>
-            <foldername><%= fullNamespace %></foldername>
+            <foldername><%= company %>/<%= extensionName %></foldername>
             <businessControllerClass><%= fullNamespace %>.Components.<%= extensionName %>Controller, <%= fullNamespace %></businessControllerClass>
             <supportedFeatures />
             <moduleDefinitions>
@@ -105,7 +105,7 @@
 
         <component type="ResourceFile">
           <resourceFiles>
-            <basePath>DesktopModules/MVC/<%= fullNamespace %></basePath>
+            <basePath>DesktopModules/MVC/<%= company %>/<%= fullNamespace %></basePath>
             <resourceFile>
               <name>Resources.zip</name>
             </resourceFile>

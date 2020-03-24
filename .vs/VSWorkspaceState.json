@@ -1,6 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\generators",
+    "\\generators\\app",
+    "\\generators\\common",
+    "\\generators\\solution",
+    "\\generators\\solution\\templates",
+    "\\generators\\webforms\\templates"
   ],
+  "SelectedNode": "\\generators\\solution\\templates\\_Template.sln",
   "PreviewInSolutionExplorer": false
 }
