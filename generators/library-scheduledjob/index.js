@@ -40,35 +40,25 @@ module.exports = class extends DnnGeneratorBase {
         validate: str => {
           return str.length > 0;
         }
-      },
-      {
-        when: !this.options.companyUrl,
-        type: 'input',
-        name: 'companyUrl',
-        message: 'Company Website:',
-        store: true,
-        validate: str => {
-          return str.length > 0;
-        }
-      },
-      {
-        when: !this.options.emailAddy,
-        type: 'input',
-        name: 'emailAddy',
-        message: 'Your e-mail address:',
-        store: true,
-        validate: str => {
-          return str.length > 0;
-        }
       }
     ];
 
     return this.prompt(prompts).then(props => {
       // To access props later use this.props.someAnswer;
       props.currentDate = new Date();
-      props.namespace = this._pascalCaseName(props.company);
-      props.extensionName = this._pascalCaseName(props.name);
-	    props.extensionType = "Libraries";
+      if (this.options.company.endsWith(" -f")) {
+        props.namespace = this.options.company.replace(" -f", "");
+      }
+      else {
+        props.namespace = this._pascalCaseName(this.options.company);
+      }
+      if (props.name.endsWith(" -f")) {
+        props.extensionName = props.name.replace(" -f", "");
+      }
+      else {
+        props.extensionName = this._pascalCaseName(props.name);
+      }
+      props.extensionType = "Libraries";
       props.fullNamespace = props.namespace + "." + props.extensionType + "." + props.extensionName;
       props.guid = this._generateGuid();
 
@@ -78,7 +68,7 @@ module.exports = class extends DnnGeneratorBase {
 
   writing() {
     this.log(chalk.white('Creating Class Library.'));
-	
+
     // mod: this follows the Upendo development/solution pattern
     this.destinationRoot("Libraries/");
 
@@ -88,12 +78,14 @@ module.exports = class extends DnnGeneratorBase {
     let fullNamespace = this.props.fullNamespace;
 
     let template = {
+      yourName: this.options.yourName,
+      company: this.options.company,
       namespace: namespace,
       extensionName: extensionName,
       moduleFriendlyName: this.props.name,
       description: this.props.description,
-      companyUrl: this.props.companyUrl,
-      emailAddy: this.props.emailAddy,
+      companyUrl: this.options.companyUrl,
+      emailAddy: this.options.emailAddy,
       currentYear: currentDate.getFullYear(),
       version: '1.0.0',
       menuLinkName: this.props.menuLinkName,
@@ -152,7 +144,7 @@ module.exports = class extends DnnGeneratorBase {
     );
   }
 
-  install() {  }
+  install() { }
 
   end() {
     process.chdir('../');

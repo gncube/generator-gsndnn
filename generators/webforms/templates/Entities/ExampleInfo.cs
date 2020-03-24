@@ -1,15 +1,15 @@
-
+﻿
 using System;
 using System.Web.Caching;
 using DotNetNuke.ComponentModel.DataAnnotations;
 
 namespace <%= fullNamespace %>.Entities
 {
-    [TableName("<%= objectPrefix %>_<%= extensionName %>s")]
+    [TableName("<%= objectPrefix %>_Example")]
     [PrimaryKey("ItemId", AutoIncrement = true)]
     [Cacheable("<%= extensionName %>Info", CacheItemPriority.Default, 20)]
     [Scope("ModuleId")]
-    public class <%= extensionName %>Info : I<%= extensionName %>Info
+    public class ExampleInfo : IExampleInfo
     {
         public int ItemId { get; set; }
 
@@ -19,14 +19,12 @@ namespace <%= fullNamespace %>.Entities
 
         public string Description { get; set; }
 
-        public bool IsDeleted { get; set; }
-
         public int CreatedByUserId { get; set; }
 
-        public DateTime CreatedOnDate { get; set; }
+        public DateTime CreatedByDate { get; set; }
 
         public int LastUpdatedByUserId { get; set; }
 
-        public DateTime LastUpdatedOnDate { get; set; }
+        public DateTime LastUpdatedByDate { get; set; }
     }
 }

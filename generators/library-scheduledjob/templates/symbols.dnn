@@ -5,14 +5,17 @@
       <friendlyName><%= extensionName %> Library Symbols</friendlyName>
       <description><![CDATA[<%= description %>]]></description>
       <owner>
-        <name><%= namespace %></name>
-        <organization><%= namespace %></organization>
+        <name><%= yourName %></name>
+        <organization><%= company %></organization>
         <url><%= companyUrl %></url>
         <email><%= emailAddy %></email>
       </owner>
       <license src="License.txt" />
       <releaseNotes src="ReleaseNotes.txt" />
       <azureCompatible>True</azureCompatible>
+      <dependencies>
+        <dependency type="managedPackage" version="1.0.0"><%= fullNamespace %></dependency>
+      </dependencies>
       <components>
         <component type="ResourceFile">
           <resourceFiles>

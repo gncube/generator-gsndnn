@@ -18,27 +18,22 @@ module.exports = class extends Generator {
     this.log(
       yosay(
         'Welcome to the\n' +
-          chalk.yellow('GSN') +
-          ' ' +
-          chalk.bold.blue('DNN') +
-          '\nproject generator! v.2.0.8 '
+        chalk.yellow('Upendo Ventures') +
+        ' ' +
+        chalk.bold.blue('DNN') +
+        '\nproject generator! '
       )
     );
 
     this.log(
       chalk.white(
-        'This command line tool scaffolds a DNN project/solution in the current directory.\n'
+        'This awesome command line tool scaffolds a DNN project/solution in the current directory.\n'
       )
     );
     this.log(
-      chalk.italic.white('This tool is forked, from the original ') +
-        chalk.bold.red('generator-dnn') +
-        chalk.italic.white(' maintained by Matt Rutledge.\n')
-    );
-    this.log(
-      chalk.italic.white('This tool is forked, from the original ') +
-      chalk.bold.greenBright('generator-upendodnn') +
-      chalk.italic.white(' maintained by Upendo Ventures.\n')
+      chalk.italic.white('This tool is forked, with love, from the original ') +
+      chalk.bold.blue('generator-dnn') +
+      chalk.italic.white(' maintained by the most honorable Matt Rutledge.\n\n')
     );
 
     // Does the solution already exist? then customize the wizard
@@ -60,7 +55,7 @@ module.exports = class extends Generator {
 
     //
     // TODO: Add logic to look for solution folders (e.g., Modules) and disable the extensions below until the solution is created.
-	// TODO: Update the primary solution file when projects are added.
+    // TODO: Update the primary solution file when projects are added.
     //
 
     const prompts = [
@@ -73,33 +68,51 @@ module.exports = class extends Generator {
           solutionChoice,
           { name: 'Module: Webforms', value: 'webforms' },
           { name: 'Module: MVC', value: 'mvc' },
-          { name: 'Module: MVC, .NET Core', value: 'mvc-core' },
+          { name: 'Module: MVC+SPA', value: 'mvc-spa' },
+          /*{ name: 'Module: MVC, .NET Core', value: 'mvc-core' },*/
           { name: 'Module: SPA', value: 'spa' },
           { name: 'Persona Bar', value: 'personabar' },
           { name: 'Skin Object', value: 'skinobject' },
-          { name: 'DNN Skin', value: 'skin' },
           { name: 'Library', value: 'library' },
           { name: 'Library: Scheduled Job', value: 'library-scheduledjob' },
           { name: 'Hotcakes Commerce Extension', value: 'hcc' }
         ]
       },
       {
-        when: !this.options.dnnHost,
+        when: !this.options.yourName,
         type: 'input',
-        name: 'dnnHost',
-        message: 'What is the URL to your local DNN site? (currently only used by SPA templates)',
-        default: 'https://dnndev.me',
+        name: 'yourName',
+        message: 'What\'s your first and last name (surname)?',
         store: true,
         validate: str => {
           return str.length > 0;
         }
       },
       {
-        when: !this.options.dnnRoot,
+        when: !this.options.company,
         type: 'input',
-        name: 'dnnRoot',
-        message: 'What is the local path to the root of your DNN site? (currently only used by SPA templates)',
-		default: process.cwd(),
+        name: 'company',
+        message: 'Namespace for your solution (Usually a company name, such as \'Upendo\' if you were Upendo Ventures)?',
+        store: true,
+        validate: str => {
+          return str.length > 0;
+        }
+      },
+      {
+        when: !this.options.companyUrl,
+        type: 'input',
+        name: 'companyUrl',
+        message: 'Company Website:',
+        store: true,
+        validate: str => {
+          return str.length > 0;
+        }
+      },
+      {
+        when: !this.options.emailAddy,
+        type: 'input',
+        name: 'emailAddy',
+        message: 'Your e-mail address:',
         store: true,
         validate: str => {
           return str.length > 0;
@@ -116,14 +129,16 @@ module.exports = class extends Generator {
   composing() {
     const options = {
       projType: this.props.value,
-      dnnHost: this.props.dnnHost,
-      dnnRoot: this.props.dnnRoot
+      yourName: this.props.yourName,
+      company: this.props.company,
+      companyUrl: this.props.companyUrl,
+      emailAddy: this.props.emailAddy
     };
 
     this.composeWith(require.resolve('../' + this.props.projType), options);
   }
 
-  writing() {}
+  writing() { }
 
-  install() {}
+  install() { }
 };

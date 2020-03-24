@@ -1,23 +1,23 @@
-"use strict";
-const path = require("path");
-const assert = require("yeoman-assert");
-const helpers = require("yeoman-test");
+'use strict';
+const path = require('path');
+const assert = require('yeoman-assert');
+const helpers = require('yeoman-test');
 
-describe("generator-dnn:mvc", () => {
+describe('generator-dnn:mvc', () => {
   beforeAll(() => {
     return helpers
-      .run(path.join(__dirname, "../generators/mvc"))
-      .withArguments(["--noinstall"])
+      .run(path.join(__dirname, '../generators/mvc'))
+      .withArguments(['--noinstall'])
       .withPrompts({
-        company: "Gerald Ncube",
-        name: "TestMVC",
-        description: "Test Build Module",
-        companyUrl: "geraldncube.co.uk",
-        emailAddy: "me@geraldncube.co.uk"
+        company: 'Upendo Ventures',
+        name: 'TestMVC',
+        description: 'Test Build Module',
+        companyUrl: 'upendoventures.com',
+        emailAddy: 'solutions@upendoventures.com'
       });
   });
 
-  it("created files", () => {
+  it('created files', () => {
     assert(true);
   });
 });

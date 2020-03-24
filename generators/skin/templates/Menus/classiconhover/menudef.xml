@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<manifest>
-    <template>classiconhover.txt</template>
-	  <scripts>
-    <script>classiconhover.js</script>
-  </scripts>
-</manifest>
