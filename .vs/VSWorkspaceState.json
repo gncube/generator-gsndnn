@@ -2,12 +2,14 @@
   "ExpandedNodes": [
     "",
     "\\generators",
-    "\\generators\\app",
-    "\\generators\\common",
-    "\\generators\\solution",
+    "\\generators\\common\\src-webforms",
     "\\generators\\solution\\templates",
-    "\\generators\\webforms\\templates"
+    "\\generators\\webforms",
+    "\\generators\\webforms\\templates",
+    "\\generators\\webforms\\templates\\Entities\\Interfaces",
+    "\\generators\\webforms\\templates\\Providers\\DataProviders",
+    "\\generators\\webforms\\templates\\Providers\\DataProviders\\SqlDataProvider"
   ],
-  "SelectedNode": "\\generators\\solution\\templates\\_Template.sln",
+  "SelectedNode": "\\generators\\webforms\\templates\\Module.sln",
   "PreviewInSolutionExplorer": false
 }
