@@ -8,7 +8,7 @@
   },
   "dnnModule": {
     "fullName": "<%= namespace %>.<%= moduleName %>",
-    "friendlyName": "<%= moduleName %> Module",
+    "friendlyName": "<%= namespace %>: <%= moduleName %> Module",
     "packageName": "<%= namespace %>_<%= moduleName %>",
     "owner": {
       "name": "<%= moduleName %>",
@@ -20,8 +20,7 @@
       "packageName": "<%= namespace %>_<%= moduleName %>",
       "folderName": "<%= namespace %>/<%= moduleName %>",
       "azureCompatible": "true",
-      "iconFile":
-        "DesktopModules\\<%= namespace %>\\<%= moduleName %>\\Resources\\img\\extension.png"
+      "iconFile": "DesktopModules\\<%= namespace %>\\<%= moduleName %>\\Resources\\img\\extension.png"
     },
     "tempPath": "./package",
     "packagesPath": "./_Packages",
