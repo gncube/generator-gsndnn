@@ -3,9 +3,9 @@ using System;
 
 namespace <%= fullNamespace %>.Models
 {
-    public interface I<%= namespace %>Info
+    public interface I<%= extensionName %>Info
     {
-        int <%= namespace %>Id { get; set; }
+        int <%= extensionName %>Id { get; set; }
         int ModuleId { get; set; }
         string Title { get; set; }
         string Description { get; set; }

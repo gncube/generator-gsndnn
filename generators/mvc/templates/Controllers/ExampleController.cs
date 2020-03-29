@@ -11,12 +11,12 @@ using <%= fullNamespace %>.Models;
 namespace <%= fullNamespace %>.Controllers
 {
     [DnnHandleError]
-    public class <%= namespace %>Controller : DnnController
+    public class <%= extensionName %>Controller : DnnController
     {
 
         public ActionResult Delete(int itemId)
         {
-            <%= namespace %>InfoRepository.Instance.DeleteItem(itemId, ModuleContext.ModuleId);
+            <%= extensionName %>InfoRepository.Instance.DeleteItem(itemId, ModuleContext.ModuleId);
             return RedirectToDefaultRoute();
         }
 
@@ -25,34 +25,34 @@ namespace <%= fullNamespace %>.Controllers
             DotNetNuke.Framework.JavaScriptLibraries.JavaScript.RequestRegistration(CommonJs.DnnPlugins);
 
             var item = (itemId == -1)
-                 ? new <%= namespace %>Info { ModuleId = ModuleContext.ModuleId }
-                 : <%= namespace %>InfoRepository.Instance.GetItem(itemId, ModuleContext.ModuleId);
+                 ? new <%= extensionName %>Info { ModuleId = ModuleContext.ModuleId }
+                 : <%= extensionName %>InfoRepository.Instance.GetItem(itemId, ModuleContext.ModuleId);
 
             return View(item);
         }
 
         [HttpPost]
         [DotNetNuke.Web.Mvc.Framework.ActionFilters.ValidateAntiForgeryToken]
-        public ActionResult Edit(<%= namespace %>Info item)
+        public ActionResult Edit(<%= extensionName %>Info item)
         {
-            if (item.<%= namespace %>Id == -1)
+            if (item.<%= extensionName %>Id == -1)
             {
                 item.CreatedByUserId = User.UserID;
                 item.CreatedOnDate = DateTime.UtcNow;
                 item.LastUpdatedByUserId = User.UserID;
                 item.LastUpdatedOnDate = DateTime.UtcNow;
 
-                <%= namespace %>InfoRepository.Instance.CreateItem(item);
+                <%= extensionName %>InfoRepository.Instance.CreateItem(item);
             }
             else
             {
-                var existingItem = <%= namespace %>InfoRepository.Instance.GetItem(item.<%= namespace %>Id, item.ModuleId);
+                var existingItem = <%= extensionName %>InfoRepository.Instance.GetItem(item.<%= extensionName %>Id, item.ModuleId);
                 existingItem.LastUpdatedByUserId = User.UserID;
                 existingItem.LastUpdatedOnDate = DateTime.UtcNow;
                 existingItem.Title = item.Title;
                 existingItem.Description = item.Description;
 
-                <%= namespace %>InfoRepository.Instance.UpdateItem(existingItem);
+                <%= extensionName %>InfoRepository.Instance.UpdateItem(existingItem);
             }
 
             return RedirectToDefaultRoute();
@@ -61,7 +61,7 @@ namespace <%= fullNamespace %>.Controllers
         [ModuleAction(ControlKey = "Edit", TitleKey = "AddItem")]
         public ActionResult Index()
         {
-            var items = <%= namespace %>InfoRepository.Instance.GetItems(ModuleContext.ModuleId);
+            var items = <%= extensionName %>InfoRepository.Instance.GetItems(ModuleContext.ModuleId);
             return View(items);
         }
     }

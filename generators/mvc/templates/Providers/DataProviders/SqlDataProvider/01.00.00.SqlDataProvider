@@ -11,15 +11,15 @@ Release Notes:
 
 */
 
-IF NOT OBJECT_ID('{databaseOwner}[{objectQualifier}<%= objectPrefix %>_<%= namespace %>s]') IS NULL
-    DROP TABLE {databaseOwner}[{objectQualifier}<%= objectPrefix %>_<%= namespace %>s];
+IF NOT OBJECT_ID('{databaseOwner}[{objectQualifier}<%= objectPrefix %>_<%= extensionName %>s]') IS NULL
+    DROP TABLE {databaseOwner}[{objectQualifier}<%= objectPrefix %>_<%= extensionName %>s];
 GO
 
-CREATE TABLE {databaseOwner}[{objectQualifier}<%= objectPrefix %>_<%= namespace %>s] (
-    [<%= namespace %>Id] INT IDENTITY(1,1) 
-        CONSTRAINT [PK_{objectQualifier}<%= objectPrefix %>_<%= namespace %>s] PRIMARY KEY CLUSTERED, 
+CREATE TABLE {databaseOwner}[{objectQualifier}<%= objectPrefix %>_<%= extensionName %>s] (
+    [<%= extensionName %>Id] INT IDENTITY(1,1) 
+        CONSTRAINT [PK_{objectQualifier}<%= objectPrefix %>_<%= extensionName %>s] PRIMARY KEY CLUSTERED, 
     [ModuleId] INT NOT NULL 
-        CONSTRAINT [FK_{objectQualifier}<%= objectPrefix %>_<%= namespace %>s_ModuleId] FOREIGN KEY 
+        CONSTRAINT [FK_{objectQualifier}<%= objectPrefix %>_<%= extensionName %>s_ModuleId] FOREIGN KEY 
         REFERENCES {databaseOwner}[{objectQualifier}Modules] ([ModuleId]) ON DELETE CASCADE, 
     [Title] NVARCHAR(100) NOT NULL, 
     [Description] NVARCHAR(1000) NOT NULL, 
@@ -30,13 +30,13 @@ CREATE TABLE {databaseOwner}[{objectQualifier}<%= objectPrefix %>_<%= namespace 
 );
 GO
 
-CREATE NONCLUSTERED INDEX [IX_{objectQualifier}<%= objectPrefix %>_<%= namespace %>s_ModuleId] ON {databaseOwner}[{objectQualifier}<%= objectPrefix %>_<%= namespace %>s] ([ModuleId]);
+CREATE NONCLUSTERED INDEX [IX_{objectQualifier}<%= objectPrefix %>_<%= extensionName %>s_ModuleId] ON {databaseOwner}[{objectQualifier}<%= objectPrefix %>_<%= extensionName %>s] ([ModuleId]);
 GO
 
-CREATE NONCLUSTERED INDEX [IX_{objectQualifier}<%= objectPrefix %>_<%= namespace %>s_ItemId_ModuleId] ON {databaseOwner}[{objectQualifier}<%= objectPrefix %>_<%= namespace %>s] ([<%= namespace %>Id],[ModuleId]);
+CREATE NONCLUSTERED INDEX [IX_{objectQualifier}<%= objectPrefix %>_<%= extensionName %>s_ItemId_ModuleId] ON {databaseOwner}[{objectQualifier}<%= objectPrefix %>_<%= extensionName %>s] ([<%= extensionName %>Id],[ModuleId]);
 GO
 
-CREATE NONCLUSTERED INDEX [IX_{objectQualifier}<%= objectPrefix %>_<%= namespace %>s_CreatedByUser] ON {databaseOwner}[{objectQualifier}<%= objectPrefix %>_<%= namespace %>s] ([CreatedByUserId]);
+CREATE NONCLUSTERED INDEX [IX_{objectQualifier}<%= objectPrefix %>_<%= extensionName %>s_CreatedByUser] ON {databaseOwner}[{objectQualifier}<%= objectPrefix %>_<%= extensionName %>s] ([CreatedByUserId]);
 GO
 
 /*
