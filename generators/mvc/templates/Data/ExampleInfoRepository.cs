@@ -1,4 +1,4 @@
-﻿
+
 using DotNetNuke.Data;
 using DotNetNuke.Framework;
 using System.Collections.Generic;
@@ -7,23 +7,23 @@ using <%= fullNamespace %>.Models;
 
 namespace <%= fullNamespace %>.Data
 {
-    public interface IExampleInfoRepository
+    public interface I<%= namespace %>InfoRepository
     {
-        void CreateItem(ExampleInfo t);
+        void CreateItem(<%= namespace %>Info t);
         void DeleteItem(int itemId, int moduleId);
-        void DeleteItem(ExampleInfo t);
-        IEnumerable<ExampleInfo> GetItems(int moduleId);
-        ExampleInfo GetItem(int itemId, int moduleId);
-        void UpdateItem(ExampleInfo t);
+        void DeleteItem(<%= namespace %>Info t);
+        IEnumerable<<%= namespace %>Info> GetItems(int moduleId);
+        <%= namespace %>Info GetItem(int itemId, int moduleId);
+        void UpdateItem(<%= namespace %>Info t);
     }
 
-    public class ExampleInfoRepository : ServiceLocator<IExampleInfoRepository, ExampleInfoRepository>, IExampleInfoRepository
+    public class <%= namespace %>InfoRepository : ServiceLocator<I<%= namespace %>InfoRepository, <%= namespace %>InfoRepository>, I<%= namespace %>InfoRepository
     {
-        public void CreateItem(ExampleInfo t)
+        public void CreateItem(<%= namespace %>Info t)
         {
             using (IDataContext ctx = DataContext.Instance())
             {
-                var rep = ctx.GetRepository<ExampleInfo>();
+                var rep = ctx.GetRepository<<%= namespace %>Info>();
                 rep.Insert(t);
             }
         }
@@ -34,49 +34,49 @@ namespace <%= fullNamespace %>.Data
             DeleteItem(t);
         }
 
-        public void DeleteItem(ExampleInfo t)
+        public void DeleteItem(<%= namespace %>Info t)
         {
             using (IDataContext ctx = DataContext.Instance())
             {
-                var rep = ctx.GetRepository<ExampleInfo>();
+                var rep = ctx.GetRepository<<%= namespace %>Info>();
                 rep.Delete(t);
             }
         }
 
-        public IEnumerable<ExampleInfo> GetItems(int moduleId)
+        public IEnumerable<<%= namespace %>Info> GetItems(int moduleId)
         {
-            IEnumerable<ExampleInfo> t;
+            IEnumerable<<%= namespace %>Info> t;
             using (IDataContext ctx = DataContext.Instance())
             {
-                var rep = ctx.GetRepository<ExampleInfo>();
+                var rep = ctx.GetRepository<<%= namespace %>Info>();
                 t = rep.Get(moduleId);
             }
             return t;
         }
 
-        public ExampleInfo GetItem(int itemId, int moduleId)
+        public <%= namespace %>Info GetItem(int itemId, int moduleId)
         {
-            ExampleInfo t;
+            <%= namespace %>Info t;
             using (IDataContext ctx = DataContext.Instance())
             {
-                var rep = ctx.GetRepository<ExampleInfo>();
+                var rep = ctx.GetRepository<<%= namespace %>Info>();
                 t = rep.GetById(itemId, moduleId);
             }
             return t;
         }
 
-        public void UpdateItem(ExampleInfo t)
+        public void UpdateItem(<%= namespace %>Info t)
         {
             using (IDataContext ctx = DataContext.Instance())
             {
-                var rep = ctx.GetRepository<ExampleInfo>();
+                var rep = ctx.GetRepository<<%= namespace %>Info>();
                 rep.Update(t);
             }
         }
 
-        protected override System.Func<IExampleInfoRepository> GetFactory()
+        protected override System.Func<I<%= namespace %>InfoRepository> GetFactory()
         {
-            return () => new ExampleInfoRepository();
+            return () => new <%= namespace %>InfoRepository();
         }
     }
 }

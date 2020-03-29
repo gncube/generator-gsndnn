@@ -1,4 +1,4 @@
-﻿
+
 using DotNetNuke.Framework.JavaScriptLibraries;
 using DotNetNuke.Web.Mvc.Framework.ActionFilters;
 using DotNetNuke.Web.Mvc.Framework.Controllers;
@@ -11,12 +11,12 @@ using <%= fullNamespace %>.Models;
 namespace <%= fullNamespace %>.Controllers
 {
     [DnnHandleError]
-    public class ExampleController : DnnController
+    public class <%= namespace %>Controller : DnnController
     {
 
         public ActionResult Delete(int itemId)
         {
-            ExampleInfoRepository.Instance.DeleteItem(itemId, ModuleContext.ModuleId);
+            <%= namespace %>InfoRepository.Instance.DeleteItem(itemId, ModuleContext.ModuleId);
             return RedirectToDefaultRoute();
         }
 
@@ -25,34 +25,34 @@ namespace <%= fullNamespace %>.Controllers
             DotNetNuke.Framework.JavaScriptLibraries.JavaScript.RequestRegistration(CommonJs.DnnPlugins);
 
             var item = (itemId == -1)
-                 ? new ExampleInfo { ModuleId = ModuleContext.ModuleId }
-                 : ExampleInfoRepository.Instance.GetItem(itemId, ModuleContext.ModuleId);
+                 ? new <%= namespace %>Info { ModuleId = ModuleContext.ModuleId }
+                 : <%= namespace %>InfoRepository.Instance.GetItem(itemId, ModuleContext.ModuleId);
 
             return View(item);
         }
 
         [HttpPost]
         [DotNetNuke.Web.Mvc.Framework.ActionFilters.ValidateAntiForgeryToken]
-        public ActionResult Edit(ExampleInfo item)
+        public ActionResult Edit(<%= namespace %>Info item)
         {
-            if (item.ExampleId == -1)
+            if (item.<%= namespace %>Id == -1)
             {
                 item.CreatedByUserId = User.UserID;
                 item.CreatedOnDate = DateTime.UtcNow;
                 item.LastUpdatedByUserId = User.UserID;
                 item.LastUpdatedOnDate = DateTime.UtcNow;
 
-                ExampleInfoRepository.Instance.CreateItem(item);
+                <%= namespace %>InfoRepository.Instance.CreateItem(item);
             }
             else
             {
-                var existingItem = ExampleInfoRepository.Instance.GetItem(item.ExampleId, item.ModuleId);
+                var existingItem = <%= namespace %>InfoRepository.Instance.GetItem(item.<%= namespace %>Id, item.ModuleId);
                 existingItem.LastUpdatedByUserId = User.UserID;
                 existingItem.LastUpdatedOnDate = DateTime.UtcNow;
                 existingItem.Title = item.Title;
                 existingItem.Description = item.Description;
 
-                ExampleInfoRepository.Instance.UpdateItem(existingItem);
+                <%= namespace %>InfoRepository.Instance.UpdateItem(existingItem);
             }
 
             return RedirectToDefaultRoute();
@@ -61,7 +61,7 @@ namespace <%= fullNamespace %>.Controllers
         [ModuleAction(ControlKey = "Edit", TitleKey = "AddItem")]
         public ActionResult Index()
         {
-            var items = ExampleInfoRepository.Instance.GetItems(ModuleContext.ModuleId);
+            var items = <%= namespace %>InfoRepository.Instance.GetItems(ModuleContext.ModuleId);
             return View(items);
         }
     }

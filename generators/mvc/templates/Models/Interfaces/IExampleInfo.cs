@@ -1,11 +1,11 @@
-﻿
+
 using System;
 
 namespace <%= fullNamespace %>.Models
 {
-    public interface IExampleInfo
+    public interface I<%= namespace %>Info
     {
-        int ExampleId { get; set; }
+        int <%= namespace %>Id { get; set; }
         int ModuleId { get; set; }
         string Title { get; set; }
         string Description { get; set; }
