@@ -3,8 +3,11 @@ using DotNetNuke.Entities.Modules;
 using DotNetNuke.Entities.Modules.Actions;
 using DotNetNuke.Services.Exceptions;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Web.UI;
 using <%= fullNamespace %>.Components;
+using <%= fullNamespace %>.Entities;
 
 namespace <%= fullNamespace %>
 {
