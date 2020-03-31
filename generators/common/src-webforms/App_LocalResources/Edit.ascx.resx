@@ -117,7 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ControlTitle_edit.Text" xml:space="preserve">
-    <value>Edit <%= extensionName %> Module</value>
+ <data name="ControlTitle_edit.Text" xml:space="preserve">
+    <value>Edit Event Module</value>
+  </data>
+  <data name="Description.Help" xml:space="preserve">
+    <value>Description help text</value>
+  </data>
+  <data name="Description.Text" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Intro.Text" xml:space="preserve">
+    <value>This would be good place to explain anything specific to this form. You can point out important fields and anything to pay special attention to. For more information on how to use those patterns, refer to the navigation on the left.</value>
+  </data>
+  <data name="Required Indicator.Text" xml:space="preserve">
+    <value>Indicates required fields</value>
+  </data>
+  <data name="Title.Help" xml:space="preserve">
+    <value>Title Helptext</value>
+  </data>
+  <data name="Title.Required.Text" xml:space="preserve">
+    <value>Title required!</value>
+  </data>
+  <data name="Title.Text" xml:space="preserve">
+    <value>Title Heading</value>
   </data>
 </root>

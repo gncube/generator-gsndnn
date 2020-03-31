@@ -5,7 +5,7 @@ using DotNetNuke.ComponentModel.DataAnnotations;
 
 namespace <%= fullNamespace %>.Entities
 {
-    [TableName("<%= objectPrefix %>_Example")]
+    [TableName("<%= objectPrefix %>_<%= extensionName %>s")]
     [PrimaryKey("<%= extensionName %>Id", AutoIncrement = true)]
     [Cacheable("<%= extensionName %>Info", CacheItemPriority.Default, 20)]
     [Scope("ModuleId")]
