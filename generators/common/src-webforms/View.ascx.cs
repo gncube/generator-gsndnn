@@ -10,33 +10,39 @@ namespace <%= fullNamespace %>
 {
     public partial class View : <%= extensionName %>ModuleBase, IActionable
     {
+        private bool _hasRecords;
         #region Event Handlers
 
         protected void Page_Load(object sender, EventArgs e)
-        {
-            try
-            {
-                if (!Page.IsPostBack)
-                {
-                    BindModule();
-                }
-            }
-            catch (Exception exc)
-            {
-                // Module failed to load
-                Exceptions.ProcessModuleLoadException(this, exc, IsEditable);
-            }
-        }
+              {
+                  try
+                  {
+                      if (!Page.IsPostBack)
+                      {
+                          BindModule();
+                      }
+                  }
+                  catch (Exception exc)
+                  {
+                      // Module failed to load
+                      Exceptions.ProcessModuleLoadException(this, exc, IsEditable);
+                  }
+              }
 
-        #endregion
+              #endregion
 
         #region Private Helper Methods
 
         private void BindModule()
         {
-            LocalizeModule();
-			
-			
+            var tc = new <%= extensionName %>InfoRepository();
+            IEnumerable<<%= extensionName %>Info> infos = tc.GetItems(ModuleId);
+            _hasRecords = infos.Any();
+            rpt<%= extensionName %>s.DataSource = infos;
+            rpt<%= extensionName %>s.DataBind();
+
+
+            LocalizeModule();			
         }
         
         private void LocalizeModule()

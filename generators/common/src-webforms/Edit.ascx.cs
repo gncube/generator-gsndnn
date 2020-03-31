@@ -27,9 +27,9 @@ namespace <%= fullNamespace %>
 
         private void BindData()
         {
-            LocalizeModule();
-			
-			
+
+
+            LocalizeModule();			
         }
 
         private void LocalizeModule()

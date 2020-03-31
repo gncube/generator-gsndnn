@@ -1,4 +1,4 @@
-﻿
+
 using System;
 using System.Web.Caching;
 using DotNetNuke.ComponentModel.DataAnnotations;
@@ -6,12 +6,12 @@ using DotNetNuke.ComponentModel.DataAnnotations;
 namespace <%= fullNamespace %>.Entities
 {
     [TableName("<%= objectPrefix %>_Example")]
-    [PrimaryKey("ItemId", AutoIncrement = true)]
+    [PrimaryKey("<%= extensionName %>Id", AutoIncrement = true)]
     [Cacheable("<%= extensionName %>Info", CacheItemPriority.Default, 20)]
     [Scope("ModuleId")]
-    public class ExampleInfo : IExampleInfo
+    public class <%= extensionName %>Info : I<%= extensionName %>Info
     {
-        public int ItemId { get; set; }
+        public int <%= extensionName %>Id { get; set; }
 
         public int ModuleId { get; set; }
 
