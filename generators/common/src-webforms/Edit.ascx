@@ -12,19 +12,23 @@
     <fieldset>
         <div class="dnnFormItem">
             <dnn:Label runat="server" ControlName="txtTitle" ResourceKey="Title" />
-            <asp:TextBox runat="server" ID="txtTitle" CssClass="dnnFormRequired" />
+            <asp:TextBox runat="server" ID="txtTitle" CssClass="dnnFormRequired"></asp:TextBox>
             <asp:RequiredFieldValidator runat="server" ControlToValidate="txtTitle"
                 CssClass="dnnFormMessage dnnFormError" ResourceKey="Title.Required" />
         </div>
         <div class="dnnFormItem">
             <dnn:Label runat="server" ControlName="txtDescription" ResourceKey="Description" />
-            <asp:TextBox runat="server" TextMode="MultiLine" ID="txtDescription" />
+            <asp:TextBox runat="server" TextMode="MultiLine" ID="txtDescription"></asp:TextBox>
         </div>
     </fieldset>
     <ul class="dnnActions dnnClear">
         <li>
-            <asp:LinkButton runat="server" CssClass="dnnPrimaryAction" ResourceKey="Save" /></li>
+            <asp:LinkButton ID="btnSave" runat="server" CssClass="dnnPrimaryAction" ResourceKey="Save" OnClick="btnSave_Click"></asp:LinkButton>
+
+        </li>
         <li>
-            <asp:HyperLink runat="server" CssClass="dnnSecondaryAction" NavigateUrl="/" ResourceKey="Cancel" /></li>
+            <asp:LinkButton ID="btnCancel" runat="server" CssClass="dnnSecondaryAction" ResourceKey="Cancel" OnClick="btnCancel_Click"></asp:LinkButton>
+
+        </li>
     </ul>
 </div>

@@ -24,9 +24,10 @@ CREATE TABLE {databaseOwner}[{objectQualifier}<%= objectPrefix %>_<%= extensionN
     [Title] NVARCHAR(100) NOT NULL,
     [Description] NVARCHAR(1000) NOT NULL,
     [CreatedOnDate] DATETIME NOT NULL,
+    [IsDeleted] BIT NULL,
     [CreatedByUserId] INT NOT NULL,
-    [LastModifiedOnDate] DATETIME NOT NULL,
-    [LastModifiedByUserId] INT NOT NULL
+    [LastUpdatedOnDate] DATETIME NOT NULL,
+    [LastUpdatedByUserId] INT NOT NULL
 );
 GO
 

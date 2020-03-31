@@ -9,31 +9,42 @@ namespace <%= fullNamespace %>.Components
     public abstract class <%= extensionName %>ModuleBase : PortalModuleBase
     {
 
+        public int <%= extensionName %>Id
+        {
+          get
+          {
+            var qs = Request.QueryString["videoid"];
+            if (qs != null)
+              return Convert.ToInt32(qs);
+            return -1;
+          }
+     }
+
         #region Localization
         protected string GetLocalizedString(string LocalizationKey)
-        {
-            if (!string.IsNullOrEmpty(LocalizationKey))
-            {
-                return Localization.GetString(LocalizationKey, this.LocalResourceFile);
-            }
-            else
-            {
-                return string.Empty;
-            }
-        }
+                {
+                    if (!string.IsNullOrEmpty(LocalizationKey))
+                    {
+                        return Localization.GetString(LocalizationKey, this.LocalResourceFile);
+                    }
+                    else
+                    {
+                        return string.Empty;
+                    }
+                }
 
-        protected string GetLocalizedString(string LocalizationKey, string LocalResourceFilePath)
-        {
-            if (!string.IsNullOrEmpty(LocalizationKey))
-            {
-                return Localization.GetString(LocalizationKey, LocalResourceFilePath);
-            }
-            else
-            {
-                return string.Empty;
-            }
-        }
-        #endregion
+                protected string GetLocalizedString(string LocalizationKey, string LocalResourceFilePath)
+                {
+                    if (!string.IsNullOrEmpty(LocalizationKey))
+                    {
+                        return Localization.GetString(LocalizationKey, LocalResourceFilePath);
+                    }
+                    else
+                    {
+                        return string.Empty;
+                    }
+                }
+                #endregion
 
         #region Event Handlers
         protected <%= extensionName %>ModuleBase()

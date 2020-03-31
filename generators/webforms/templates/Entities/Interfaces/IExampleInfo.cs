@@ -10,8 +10,9 @@ namespace <%= fullNamespace %>.Entities
         string Title { get; set; }
         string Description { get; set; }
         int CreatedByUserId { get; set; }
-        DateTime CreatedByDate { get; set; }
+        bool IsDeleted { get; set; }
+        DateTime CreatedOnDate { get; set; }
         int LastUpdatedByUserId { get; set; }
-        DateTime LastUpdatedByDate { get; set; }
+        DateTime LastUpdatedOnDate { get; set; }
     }
 }

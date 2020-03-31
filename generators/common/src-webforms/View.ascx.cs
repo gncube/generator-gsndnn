@@ -13,7 +13,8 @@ namespace <%= fullNamespace %>
 {
     public partial class View : <%= extensionName %>ModuleBase, IActionable
     {
-        private bool _hasRecords;
+        private bool _hasRecords
+
         #region Event Handlers
 
         protected void Page_Load(object sender, EventArgs e)
