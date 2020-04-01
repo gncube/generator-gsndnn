@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\generators",
+    "\\generators\\app",
+    "\\generators\\common"
   ],
-  "SelectedNode": "\\generators",
+  "SelectedNode": "\\package.json",
   "PreviewInSolutionExplorer": false
 }
