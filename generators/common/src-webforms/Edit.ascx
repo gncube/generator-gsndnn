@@ -18,7 +18,9 @@
         </div>
         <div class="dnnFormItem">
             <dnn:Label runat="server" ControlName="txtDescription" ResourceKey="Description" />
-            <asp:TextBox runat="server" TextMode="MultiLine" ID="txtDescription"></asp:TextBox>
+            <asp:TextBox runat="server" TextMode="MultiLine" ID="txtDescription" CssClass="dnnFormRequired"></asp:TextBox>
+            <asp:RequiredFieldValidator runat="server" ControlToValidate="txtDescription"
+                CssClass="dnnFormMessage dnnFormError" ResourceKey="Description.Required" />
         </div>
     </fieldset>
     <ul class="dnnActions dnnClear">
@@ -27,7 +29,7 @@
 
         </li>
         <li>
-            <asp:LinkButton ID="btnCancel" runat="server" CssClass="dnnSecondaryAction" ResourceKey="Cancel" OnClick="btnCancel_Click"></asp:LinkButton>
+            <asp:LinkButton ID="btnCancel" runat="server" CssClass="dnnSecondaryAction" ResourceKey="Cancel" OnClick="btnCancel_Click" CausesValidation="False"></asp:LinkButton>
 
         </li>
     </ul>

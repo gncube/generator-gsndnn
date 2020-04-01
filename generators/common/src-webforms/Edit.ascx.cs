@@ -76,18 +76,36 @@ namespace <%= fullNamespace %>
 
   #region Helper Methods
 
-  private void BindData()
+        private void BindData()
         {
+            if (!Page.IsPostBack)
+            {
+                if (<%= extensionName %>Id > 0)
+                {
+                    var tc = new <%= extensionName %>InfoRepository();
+                    var t = tc.GetItem(<%= extensionName %>Id, ModuleId);
+
+                    if (t != null)
+                    {
+                        txtTitle.Text = t.Title;
+                        txtDescription.Text = t.Description;
+                    }
+                    if (CurrentUserCanEdit)
+                    {
+
+                    }
+                }
+            }
 
 
-            LocalizeModule();			
+          LocalizeModule();
         }
 
-        private void LocalizeModule()
+  private void LocalizeModule()
         {
-            
+
         }
 
-        #endregion
-    }
+  #endregion
+}
 }

@@ -2,9 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\generators",
-    "\\generators\\solution",
-    "\\generators\\solution\\templates"
+    "\\generators\\app",
+    "\\generators\\common",
+    "\\generators\\common\\src-webforms",
+    "\\generators\\webforms\\templates"
   ],
-  "SelectedNode": "\\generators\\solution\\templates\\_Template.sln",
+  "SelectedNode": "\\generators\\common\\src-webforms\\View.ascx",
   "PreviewInSolutionExplorer": false
 }
