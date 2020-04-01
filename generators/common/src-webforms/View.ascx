@@ -12,7 +12,7 @@
     </div>
 </asp:Panel>
 
-<asp:Repeater ID="rpt<%= extensionName %>s" runat="server">
+<asp:Repeater ID="rpt<%= extensionName %>s" runat="server" OnItemCommand="rpt<%= extensionName %>s_ItemCommand" OnItemDataBound="rpt<%= extensionName %>s_ItemDataBound">
     <HeaderTemplate>
         <div id="pnlNo<%= extensionName %>s">
             <div id="NoRecords" runat="server" class="alert alert-info" role="alert" visible="false">
@@ -30,8 +30,8 @@
             </p>
             <asp:Panel ID="pnlAdmin" runat="server" Visible="false">
                 <div class="pull-left">
-                    <asp:HyperLink ID="lnkEdit" runat="server" ResourceKey="EditVideo.Text" Visible="false" Enabled="false">Edit</asp:HyperLink>
-                    <asp:LinkButton ID="lnkDelete" runat="server" ResourceKey="DeleteVideo.Text" Visible="false" Enabled="false" CommandName="Delete"></asp:LinkButton>
+                    <asp:HyperLink ID="lnkEdit" runat="server" ResourceKey="EditItem.Text" Visible="false" Enabled="false">Edit</asp:HyperLink>
+                    <asp:LinkButton ID="lnkDelete" runat="server" ResourceKey="DeleteItem.Text" Visible="false" Enabled="false" CommandName="Delete"></asp:LinkButton>
                 </div>
             </asp:Panel>
         </li>
