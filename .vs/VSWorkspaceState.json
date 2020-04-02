@@ -2,15 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\generators",
+    "\\generators\\app",
     "\\generators\\common",
     "\\generators\\common\\src-webforms",
-    "\\generators\\webforms\\templates",
-    "\\generators\\webforms\\templates\\Components",
-    "\\generators\\webforms\\templates\\Controllers",
-    "\\generators\\webforms\\templates\\Entities",
-    "\\generators\\webforms\\templates\\Entities\\Interfaces",
-    "\\generators\\webforms\\templates\\Providers"
+    "\\generators\\webforms\\templates"
   ],
-  "SelectedNode": "\\generators\\common\\src-webforms\\View.ascx.cs",
+  "SelectedNode": "\\generators\\common\\src-webforms\\View.ascx",
   "PreviewInSolutionExplorer": false
 }
