@@ -13,7 +13,7 @@ namespace <%= fullNamespace %>.Components
         {
           get
           {
-            var qs = Request.QueryString["videoid"];
+            var qs = Request.QueryString["gsid"];
             if (qs != null)
               return Convert.ToInt32(qs);
             return -1;

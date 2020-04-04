@@ -2,7 +2,7 @@
 <<%= openDirective %> Import Namespace="DotNetNuke.Services.Localization" <%= closeDirective %>>
 <<%= openDirective %> Register TagPrefix="dnn" TagName="Label" Src="~/controls/labelcontrol.ascx" <%= closeDirective %>>
 
-<div class="dnnForm" id="form-edit">
+<div class="dnnForm dnn<%= extensionName %>Form dnnClear" id="<%= extensionName %>sForm">
     <asp:Label runat="server" CssClass="dnnFormMessage dnnFormInfo" ResourceKey="Intro" />
     <div class="dnnFormItem dnnFormHelp dnnClear">
         <p class="dnnFormRequired">
