@@ -87,7 +87,7 @@ namespace <%= fullNamespace %>
                         {
                             pnlAdminControls.Visible = true;
                             lnkDelete.CommandArgument = t.<%= extensionName %>Id.ToString();
-                            lnkDelete.Enabled = lnkDelete.Visible = false;
+                            lnkDelete.Enabled = lnkDelete.Visible = true;
                             lnkEdit.Enabled = lnkEdit.Visible = true;
                             lnkEdit.NavigateUrl = EditUrl(string.Empty, string.Empty, "Edit", "gsid=" + t.<%= extensionName %>Id.ToString());
                         }
