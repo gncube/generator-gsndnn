@@ -89,7 +89,7 @@ namespace <%= fullNamespace %>
                             lnkDelete.CommandArgument = t.<%= extensionName %>Id.ToString();
                             lnkDelete.Enabled = lnkDelete.Visible = false;
                             lnkEdit.Enabled = lnkEdit.Visible = true;
-                            lnkEdit.NavigateUrl = EditUrl(string.Empty, string.Empty, "Edit", "videoid=" + t.<%= extensionName %>Id.ToString());
+                            lnkEdit.NavigateUrl = EditUrl(string.Empty, string.Empty, "Edit", "gsid=" + t.<%= extensionName %>Id.ToString());
                         }
                         else
                         {
