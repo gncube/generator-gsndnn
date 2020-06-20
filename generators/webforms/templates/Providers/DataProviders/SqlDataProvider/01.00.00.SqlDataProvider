@@ -26,7 +26,6 @@ CREATE TABLE {databaseOwner}[{objectQualifier}<%= objectPrefix %>_<%= extensionN
     [Description] NVARCHAR(1000) NOT NULL,
     [ContentItemId] INT NULL,
     [CreatedOnDate] DATETIME NOT NULL,
-    [ContentItemId] INT NULL,
     [IsDeleted] BIT NULL,
     [CreatedByUserId] INT NOT NULL,
     [LastUpdatedOnDate] DATETIME NOT NULL,
