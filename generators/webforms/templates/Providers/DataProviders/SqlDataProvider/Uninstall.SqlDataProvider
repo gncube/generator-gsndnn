@@ -10,6 +10,11 @@ IF NOT OBJECT_ID('{databaseOwner}[{objectQualifier}<%= objectPrefix %>_<%= exten
     DROP TABLE {databaseOwner}[{objectQualifier}<%= objectPrefix %>_<%= extensionName %>s];
 GO
 
+
+IF NOT OBJECT_ID('{databaseOwner}[{objectQualifier}<%= objectPrefix %>_<%= extensionName %>Subscribers]') IS NULL
+    DROP TABLE {databaseOwner}[{objectQualifier}<%= objectPrefix %>_<%= extensionName %>Subscribers];
+GO
+
 /*
 
 END OF FILE

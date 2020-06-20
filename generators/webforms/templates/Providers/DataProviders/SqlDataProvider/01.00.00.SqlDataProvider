@@ -18,11 +18,13 @@ GO
 CREATE TABLE {databaseOwner}[{objectQualifier}<%= objectPrefix %>_<%= extensionName %>s] (
     [<%= extensionName %>Id] INT IDENTITY(1,1)
         CONSTRAINT [PK_{objectQualifier}<%= objectPrefix %>_<%= extensionName %>s] PRIMARY KEY CLUSTERED,
+    [PortalId] INT NOT NULL,
     [ModuleId] INT NOT NULL
         CONSTRAINT [FK_{objectQualifier}<%= objectPrefix %>_<%= extensionName %>s_ModuleId] FOREIGN KEY
         REFERENCES {databaseOwner}[{objectQualifier}Modules] ([ModuleId]) ON DELETE CASCADE,
     [Title] NVARCHAR(100) NOT NULL,
     [Description] NVARCHAR(1000) NOT NULL,
+    [ContentItemId] INT NULL,
     [CreatedOnDate] DATETIME NOT NULL,
     [ContentItemId] INT NULL,
     [IsDeleted] BIT NULL,

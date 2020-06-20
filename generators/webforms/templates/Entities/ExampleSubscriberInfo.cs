@@ -6,8 +6,6 @@ using DotNetNuke.Common.Utilities;
 using DotNetNuke.ComponentModel.DataAnnotations;
 using DotNetNuke.Entities.Users;
 
-using <%= fullNamespace %>.Entities.Interfaces;
-
 namespace <%= fullNamespace %>.Entities
 {
     [TableName("<%= objectPrefix %>_<%= extensionName %>Subscribers")]
