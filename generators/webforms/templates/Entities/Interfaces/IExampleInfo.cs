@@ -1,17 +1,20 @@
-﻿
+
 using System;
 
 namespace <%= fullNamespace %>.Entities
 {
-    public interface IExampleInfo
+    public interface I<%= extensionName %>Info
     {
-        int ItemId { get; set; }
+        int <%= extensionName %>Id { get; set; }
+        int PortalId { get; set; }
         int ModuleId { get; set; }
         string Title { get; set; }
         string Description { get; set; }
+        int ContentItemId { get; set; }
         int CreatedByUserId { get; set; }
-        DateTime CreatedByDate { get; set; }
+        bool IsDeleted { get; set; }
+        DateTime CreatedOnDate { get; set; }
         int LastUpdatedByUserId { get; set; }
-        DateTime LastUpdatedByDate { get; set; }
+        DateTime LastUpdatedOnDate { get; set; }
     }
 }
