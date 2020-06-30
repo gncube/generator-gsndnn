@@ -123,7 +123,7 @@ namespace <%= fullNamespace %>.Controllers
             var receiver = UserController.GetUserById(t.PortalId, s.UserId);
             var sender = UserController.GetUserById(t.PortalId, Convert.ToInt32(s.LastUpdatedByUserId));
 
-            AddArticleInfoNotification(t.Title, t.Description, receiver, sender, t.PortalId);
+            Add<%= extensionName %>InfoNotification(t.Title, t.Description, receiver, sender, t.PortalId);
           }
         }
 

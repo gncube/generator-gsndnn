@@ -2,14 +2,14 @@
   "ExpandedNodes": [
     "",
     "\\generators",
-    "\\generators\\app",
     "\\generators\\common",
     "\\generators\\common\\src-webforms",
     "\\generators\\webforms",
     "\\generators\\webforms\\templates",
     "\\generators\\webforms\\templates\\Components",
-    "\\generators\\webforms\\templates\\Controllers",
-    "\\generators\\webforms\\templates\\Entities"
+    "\\generators\\webforms\\templates\\Entities",
+    "\\generators\\webforms\\templates\\Entities\\Interfaces",
+    "\\generators\\webforms\\templates\\Providers"
   ],
   "SelectedNode": "\\package.json",
   "PreviewInSolutionExplorer": false
