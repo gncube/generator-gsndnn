@@ -133,7 +133,7 @@ namespace <%= fullNamespace %>.Controllers
 
         public override IList<SearchDocument> GetModifiedSearchDocuments(ModuleInfo moduleInfo, DateTime beginDateUtc)
         {
-          throw new NotImplementedException();
+          
         }
 
         #endregion

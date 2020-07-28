@@ -118,9 +118,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="View.MenuItem.Title" xml:space="preserve">
-    <value>Add New Item</value>
+    <value>&lt;i class="fa fa-plus" aria-hidden="true"&gt;&lt;/i&gt; Add New</value>
   </data>
   <data name="ModuleHelp.Text" xml:space="preserve">
     <value>&lt;p&gt;No information at this time.&lt;/p&gt;</value>
+  </data>
+  <data name="DeleteItem.Text" xml:space="preserve">
+    <value>&lt;i class="fa fa-trash" aria-hidden="true"&gt;&lt;/i&gt; Delete</value>
+  </data>
+  <data name="EditItem.Text" xml:space="preserve">
+    <value>&lt;i class="fa fa-pencil" aria-hidden="true"&gt;&lt;/i&gt; Edit</value>
   </data>
 </root>
