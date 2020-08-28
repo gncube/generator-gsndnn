@@ -3,10 +3,9 @@
     "",
     "\\generators",
     "\\generators\\common",
-    "\\generators\\common\\src-webforms",
-    "\\generators\\common\\src-webforms\\App_LocalResources",
     "\\generators\\mvc",
-    "\\generators\\webforms\\templates\\Entities\\Interfaces"
+    "\\generators\\mvc\\templates",
+    "\\generators\\mvc\\templates\\Views"
   ],
   "SelectedNode": "\\package.json",
   "PreviewInSolutionExplorer": false
