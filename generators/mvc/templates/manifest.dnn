@@ -49,7 +49,7 @@
                 <moduleControls>
                   <moduleControl>
                     <controlKey />
-                    <controlSrc><%= fullNamespace %>.Controllers/Example/Index.mvc</controlSrc>
+                    <controlSrc><%= fullNamespace %>.Controllers/<%= extensionName %>/Index.mvc</controlSrc>
                     <supportsPartialRendering>False</supportsPartialRendering>
                     <controlTitle />
                     <controlType>View</controlType>
@@ -59,7 +59,7 @@
                   </moduleControl>
                   <moduleControl>
                     <controlKey>Edit</controlKey>
-                    <controlSrc><%= fullNamespace %>.Controllers/Example/Edit.mvc</controlSrc>
+                    <controlSrc><%= fullNamespace %>.Controllers/<%= extensionName %>/Edit.mvc</controlSrc>
                     <supportsPartialRendering>False</supportsPartialRendering>
                     <controlTitle>Edit <%= extensionName %> Content</controlTitle>
                     <controlType>Edit</controlType>
