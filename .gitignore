@@ -1,4 +1,6 @@
 node_modules
 coverage
 .vs
+.vs\generator-gsndnn\v16
+.suo
 

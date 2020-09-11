@@ -3,9 +3,13 @@
     "",
     "\\generators",
     "\\generators\\common",
-    "\\generators\\mvc",
-    "\\generators\\mvc\\templates",
-    "\\generators\\mvc\\templates\\Views"
+    "\\generators\\mvc\\templates\\Models\\Interfaces",
+    "\\generators\\mvc\\templates\\Providers\\DataProviders",
+    "\\generators\\mvc\\templates\\Providers\\DataProviders\\SqlDataProvider",
+    "\\generators\\mvc\\templates\\Views",
+    "\\generators\\webforms\\templates",
+    "\\generators\\webforms\\templates\\Entities",
+    "\\generators\\webforms\\templates\\Entities\\Interfaces"
   ],
   "SelectedNode": "\\package.json",
   "PreviewInSolutionExplorer": false
