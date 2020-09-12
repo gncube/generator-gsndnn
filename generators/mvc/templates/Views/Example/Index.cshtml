@@ -15,7 +15,9 @@
 			{
     <li class="tm_t">
       <h3>@item.Title</h3>
-      <div class="tm_td">@item.Description</div>
+      <div class="tm_td">@item.Description
+        @item.CreatedByUser().Displayname
+      </div>
       @{
                         if (Dnn.ModuleContext.IsEditable)
 						{

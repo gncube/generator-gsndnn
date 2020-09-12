@@ -1,5 +1,8 @@
 
+using DotNetNuke.Common.Utilities;
 using DotNetNuke.ComponentModel.DataAnnotations;
+using DotNetNuke.Entities.Portals;
+using DotNetNuke.Entities.Users;
 using System;
 using System.Web.Caching;
 
@@ -36,5 +39,31 @@ namespace <%= fullNamespace %>.Models
         public int LastUpdatedByUserId { get; set; }
 
         public DateTime LastUpdatedOnDate { get; set; }
+
+        #region NonDB Fields
+
+        [IgnoreColumn]
+        public UserInfo CreatedByUser()
+        {
+          if (CreatedByUserId > Null.NullInteger)
+          {
+            UserInfo user = UserController.GetUserById(PortalSettings.Current.PortalId, CreatedByUserId);
+            return user;
+          }
+          return null;
+        }
+
+        [IgnoreColumn]
+        public UserInfo LastUpdatedByUser()
+        {
+          if (LastUpdatedByUserId > Null.NullInteger)
+          {
+            UserInfo user = UserController.GetUserById(PortalSettings.Current.PortalId, LastUpdatedByUserId);
+            return user;
+          }
+          return null;
+        }
+
+        #endregion
     }
 }
