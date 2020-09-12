@@ -2,6 +2,7 @@
 using DotNetNuke.Data;
 using DotNetNuke.Framework;
 using DotNetNuke.Entities.Content;
+using DotNetNuke.Common.Utilities;
 using System.Collections.Generic;
 using <%= fullNamespace %>.Data;
 using <%= fullNamespace %>.Models;

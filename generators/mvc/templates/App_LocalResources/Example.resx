@@ -59,7 +59,10 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema id="root"
+    xmlns=""
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -121,33 +124,37 @@
     <value>Add New Item</value>
   </data>
   <data name="BasicSettings.Text" xml:space="preserve">
-    <value><%= extensionName %> Item Basic Settings</value>
-  </data>
-  <data name="Cancel.Text" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
-  <data name="CollapseAll.Text" xml:space="preserve">
-    <value>Collapse All</value>
-  </data>
-  <data name="DeleteItem.Text" xml:space="preserve">
-    <value>Delete</value>
-  </data>
-  <data name="EditItem.Text" xml:space="preserve">
-    <value>Edit</value>
-  </data>
-  <data name="ExpandAll.Text" xml:space="preserve">
-    <value>Expand All</value>
-  </data>
-  <data name="lblDescription.Text" xml:space="preserve">
-    <value>Description</value>
-  </data>
-  <data name="lblName.Text" xml:space="preserve">
-    <value>Name</value>
-  </data>
-  <data name="Submit.Text" xml:space="preserve">
-    <value>Save</value>
-  </data>
-  <data name="NoItems.Text" xml:space="preserve">
-    <value>No items defined.</value>
-  </data>
+    <value>
+      <%= extensionName %> Item Basic Settings</value>
+</data>
+<data name="Cancel.Text" xml:space="preserve">
+        <value>Cancel</value>
+      </data>
+      <data name="CollapseAll.Text" xml:space="preserve">
+        <value>Collapse All</value>
+      </data>
+      <data name="DeleteItem.Confirm" xml:space="preserve">
+        <value>Are you sure you want to delete this <%= extensionName %> record!</value>
+</data>
+<data name="DeleteItem.Text" xml:space="preserve">
+          <value>Delete</value>
+        </data>
+        <data name="EditItem.Text" xml:space="preserve">
+          <value>Edit</value>
+        </data>
+        <data name="ExpandAll.Text" xml:space="preserve">
+          <value>Expand All</value>
+        </data>
+        <data name="lblDescription.Text" xml:space="preserve">
+          <value>Description</value>
+        </data>
+        <data name="lblName.Text" xml:space="preserve">
+          <value>Name</value>
+        </data>
+        <data name="Submit.Text" xml:space="preserve">
+          <value>Save</value>
+        </data>
+        <data name="NoItems.Text" xml:space="preserve">
+          <value>No <%= extensionName %> items defined.</value>
+</data>
 </root>

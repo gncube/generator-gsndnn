@@ -21,7 +21,7 @@
 						{
         <div>
           <a href="@Url.Action("Edit", "Example", new {ctl = "Edit", itemId = item.<%= extensionName %>Id})" class="btn btn-primary btn-edit">@Dnn.LocalizeString("EditItem")</a>
-          <a href="@Url.Action("Delete", "Example", new {itemId = item.<%= extensionName %>Id}) class="btn btn-danger btn-delete">@Dnn.LocalizeString("DeleteItem")</a>
+          <a href="@Url.Action("Delete", "Example", new {itemId = item.<%= extensionName %>Id})" class="btn btn-danger btn-delete">@Dnn.LocalizeString("DeleteItem")</a>
         </div>
                         }
       }
