@@ -27,6 +27,8 @@ namespace <%= fullNamespace %>.Models
 
         public string Description { get; set; }
 
+        public int ContentItemId { get; set; }
+
         public int CreatedByUserId { get; set; }
 
         public DateTime CreatedOnDate { get; set; }

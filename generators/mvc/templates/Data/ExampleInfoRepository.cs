@@ -1,6 +1,7 @@
 
 using DotNetNuke.Data;
 using DotNetNuke.Framework;
+using DotNetNuke.Entities.Content;
 using System.Collections.Generic;
 using <%= fullNamespace %>.Data;
 using <%= fullNamespace %>.Models;
@@ -24,6 +25,20 @@ namespace <%= fullNamespace %>.Data
             using (IDataContext ctx = DataContext.Instance())
             {
                 var rep = ctx.GetRepository<<%= extensionName %>Info>();
+
+                var content = new ContentItem
+                {
+                  Content = t.Description,
+                  ContentTitle = t.Title,
+                  Indexed = false,
+                  ModuleID = t.ModuleId,
+                  TabID = Null.NullInteger,
+                  ContentKey = null,
+                  ContentTypeId = 4,
+                };
+
+                t.ContentItemId = new ContentController().AddContentItem(content);
+
                 rep.Insert(t);
             }
         }
@@ -70,6 +85,27 @@ namespace <%= fullNamespace %>.Data
             using (IDataContext ctx = DataContext.Instance())
             {
                 var rep = ctx.GetRepository<<%= extensionName %>Info>();
+
+                var content = new ContentItem
+                {
+                  Content = t.Description,
+                  ContentTitle = t.Title,
+                  Indexed = false,
+                  ModuleID = t.ModuleId,
+                  TabID = Null.NullInteger,
+                  ContentKey = null,
+                  ContentTypeId = 4,
+                };
+
+                if (content.ContentItemId == Null.NullInteger || content.ContentItemId == 0)
+                {
+                  t.ContentItemId = new ContentController().AddContentItem(content);
+                }
+                else
+                {
+                  new ContentController().UpdateContentItem(content);
+                }
+
                 rep.Update(t);
             }
         }

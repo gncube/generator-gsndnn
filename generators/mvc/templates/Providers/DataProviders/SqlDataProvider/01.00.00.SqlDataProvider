@@ -22,7 +22,8 @@ CREATE TABLE {databaseOwner}[{objectQualifier}<%= objectPrefix %>_<%= extensionN
         CONSTRAINT [FK_{objectQualifier}<%= objectPrefix %>_<%= extensionName %>_ModuleId] FOREIGN KEY 
         REFERENCES {databaseOwner}[{objectQualifier}Modules] ([ModuleId]) ON DELETE CASCADE, 
     [Title] NVARCHAR(100) NOT NULL, 
-    [Description] NVARCHAR(1000) NOT NULL, 
+    [Description] NVARCHAR(1000) NOT NULL,
+    [ContentItemId] INT NULL,
     [CreatedOnDate] DATETIME NOT NULL, 
     [CreatedByUserId] INT NOT NULL, 
     [LastUpdatedOnDate] DATETIME NOT NULL, 
