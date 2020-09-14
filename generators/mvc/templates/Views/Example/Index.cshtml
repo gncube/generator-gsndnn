@@ -34,10 +34,18 @@
     }
 </div>
 
-<script type="text/javascript">
- $(function () {
-     $('.btn-delete').click(function () {
-   return confirm('@Dnn.LocalizeString("DeleteItem.Confirm")');
-  });
- });
+<script>
+
+    $(document).ready(function () {
+
+        $(".btn-delete").each(function () {
+            $(this).dnnConfirm({
+                text: '@Dnn.LocalizeString("DeleteItem.Confirm")',
+                yesText: 'Delete',
+                noText: 'Cancel',
+                title: 'Confirm Deletion',
+                isButton: false
+            });
+        });
+    });
 </script>
