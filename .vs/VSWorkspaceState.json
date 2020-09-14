@@ -5,12 +5,10 @@
     "\\generators\\common",
     "\\generators\\common\\csproj",
     "\\generators\\common\\csproj\\App_LocalResources",
-    "\\generators\\mvc",
-    "\\generators\\mvc\\templates",
     "\\generators\\mvc\\templates\\Models",
     "\\generators\\mvc\\templates\\Views",
     "\\generators\\mvc\\templates\\Views\\Example"
   ],
-  "SelectedNode": "\\generators\\mvc\\templates\\Views\\Example\\Index.cshtml",
+  "SelectedNode": "\\package.json",
   "PreviewInSolutionExplorer": false
 }
