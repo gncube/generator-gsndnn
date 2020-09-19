@@ -28,18 +28,18 @@ namespace <%= fullNamespace %>.Services
   /// </summary>
   /// <returns></returns>
   /// <remarks>
-  /// GET: http://dnndev.me/DesktopModules/MVC/<%= namespace %>/<%= extensionName %>/API/Example/GetExamples
+  /// GET: http://dnndev.me/DesktopModules/MVC/<%= namespace %>/<%= extensionName %>/API/<%= extensionName %>/Get<%= extensionName %>s
   /// </remarks>
   [DnnModuleAuthorize(AccessLevel = SecurityAccessLevel.View)]
         [HttpGet]
-        public HttpResponseMessage GetExamples()
+        public HttpResponseMessage Get<%= extensionName %>s()
         {
             try
             {
-                var examples = ExampleDataAccess.GetItems(ActiveModule.ModuleID);
-                var response = new ServiceResponse<List<<%= extensionName %>Info>> { Content = examples.ToList() };
+                var <%= objectName %>s = <%= extensionName %>DataAccess.GetItems(ActiveModule.ModuleID);
+                var response = new ServiceResponse<List<<%= extensionName %>Info>> { Content = <%= objectName %>s.ToList() };
 
-                if (examples == null || !examples.Any())
+                if (<%= objectName %>s == null || !<%= objectName %>s.Any())
                 {
                     ServiceResponseHelper<List<<%= extensionName %>Info>>.AddNoneFoundError("<%= extensionName %>Info", ref response);
                 }
@@ -58,18 +58,18 @@ namespace <%= fullNamespace %>.Services
   /// </summary>
   /// <returns></returns>
   /// <remarks>
-  /// GET: http://dnndev.me/DesktopModules/<%= namespace %>/<%= extensionName %>/MVC/API/Example/GetExample
+  /// GET: http://dnndev.me/DesktopModules/<%= namespace %>/<%= extensionName %>/MVC/API/<%= extensionName %>/Get<%= extensionName %>
   /// </remarks>
   [DnnModuleAuthorize(AccessLevel = SecurityAccessLevel.View)]
         [HttpGet]
-        public HttpResponseMessage GetExample(int exampleId)
+        public HttpResponseMessage Get<%= extensionName %>(int <%= objectName %>Id)
         {
             try
             {
-                var example = ExampleDataAccess.GetItem(exampleId, ActiveModule.ModuleID);
-                var response = new ServiceResponse<<%= extensionName %>Info> { Content = example };
+                var <%= objectName %> = <%= extensionName %>DataAccess.GetItem(<%= objectName %>Id, ActiveModule.ModuleID);
+                var response = new ServiceResponse<<%= extensionName %>Info> { Content = <%= objectName %> };
 
-                if (example == null)
+                if (<%= objectName %> == null)
                 {
                     ServiceResponseHelper<<%= extensionName %>Info>.AddNoneFoundError("<%= extensionName %>Info", ref response);
                 }
@@ -88,16 +88,16 @@ namespace <%= fullNamespace %>.Services
   /// </summary>
   /// <returns></returns>
   /// <remarks>
-  /// DELETE: http://dnndev.me/DesktopModules/<%= namespace %>/<%= extensionName %>/MVC/API/Example/DeleteExample
+  /// DELETE: http://dnndev.me/DesktopModules/<%= namespace %>/<%= extensionName %>/MVC/API/<%= extensionName %>/Delete<%= extensionName %>
   /// </remarks>
   [DnnModuleAuthorize(AccessLevel = SecurityAccessLevel.Edit)]
         [ValidateAntiForgeryToken]
         [HttpDelete]
-        public HttpResponseMessage DeleteExample(int exampleId)
+        public HttpResponseMessage Delete<%= extensionName %>(int <%= objectName %>Id)
         {
             try
             {
-                ExampleDataAccess.DeleteItem(exampleId, ActiveModule.ModuleID);
+                <%= extensionName %>DataAccess.DeleteItem(<%= objectName %>Id, ActiveModule.ModuleID);
                 var response = new ServiceResponse<string> { Content = SUCCESS_MESSAGE };
 
                 return Request.CreateResponse(HttpStatusCode.OK, response.ObjectToJson());
@@ -114,27 +114,27 @@ namespace <%= fullNamespace %>.Services
   /// </summary>
   /// <returns></returns>
   /// <remarks>
-  /// POST: http://dnndev.me/DesktopModules/MVC/<%= namespace %>/<%= extensionName %>/API/Example/CeateExample
+  /// POST: http://dnndev.me/DesktopModules/MVC/<%= namespace %>/<%= extensionName %>/API/<%= extensionName %>/Ceate<%= extensionName %>
   /// </remarks>
   [DnnModuleAuthorize(AccessLevel = SecurityAccessLevel.Edit)]
         [ValidateAntiForgeryToken]
         [HttpPost]
-        public HttpResponseMessage CreateExample(<%= extensionName %>Info newExample)
+        public HttpResponseMessage Create<%= extensionName %>(<%= extensionName %>Info new<%= extensionName %>)
         {
             try
             {
-                newExample.CreatedOnDate = DateTime.Now;
-                newExample.CreatedByUserId = UserInfo.UserID;
-                newExample.LastUpdatedOnDate = DateTime.Now;
-                newExample.LastUpdatedByUserId = UserInfo.UserID;
-                newExample.ModuleId = ActiveModule.ModuleID;
+                new<%= extensionName %>.CreatedOnDate = DateTime.Now;
+                new<%= extensionName %>.CreatedByUserId = UserInfo.UserID;
+                new<%= extensionName %>.LastUpdatedOnDate = DateTime.Now;
+                new<%= extensionName %>.LastUpdatedByUserId = UserInfo.UserID;
+                new<%= extensionName %>.ModuleId = ActiveModule.ModuleID;
 
                 var security = new PortalSecurity();
 
-                newExample.Title = security.InputFilter(newExample.Title.Trim(), PortalSecurity.FilterFlag.NoMarkup);
-                newExample.Description = security.InputFilter(newExample.Description.Trim(), PortalSecurity.FilterFlag.NoMarkup);
+                new<%= extensionName %>.Title = security.InputFilter(new<%= extensionName %>.Title.Trim(), PortalSecurity.FilterFlag.NoMarkup);
+                new<%= extensionName %>.Description = security.InputFilter(new<%= extensionName %>.Description.Trim(), PortalSecurity.FilterFlag.NoMarkup);
 
-                ExampleDataAccess.CreateItem(newExample);
+                <%= extensionName %>DataAccess.CreateItem(new<%= extensionName %>);
 
                 var response = new ServiceResponse<string> { Content = Globals.RESPONSE_SUCCESS };
 
@@ -152,34 +152,34 @@ namespace <%= fullNamespace %>.Services
   /// </summary>
   /// <returns></returns>
   /// <remarks>
-  /// POST: http://dnndev.me/DesktopModules/MVC/<%= namespace %>/<%= extensionName %>/API/Example/UpdateExample
+  /// POST: http://dnndev.me/DesktopModules/MVC/<%= namespace %>/<%= extensionName %>/API/<%= extensionName %>/Update<%= extensionName %>
   /// </remarks>
   [DnnModuleAuthorize(AccessLevel = SecurityAccessLevel.Edit)]
         [ValidateAntiForgeryToken]
         [HttpPost]
-        public HttpResponseMessage UpdateExample(<%= extensionName %>Info example)
+        public HttpResponseMessage Update<%= extensionName %>(<%= extensionName %>Info <%= objectName %>)
         {
             try
             {
-                var originalExample = ExampleDataAccess.GetItem(example.ExampleId, example.ModuleId);
-                var updatesToProcess = ExampleHasUpdates(ref originalExample, ref example);
+                var original<%= extensionName %> = <%= extensionName %>DataAccess.GetItem(<%= objectName %>.<%= extensionName %>Id, <%= objectName %>.ModuleId);
+                var updatesToProcess = <%= extensionName %>HasUpdates(ref original<%= extensionName %>, ref <%= objectName %>);
 
                 if (updatesToProcess)
                 {
-                    originalExample.LastUpdatedOnDate = DateTime.Now;
-                    originalExample.LastUpdatedByUserId = UserInfo.UserID;
+                    original<%= extensionName %>.LastUpdatedOnDate = DateTime.Now;
+                    original<%= extensionName %>.LastUpdatedByUserId = UserInfo.UserID;
 
                     var security = new PortalSecurity();
 
-                    originalExample.Title = security.InputFilter(originalExample.Title.Trim(), PortalSecurity.FilterFlag.NoMarkup);
-                    originalExample.Description = security.InputFilter(originalExample.Description.Trim(), PortalSecurity.FilterFlag.NoMarkup);
+                    original<%= extensionName %>.Title = security.InputFilter(original<%= extensionName %>.Title.Trim(), PortalSecurity.FilterFlag.NoMarkup);
+                    original<%= extensionName %>.Description = security.InputFilter(original<%= extensionName %>.Description.Trim(), PortalSecurity.FilterFlag.NoMarkup);
 
-                    ExampleDataAccess.UpdateItem(originalExample);
+                    <%= extensionName %>DataAccess.UpdateItem(original<%= extensionName %>);
                 }
 
-                var savedExample = ExampleDataAccess.GetItem(originalExample.ExampleId, originalExample.ModuleId);
+                var saved<%= extensionName %> = <%= extensionName %>DataAccess.GetItem(original<%= extensionName %>.<%= extensionName %>Id, original<%= extensionName %>.ModuleId);
 
-                var response = new ServiceResponse<<%= extensionName %>Info> { Content = savedExample };
+                var response = new ServiceResponse<<%= extensionName %>Info> { Content = saved<%= extensionName %> };
 
                 return Request.CreateResponse(HttpStatusCode.OK, response.ObjectToJson());
             }
@@ -195,11 +195,11 @@ namespace <%= fullNamespace %>.Services
   /// </summary>
   /// <returns></returns>
   /// <remarks>
-  /// GET: http://dnndev.me/DesktopModules/MVC/<%= namespace %>/<%= extensionName %>/API/Example/UserCanEditExample
+  /// GET: http://dnndev.me/DesktopModules/MVC/<%= namespace %>/<%= extensionName %>/API/<%= extensionName %>/UserCanEdit<%= extensionName %>
   /// </remarks>
   [AllowAnonymous]
         [HttpGet]
-        public HttpResponseMessage UserCanEditExample()
+        public HttpResponseMessage UserCanEdit<%= extensionName %>()
         {
             ServiceResponse<string> response = null;
 
@@ -217,25 +217,25 @@ namespace <%= fullNamespace %>.Services
 
         #region Private Helper Methods
 
-        private bool ExampleHasUpdates(ref <%= extensionName %>Info originalExample, ref <%= extensionName %>Info newExample)
+        private bool <%= extensionName %>HasUpdates(ref <%= extensionName %>Info original<%= extensionName %>, ref <%= extensionName %>Info new<%= extensionName %>)
         {
             var updatesToProcess = false;
 
-            if (!string.Equals(newExample.Title, originalExample.Title))
+            if (!string.Equals(new<%= extensionName %>.Title, original<%= extensionName %>.Title))
             {
-                originalExample.Title = newExample.Title;
+                original<%= extensionName %>.Title = new<%= extensionName %>.Title;
                 updatesToProcess = true;
             }
 
-            if (!string.Equals(newExample.Description, originalExample.Description))
+            if (!string.Equals(new<%= extensionName %>.Description, original<%= extensionName %>.Description))
             {
-                originalExample.Description = newExample.Description;
+                original<%= extensionName %>.Description = new<%= extensionName %>.Description;
                 updatesToProcess = true;
             }
 
-            if (newExample.ModuleId != originalExample.ModuleId)
+            if (new<%= extensionName %>.ModuleId != original<%= extensionName %>.ModuleId)
             {
-                originalExample.ModuleId = newExample.ModuleId;
+                original<%= extensionName %>.ModuleId = new<%= extensionName %>.ModuleId;
                 updatesToProcess = true;
             }
 

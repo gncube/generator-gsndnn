@@ -64,6 +64,7 @@ module.exports = class extends DnnGeneratorBase {
       else {
         props.extensionName = this._pascalCaseName(props.name);
       }
+
       props.extensionType = "Modules";
       props.fullNamespace = props.namespace + "." + props.extensionType + "." + props.extensionName;
       props.guid = this._generateGuid();
@@ -89,6 +90,7 @@ module.exports = class extends DnnGeneratorBase {
       company: this.options.company,
       namespace: namespace,
       extensionName: extensionName,
+      objectName: this._camelCaseName(extensionName),
       moduleFriendlyName: this.props.name,
       description: this.props.description,
       companyUrl: this.options.companyUrl,

@@ -10,7 +10,7 @@ namespace <%= fullNamespace %>.Services
         protected const string SUCCESS_MESSAGE = "SUCCESS";
         protected const string ERROR_MESSAGE = "An error occurred. Please check the event log or contact your website administrator for more information";
 
-        protected <%= extensionName %>InfoRepository<%= extensionName %>DataAccess { get; set; }
+        protected <%= extensionName %>InfoRepository <%= extensionName %>DataAccess { get; set; }
 
         public ServiceBase()
         {
