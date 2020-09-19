@@ -7,9 +7,9 @@ using DotNetNuke.Entities.Users;
 using DotNetNuke.Security;
 using DotNetNuke.Services.Exceptions;
 using DotNetNuke.Web.Api;
-using <%= namespace %>/<%= extensionName %>.Components;
+using <%= fullNamespace %>.Components;
 
-namespace <%= namespace %>/<%= extensionName %>.Services
+namespace <%= fullNamespace %>.Services
 {
     public partial class <%= extensionName %>Controller
     {

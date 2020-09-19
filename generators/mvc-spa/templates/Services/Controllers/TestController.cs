@@ -5,9 +5,9 @@ using System.Net.Http;
 using System.Web.Http;
 using DotNetNuke.Security;
 using DotNetNuke.Web.Api;
-using <%= namespace %>/<%= extensionName %>.Components;
+using <%= fullNamespace %>.Components;
 
-namespace <%= namespace %>/<%= extensionName %>.Services
+namespace <%= fullNamespace %>.Services
 {
     public partial class <%= extensionName %>Controller
     {
