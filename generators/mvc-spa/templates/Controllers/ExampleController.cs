@@ -20,7 +20,7 @@ namespace <%= fullNamespace %>.Controllers
 
             ViewBag.PortalId = ModuleContext.PortalId;
             ViewBag.ModuleId = ModuleContext.ModuleId;
-            ViewBag.ModulePath = $"/DesktopModules/MVC/{ModuleContext.Configuration.DesktopModule.FolderName}/";
+            ViewBag.ModulePath = $"/DesktopModules/MVC/<%= namespace %>/{ModuleContext.Configuration.DesktopModule.FolderName}/";
 
             return View(items);
         }
