@@ -7,23 +7,23 @@ using <%= fullNamespace %>.Models;
 
 namespace <%= fullNamespace %>.Data
 {
-    public interface IExampleInfoRepository
+    public interface I<%= extensionName %>InfoRepository
     {
-        void CreateItem(ExampleInfo t);
+        void CreateItem(<%= extensionName %>Info t);
         void DeleteItem(int itemId, int moduleId);
-        void DeleteItem(ExampleInfo t);
-        IEnumerable<ExampleInfo> GetItems(int moduleId);
-        ExampleInfo GetItem(int itemId, int moduleId);
-        void UpdateItem(ExampleInfo t);
+        void DeleteItem(<%= extensionName %>Info t);
+        IEnumerable<<%= extensionName %>Info> GetItems(int moduleId);
+        <%= extensionName %>Info GetItem(int itemId, int moduleId);
+        void UpdateItem(<%= extensionName %>Info t);
     }
 
-    public class ExampleInfoRepository : ServiceLocator<IExampleInfoRepository, ExampleInfoRepository>, IExampleInfoRepository
+    public class <%= extensionName %>InfoRepository : ServiceLocator<I<%= extensionName %>InfoRepository, <%= extensionName %>InfoRepository>, I<%= extensionName %>InfoRepository
     {
-        public void CreateItem(ExampleInfo t)
+        public void CreateItem(<%= extensionName %>Info t)
         {
             using (IDataContext ctx = DataContext.Instance())
             {
-                var rep = ctx.GetRepository<ExampleInfo>();
+                var rep = ctx.GetRepository<<%= extensionName %>Info>();
                 rep.Insert(t);
             }
         }
@@ -34,49 +34,49 @@ namespace <%= fullNamespace %>.Data
             DeleteItem(t);
         }
 
-        public void DeleteItem(ExampleInfo t)
+        public void DeleteItem(<%= extensionName %>Info t)
         {
             using (IDataContext ctx = DataContext.Instance())
             {
-                var rep = ctx.GetRepository<ExampleInfo>();
+                var rep = ctx.GetRepository<<%= extensionName %>Info>();
                 rep.Delete(t);
             }
         }
 
-        public IEnumerable<ExampleInfo> GetItems(int moduleId)
+        public IEnumerable<<%= extensionName %>Info> GetItems(int moduleId)
         {
-            IEnumerable<ExampleInfo> t;
+            IEnumerable<<%= extensionName %>Info> t;
             using (IDataContext ctx = DataContext.Instance())
             {
-                var rep = ctx.GetRepository<ExampleInfo>();
+                var rep = ctx.GetRepository<<%= extensionName %>Info>();
                 t = rep.Get(moduleId);
             }
             return t;
         }
 
-        public ExampleInfo GetItem(int itemId, int moduleId)
+        public <%= extensionName %>Info GetItem(int itemId, int moduleId)
         {
-            ExampleInfo t;
+            <%= extensionName %>Info t;
             using (IDataContext ctx = DataContext.Instance())
             {
-                var rep = ctx.GetRepository<ExampleInfo>();
+                var rep = ctx.GetRepository<<%= extensionName %>Info>();
                 t = rep.GetById(itemId, moduleId);
             }
             return t;
         }
 
-        public void UpdateItem(ExampleInfo t)
+        public void UpdateItem(<%= extensionName %>Info t)
         {
             using (IDataContext ctx = DataContext.Instance())
             {
-                var rep = ctx.GetRepository<ExampleInfo>();
+                var rep = ctx.GetRepository<<%= extensionName %>Info>();
                 rep.Update(t);
             }
         }
 
-        protected override System.Func<IExampleInfoRepository> GetFactory()
+        protected override System.Func<I<%= extensionName %>InfoRepository> GetFactory()
         {
-            return () => new ExampleInfoRepository();
+            return () => new <%= extensionName %>InfoRepository();
         }
     }
 }

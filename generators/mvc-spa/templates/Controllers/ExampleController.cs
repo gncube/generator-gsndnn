@@ -9,14 +9,14 @@ using <%= fullNamespace %>.Data;
 namespace <%= fullNamespace %>.Controllers
 {
     [DnnHandleError]
-    public class ExampleController : <%= extensionName %>ModuleControllerBase
+    public class <%= extensionName %>Controller : <%= extensionName %>ModuleControllerBase
     {
         public ActionResult Index()
         {
             DotNetNuke.Framework.JavaScriptLibraries.JavaScript.RequestRegistration(CommonJs.DnnPlugins);
             ServicesFramework.Instance.RequestAjaxAntiForgerySupport();
 
-            var items = ExampleInfoRepository.Instance.GetItems(ModuleContext.ModuleId);
+            var items = <%= extensionName %>InfoRepository.Instance.GetItems(ModuleContext.ModuleId);
 
             ViewBag.PortalId = ModuleContext.PortalId;
             ViewBag.ModuleId = ModuleContext.ModuleId;

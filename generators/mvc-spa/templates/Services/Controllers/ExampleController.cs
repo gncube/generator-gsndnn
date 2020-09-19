@@ -1,4 +1,4 @@
-﻿
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,14 +23,14 @@ namespace <%= fullNamespace %>.Services
     [SupportedModules("<%= extensionName %>")]
     public partial class ExampleController : ServiceBase
     {
-        /// <summary>
-        /// Get an event
-        /// </summary>
-        /// <returns></returns>
-        /// <remarks>
-        /// GET: http://dnndev.me/DesktopModules/MVC/<%= fullNamespace %>/API/Example/GetExamples
-        /// </remarks>
-        [DnnModuleAuthorize(AccessLevel = SecurityAccessLevel.View)]
+  /// <summary>
+  /// Get an event
+  /// </summary>
+  /// <returns></returns>
+  /// <remarks>
+  /// GET: http://dnndev.me/DesktopModules/MVC/<%= namespace %>/<%= extensionName %>/API/Example/GetExamples
+  /// </remarks>
+  [DnnModuleAuthorize(AccessLevel = SecurityAccessLevel.View)]
         [HttpGet]
         public HttpResponseMessage GetExamples()
         {
@@ -53,14 +53,14 @@ namespace <%= fullNamespace %>.Services
             }
         }
 
-        /// <summary>
-        /// Get an event
-        /// </summary>
-        /// <returns></returns>
-        /// <remarks>
-        /// GET: http://dnndev.me/DesktopModules/<%= fullNamespace %>/MVC/API/Example/GetExample
-        /// </remarks>
-        [DnnModuleAuthorize(AccessLevel = SecurityAccessLevel.View)]
+  /// <summary>
+  /// Get an event
+  /// </summary>
+  /// <returns></returns>
+  /// <remarks>
+  /// GET: http://dnndev.me/DesktopModules/<%= namespace %>/<%= extensionName %>/MVC/API/Example/GetExample
+  /// </remarks>
+  [DnnModuleAuthorize(AccessLevel = SecurityAccessLevel.View)]
         [HttpGet]
         public HttpResponseMessage GetExample(int exampleId)
         {
@@ -83,14 +83,14 @@ namespace <%= fullNamespace %>.Services
             }
         }
 
-        /// <summary>
-        /// Delete an event
-        /// </summary>
-        /// <returns></returns>
-        /// <remarks>
-        /// DELETE: http://dnndev.me/DesktopModules/<%= fullNamespace %>/MVC/API/Example/DeleteExample
-        /// </remarks>
-        [DnnModuleAuthorize(AccessLevel = SecurityAccessLevel.Edit)]
+  /// <summary>
+  /// Delete an event
+  /// </summary>
+  /// <returns></returns>
+  /// <remarks>
+  /// DELETE: http://dnndev.me/DesktopModules/<%= namespace %>/<%= extensionName %>/MVC/API/Example/DeleteExample
+  /// </remarks>
+  [DnnModuleAuthorize(AccessLevel = SecurityAccessLevel.Edit)]
         [ValidateAntiForgeryToken]
         [HttpDelete]
         public HttpResponseMessage DeleteExample(int exampleId)
@@ -109,14 +109,14 @@ namespace <%= fullNamespace %>.Services
             }
         }
 
-        /// <summary>
-        /// Create an event
-        /// </summary>
-        /// <returns></returns>
-        /// <remarks>
-        /// POST: http://dnndev.me/DesktopModules/MVC/<%= fullNamespace %>/API/Example/CeateExample
-        /// </remarks>
-        [DnnModuleAuthorize(AccessLevel = SecurityAccessLevel.Edit)]
+  /// <summary>
+  /// Create an event
+  /// </summary>
+  /// <returns></returns>
+  /// <remarks>
+  /// POST: http://dnndev.me/DesktopModules/MVC/<%= namespace %>/<%= extensionName %>/API/Example/CeateExample
+  /// </remarks>
+  [DnnModuleAuthorize(AccessLevel = SecurityAccessLevel.Edit)]
         [ValidateAntiForgeryToken]
         [HttpPost]
         public HttpResponseMessage CreateExample(ExampleInfo newExample)
@@ -147,14 +147,14 @@ namespace <%= fullNamespace %>.Services
             }
         }
 
-        /// <summary>
-        /// Update an event
-        /// </summary>
-        /// <returns></returns>
-        /// <remarks>
-        /// POST: http://dnndev.me/DesktopModules/MVC/<%= fullNamespace %>/API/Example/UpdateExample
-        /// </remarks>
-        [DnnModuleAuthorize(AccessLevel = SecurityAccessLevel.Edit)]
+  /// <summary>
+  /// Update an event
+  /// </summary>
+  /// <returns></returns>
+  /// <remarks>
+  /// POST: http://dnndev.me/DesktopModules/MVC/<%= namespace %>/<%= extensionName %>/API/Example/UpdateExample
+  /// </remarks>
+  [DnnModuleAuthorize(AccessLevel = SecurityAccessLevel.Edit)]
         [ValidateAntiForgeryToken]
         [HttpPost]
         public HttpResponseMessage UpdateExample(ExampleInfo example)
@@ -190,14 +190,14 @@ namespace <%= fullNamespace %>.Services
             }
         }
 
-        /// <summary>
-        /// Use to determine if the user has edit permissions
-        /// </summary>
-        /// <returns></returns>
-        /// <remarks>
-        /// GET: http://dnndev.me/DesktopModules/MVC/<%= fullNamespace %>/API/Example/UserCanEditExample
-        /// </remarks>
-        [AllowAnonymous]
+  /// <summary>
+  /// Use to determine if the user has edit permissions
+  /// </summary>
+  /// <returns></returns>
+  /// <remarks>
+  /// GET: http://dnndev.me/DesktopModules/MVC/<%= namespace %>/<%= extensionName %>/API/Example/UserCanEditExample
+  /// </remarks>
+  [AllowAnonymous]
         [HttpGet]
         public HttpResponseMessage UserCanEditExample()
         {

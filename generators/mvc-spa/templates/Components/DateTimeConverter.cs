@@ -1,4 +1,4 @@
-﻿
+
 using Newtonsoft.Json.Converters;
 
 namespace <%= fullNamespace %>.Components
@@ -7,7 +7,7 @@ namespace <%= fullNamespace %>.Components
     {
         public DateTimeConverter()
         {
-            base.DateTimeFormat = "MM/dd/yyyy hh:mm tt";
+            base.DateTimeFormat = "dd/MM/yyyy hh:mm tt";
         }
     }
 }

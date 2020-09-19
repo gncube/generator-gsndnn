@@ -1,11 +1,11 @@
-﻿
+
 using System;
 
 namespace <%= fullNamespace %>.Components
 {
     public class Globals
     {
-        public const string LOCALIZATION_FILE_PATH = "/DesktopModules/MVC/<%= fullNamespace %>/App_LocalResources/SharedResources.resx";
+        public const string LOCALIZATION_FILE_PATH = "/DesktopModules/MVC/<%= namespace %>/<%= extensionName %>/App_LocalResources/SharedResources.resx";
 
         public const string VIEW_PATH = "Views/";
         public const string VIEW_EXTENSION = ".ascx";

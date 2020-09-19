@@ -1,4 +1,4 @@
-﻿
+
 using System.Collections.Generic;
 using <%= fullNamespace %>.Components;
 using <%= fullNamespace %>.Models;
@@ -17,7 +17,7 @@ namespace <%= fullNamespace %>.Services
                 baseUri += "/";
             }
 
-            fullApiUri = System.IO.Path.Combine(baseUri, "DesktopModules/MVC/<%= fullNamespace %>/API/Example/");
+            fullApiUri = System.IO.Path.Combine(baseUri, "DesktopModules/MVC/<%= namespace %>/<%= extensionName %>/API/Example/");
         }
 
         public ServiceResponse<string> CreateExample(ExampleInfo example)

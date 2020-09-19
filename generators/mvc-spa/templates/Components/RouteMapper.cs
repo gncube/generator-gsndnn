@@ -1,4 +1,4 @@
-﻿
+
 using DotNetNuke.Web.Api;
 
 namespace <%= fullNamespace %>.Components
@@ -7,7 +7,7 @@ namespace <%= fullNamespace %>.Components
     {
         public void RegisterRoutes(IMapRoute mapRouteManager)
         {
-            mapRouteManager.MapHttpRoute("MVC/<%= fullNamespace %>", "default", "{controller}/{action}", new[] { "<%= fullNamespace %>.Services" });
+            mapRouteManager.MapHttpRoute("MVC/<%= namespace %>/<%= extensionName %>", "default", "{controller}/{action}", new[] { "<%= fullNamespace %>.Services" });
         }
     }
 }
