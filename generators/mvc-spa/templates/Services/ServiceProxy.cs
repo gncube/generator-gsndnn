@@ -17,50 +17,50 @@ namespace <%= fullNamespace %>.Services
                 baseUri += "/";
             }
 
-            fullApiUri = System.IO.Path.Combine(baseUri, "DesktopModules/MVC/<%= namespace %>/<%= extensionName %>/API/Example/");
+            fullApiUri = System.IO.Path.Combine(baseUri, "DesktopModules/MVC/<%= namespace %>/<%= extensionName %>/API/<%= extensionName %>/");
         }
 
-        public ServiceResponse<string> CreateExample(<%= extensionName %>Info example)
+        public ServiceResponse<string> Create<%= extensionName %>(<%= extensionName %>Info <%= objectName %>)
         {
             var result = new ServiceResponse<string>();
 
-            result = ServiceHelper.PostRequest<ServiceResponse<string>>(fullApiUri + "CreateExample", example.ObjectToJson());
+            result = ServiceHelper.PostRequest<ServiceResponse<string>>(fullApiUri + "Create<%= extensionName %>", <%= objectName %>.ObjectToJson());
             
             return result;   
         }
 
-        public ServiceResponse<List<<%= extensionName %>Info>> GetExamples(int moduleId)
+        public ServiceResponse<List<<%= extensionName %>Info>> Get<%= extensionName %>s(int moduleId)
         {
             var result = new ServiceResponse<List<<%= extensionName %>Info>>();
 
-            result = ServiceHelper.GetRequest<ServiceResponse<List<<%= extensionName %>Info>>>(fullApiUri + "GetExamples?moduleId=" + moduleId);
+            result = ServiceHelper.GetRequest<ServiceResponse<List<<%= extensionName %>Info>>>(fullApiUri + "Get<%= extensionName %>s?moduleId=" + moduleId);
 
             return result;
         }
 
-        public ServiceResponse<<%= extensionName %>Info> GetExample(int itemId)
+        public ServiceResponse<<%= extensionName %>Info> Get<%= extensionName %>(int itemId)
         {
             var result = new ServiceResponse<<%= extensionName %>Info>();
 
-            result = ServiceHelper.GetRequest<ServiceResponse<<%= extensionName %>Info>>(fullApiUri + "GetExample?itemId=" + itemId);
+            result = ServiceHelper.GetRequest<ServiceResponse<<%= extensionName %>Info>>(fullApiUri + "Get<%= extensionName %>?itemId=" + itemId);
 
             return result;
         }
         
-        public ServiceResponse<string> UpdateExample(<%= extensionName %>Info example)
+        public ServiceResponse<string> Update<%= extensionName %>(<%= extensionName %>Info <%= objectName %>)
         {
             var result = new ServiceResponse<string>();
 
-            result = ServiceHelper.PostRequest<ServiceResponse<string>>(fullApiUri + "UpdateExample", example.ObjectToJson());
+            result = ServiceHelper.PostRequest<ServiceResponse<string>>(fullApiUri + "Update<%= extensionName %>", <%= objectName %>.ObjectToJson());
 
             return result;
         }
 
-        public ServiceResponse<string> DeleteExample(int itemId)
+        public ServiceResponse<string> Delete<%= extensionName %>(int itemId)
         {
             var result = new ServiceResponse<string>();
 
-            result = ServiceHelper.DeleteRequest<ServiceResponse<string>>(fullApiUri + "DeleteExample?itemId=" + itemId, string.Empty);
+            result = ServiceHelper.DeleteRequest<ServiceResponse<string>>(fullApiUri + "Delete<%= extensionName %>?itemId=" + itemId, string.Empty);
 
             return result;
         }

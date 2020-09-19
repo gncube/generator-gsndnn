@@ -7,9 +7,9 @@ using DotNetNuke.Entities.Users;
 using DotNetNuke.Security;
 using DotNetNuke.Services.Exceptions;
 using DotNetNuke.Web.Api;
-using <%= fullNamespace %>.Components;
+using <%= namespace %>/<%= extensionName %>.Components;
 
-namespace <%= fullNamespace %>.Services
+namespace <%= namespace %>/<%= extensionName %>.Services
 {
     public partial class <%= extensionName %>Controller
     {
@@ -18,7 +18,7 @@ namespace <%= fullNamespace %>.Services
         /// </summary>
         /// <returns></returns>
         /// <remarks>
-        /// GET: http://dnndev.me/DesktopModules/MVC/<%= fullNamespace %>/API/Event/GetCurrentUser
+        /// GET: http://dnndev.me/DesktopModules/MVC/<%= namespace %>/<%= extensionName %>/API/Event/GetCurrentUser
         /// </remarks>
         [DnnModuleAuthorize(AccessLevel = SecurityAccessLevel.View)]
         [HttpGet]
@@ -48,7 +48,7 @@ namespace <%= fullNamespace %>.Services
         /// </summary>
         /// <returns></returns>
         /// <remarks>
-        /// GET: http://dnndev.me/DesktopModules/MVC/<%= fullNamespace %>/API/Event/GetCurrentUserId
+        /// GET: http://dnndev.me/DesktopModules/MVC/<%= namespace %>/<%= extensionName %>/API/Event/GetCurrentUserId
         /// </remarks>
         [DnnModuleAuthorize(AccessLevel = SecurityAccessLevel.View)]
         [HttpGet]

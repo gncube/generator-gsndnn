@@ -5,9 +5,9 @@ using System.Net.Http;
 using System.Web.Http;
 using DotNetNuke.Security;
 using DotNetNuke.Web.Api;
-using <%= fullNamespace %>.Components;
+using <%= namespace %>/<%= extensionName %>.Components;
 
-namespace <%= fullNamespace %>.Services
+namespace <%= namespace %>/<%= extensionName %>.Services
 {
     public partial class <%= extensionName %>Controller
     {
@@ -16,7 +16,7 @@ namespace <%= fullNamespace %>.Services
         /// </summary>
         /// <returns></returns>
         /// <remarks>
-        /// GET: http://dnndev.me/DesktopModules/MVC/<%= fullNamespace %>/API/Event/Ping
+        /// GET: http://dnndev.me/DesktopModules/MVC/<%= namespace %>/<%= extensionName %>/API/Event/Ping
         /// </remarks>
         [AllowAnonymous]
         [HttpGet]
@@ -32,7 +32,7 @@ namespace <%= fullNamespace %>.Services
         /// </summary>
         /// <returns></returns>
         /// <remarks>
-        /// GET: http://dnndev.me/DesktopModules/MVC/<%= fullNamespace %>/API/Event/PingError
+        /// GET: http://dnndev.me/DesktopModules/MVC/<%= namespace %>/<%= extensionName %>/API/Event/PingError
         /// </remarks>
         [AllowAnonymous]
         [HttpGet]
@@ -59,7 +59,7 @@ namespace <%= fullNamespace %>.Services
         /// </summary>
         /// <returns></returns>
         /// <remarks>
-        /// GET: http://dnndev.me/DesktopModules/MVC/<%= fullNamespace %>/API/Event/PingException
+        /// GET: http://dnndev.me/DesktopModules/MVC/<%= namespace %>/<%= extensionName %>/API/Event/PingException
         /// </remarks>
         [AllowAnonymous]
         [HttpGet]
@@ -73,7 +73,7 @@ namespace <%= fullNamespace %>.Services
         /// </summary>
         /// <returns></returns>
         /// <remarks>
-        /// GET: http://dnndev.me/DesktopModules/MVC/<%= fullNamespace %>/API/Event/PingNotFound
+        /// GET: http://dnndev.me/DesktopModules/MVC/<%= namespace %>/<%= extensionName %>/API/Event/PingNotFound
         /// </remarks>
         [AllowAnonymous]
         [HttpGet]
@@ -87,7 +87,7 @@ namespace <%= fullNamespace %>.Services
         /// </summary>
         /// <returns />
         /// <remarks>
-        /// GET: http://dnndev.me/DesktopModules/MVC/<%= fullNamespace %>/API/Event/PingSecurityCheck
+        /// GET: http://dnndev.me/DesktopModules/MVC/<%= namespace %>/<%= extensionName %>/API/Event/PingSecurityCheck
         /// </remarks>
         [DnnModuleAuthorize(AccessLevel = SecurityAccessLevel.Edit)]
         [ValidateAntiForgeryToken]
