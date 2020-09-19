@@ -22,7 +22,7 @@
       <components>
         <component type="Script">
           <scripts>
-            <basePath>DesktopModules\MVC\<%= namespace %>/<%= extensionName %></basePath>
+            <basePath>DesktopModules\MVC\<%= namespace %>\<%= extensionName %></basePath>
             <script type="Install">
               <path>Providers\DataProviders\SqlDataProvider</path>
               <name>01.00.00.SqlDataProvider</name>
@@ -49,7 +49,7 @@
                 <moduleControls>
                   <moduleControl>
                     <controlKey />
-                    <controlSrc><%= fullNamespace %>.Controllers/Example/Index.mvc</controlSrc>
+                    <controlSrc><%= fullNamespace %>.Controllers/<%= extensionName %/Index.mvc</controlSrc>
                     <supportsPartialRendering>False</supportsPartialRendering>
                     <controlTitle />
                     <controlType>View</controlType>
