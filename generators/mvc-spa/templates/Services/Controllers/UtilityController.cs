@@ -1,4 +1,4 @@
-﻿
+
 using System;
 using System.Net;
 using System.Net.Http;
@@ -11,7 +11,7 @@ using <%= fullNamespace %>.Components;
 
 namespace <%= fullNamespace %>.Services
 {
-    public partial class ExampleController
+    public partial class <%= extensionName %>Controller
     {
         /// <summary>
         /// Get an event

@@ -20,7 +20,7 @@ namespace <%= fullNamespace %>.Services
             fullApiUri = System.IO.Path.Combine(baseUri, "DesktopModules/MVC/<%= namespace %>/<%= extensionName %>/API/Example/");
         }
 
-        public ServiceResponse<string> CreateExample(ExampleInfo example)
+        public ServiceResponse<string> CreateExample(<%= extensionName %>Info example)
         {
             var result = new ServiceResponse<string>();
 
@@ -29,25 +29,25 @@ namespace <%= fullNamespace %>.Services
             return result;   
         }
 
-        public ServiceResponse<List<ExampleInfo>> GetExamples(int moduleId)
+        public ServiceResponse<List<<%= extensionName %>Info>> GetExamples(int moduleId)
         {
-            var result = new ServiceResponse<List<ExampleInfo>>();
+            var result = new ServiceResponse<List<<%= extensionName %>Info>>();
 
-            result = ServiceHelper.GetRequest<ServiceResponse<List<ExampleInfo>>>(fullApiUri + "GetExamples?moduleId=" + moduleId);
+            result = ServiceHelper.GetRequest<ServiceResponse<List<<%= extensionName %>Info>>>(fullApiUri + "GetExamples?moduleId=" + moduleId);
 
             return result;
         }
 
-        public ServiceResponse<ExampleInfo> GetExample(int itemId)
+        public ServiceResponse<<%= extensionName %>Info> GetExample(int itemId)
         {
-            var result = new ServiceResponse<ExampleInfo>();
+            var result = new ServiceResponse<<%= extensionName %>Info>();
 
-            result = ServiceHelper.GetRequest<ServiceResponse<ExampleInfo>>(fullApiUri + "GetExample?itemId=" + itemId);
+            result = ServiceHelper.GetRequest<ServiceResponse<<%= extensionName %>Info>>(fullApiUri + "GetExample?itemId=" + itemId);
 
             return result;
         }
         
-        public ServiceResponse<string> UpdateExample(ExampleInfo example)
+        public ServiceResponse<string> UpdateExample(<%= extensionName %>Info example)
         {
             var result = new ServiceResponse<string>();
 

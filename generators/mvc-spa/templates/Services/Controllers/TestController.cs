@@ -1,4 +1,4 @@
-﻿
+
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
@@ -9,7 +9,7 @@ using <%= fullNamespace %>.Components;
 
 namespace <%= fullNamespace %>.Services
 {
-    public partial class ExampleController
+    public partial class <%= extensionName %>Controller
     {
         /// <summary>
         /// Use to test a successful response

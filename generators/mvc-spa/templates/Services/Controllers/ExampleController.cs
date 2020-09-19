@@ -21,7 +21,7 @@ namespace <%= fullNamespace %>.Services
     /// The SupportModules attribute will require that all API calls set and include module headers, event GET requests. Even Fiddler will return 401 Unauthorized errors.
     /// </remarks>
     [SupportedModules("<%= extensionName %>")]
-    public partial class ExampleController : ServiceBase
+    public partial class <%= extensionName %>Controller : ServiceBase
     {
   /// <summary>
   /// Get an event
@@ -37,11 +37,11 @@ namespace <%= fullNamespace %>.Services
             try
             {
                 var examples = ExampleDataAccess.GetItems(ActiveModule.ModuleID);
-                var response = new ServiceResponse<List<ExampleInfo>> { Content = examples.ToList() };
+                var response = new ServiceResponse<List<<%= extensionName %>Info>> { Content = examples.ToList() };
 
                 if (examples == null || !examples.Any())
                 {
-                    ServiceResponseHelper<List<ExampleInfo>>.AddNoneFoundError("ExampleInfo", ref response);
+                    ServiceResponseHelper<List<<%= extensionName %>Info>>.AddNoneFoundError("<%= extensionName %>Info", ref response);
                 }
 
                 return Request.CreateResponse(HttpStatusCode.OK, response.ObjectToJson());
@@ -67,11 +67,11 @@ namespace <%= fullNamespace %>.Services
             try
             {
                 var example = ExampleDataAccess.GetItem(exampleId, ActiveModule.ModuleID);
-                var response = new ServiceResponse<ExampleInfo> { Content = example };
+                var response = new ServiceResponse<<%= extensionName %>Info> { Content = example };
 
                 if (example == null)
                 {
-                    ServiceResponseHelper<ExampleInfo>.AddNoneFoundError("ExampleInfo", ref response);
+                    ServiceResponseHelper<<%= extensionName %>Info>.AddNoneFoundError("<%= extensionName %>Info", ref response);
                 }
 
                 return Request.CreateResponse(HttpStatusCode.OK, response.ObjectToJson());
@@ -119,7 +119,7 @@ namespace <%= fullNamespace %>.Services
   [DnnModuleAuthorize(AccessLevel = SecurityAccessLevel.Edit)]
         [ValidateAntiForgeryToken]
         [HttpPost]
-        public HttpResponseMessage CreateExample(ExampleInfo newExample)
+        public HttpResponseMessage CreateExample(<%= extensionName %>Info newExample)
         {
             try
             {
@@ -157,7 +157,7 @@ namespace <%= fullNamespace %>.Services
   [DnnModuleAuthorize(AccessLevel = SecurityAccessLevel.Edit)]
         [ValidateAntiForgeryToken]
         [HttpPost]
-        public HttpResponseMessage UpdateExample(ExampleInfo example)
+        public HttpResponseMessage UpdateExample(<%= extensionName %>Info example)
         {
             try
             {
@@ -179,7 +179,7 @@ namespace <%= fullNamespace %>.Services
 
                 var savedExample = ExampleDataAccess.GetItem(originalExample.ExampleId, originalExample.ModuleId);
 
-                var response = new ServiceResponse<ExampleInfo> { Content = savedExample };
+                var response = new ServiceResponse<<%= extensionName %>Info> { Content = savedExample };
 
                 return Request.CreateResponse(HttpStatusCode.OK, response.ObjectToJson());
             }
@@ -217,7 +217,7 @@ namespace <%= fullNamespace %>.Services
 
         #region Private Helper Methods
 
-        private bool ExampleHasUpdates(ref ExampleInfo originalExample, ref ExampleInfo newExample)
+        private bool ExampleHasUpdates(ref <%= extensionName %>Info originalExample, ref <%= extensionName %>Info newExample)
         {
             var updatesToProcess = false;
 
