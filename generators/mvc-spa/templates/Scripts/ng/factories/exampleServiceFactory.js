@@ -1,6 +1,6 @@
 "use strict";
 
-exampleApp.factory("exampleServiceFactory", ["$http", function ($http) {
+<%= objectName %>App.factory("<%= objectName %>ServiceFactory", ["$http", function ($http) {
 
         var $self = this;
 
