@@ -1,4 +1,4 @@
-﻿<div class="container" ng-show="!userCanEdit">
+<div class="container" ng-show="!userCanEdit">
     <div class="row">
         <div class="col-xs-12">
             <div class="alert alert-danger">
@@ -8,12 +8,12 @@
         </div>
     </div>
 </div>
-<div class="container" ng-controller="exampleController" ng-form="exampleForm" ng-show="userCanEdit">
+<div class="container" ng-controller="<%= objectName %>Controller" ng-form="<%= objectName %>Form" ng-show="userCanEdit">
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h1><span ng-show="!CanDelete(example.ExampleId)">Create</span><span ng-show="CanDelete(example.ExampleId)">Update</span> Item</h1>
+                    <h1><span ng-show="!CanDelete(<%= objectName %>.<%= extensionName %>Id)">Create</span><span ng-show="CanDelete(<%= objectName %>.<%= extensionName %>Id)">Update</span> Item</h1>
                 </div>
             </div>
         </div>
@@ -22,9 +22,9 @@
         <div class="col-md-12">
             <div class="alert alert-info" ng-show="HasSuccess">
                 <h4>Well done!</h4>
-                <p>The example was successfully saved!</p>
+                <p>The <%= objectName %> was successfully saved!</p>
                 <p>
-                    <button type="button" class="btn btn-space" ng-click="goToPage('examples')"><i class="glyphicon glyphicon-arrow-left"></i> Go Back</button>
+                    <button type="button" class="btn btn-space" ng-click="goToPage('<%= objectName %>s')"><i class="glyphicon glyphicon-arrow-left"></i> Go Back</button>
                 </p>
             </div>
             <div class="alert alert-danger" ng-show="HasErrors">
@@ -35,17 +35,17 @@
     </div>
     <div class="row">
         <div class="col-xs-12">
-            <div class="form-group" ng-class="{ 'has-error error' : exampleForm.title.$invalid && !exampleForm.title.$pristine }">
+            <div class="form-group" ng-class="{ 'has-error error' : <%= objectName %>Form.title.$invalid && !<%= objectName %>Form.title.$pristine }">
                 <label for="title">Title *</label>
-                <input type="text" name="title" ng-model="example.Title" ng-required="true" class="form-control" placeholder="Title" maxlength="100" required ng-trim />
-                <p class="help-block" ng-show="exampleForm.title.$invalid && !exampleForm.title.$pristine">
+                <input type="text" name="title" ng-model="<%= objectName %>.Title" ng-required="true" class="form-control" placeholder="Title" maxlength="100" required ng-trim />
+                <p class="help-block" ng-show="<%= objectName %>Form.title.$invalid && !<%= objectName %>Form.title.$pristine">
                     Title is required.
                 </p>
             </div>
-            <div class="form-group" ng-class="{ 'has-error error' : exampleForm.description.$invalid && !exampleForm.description.$pristine }">
+            <div class="form-group" ng-class="{ 'has-error error' : <%= objectName %>Form.description.$invalid && !<%= objectName %>Form.description.$pristine }">
                 <label for="description">Description *</label>
-                <textarea name="description" ng-model="example.Description" ng-required="true" class="form-control" placeholder="Description" maxlength="1000" required ng-trim></textarea>
-                <p class="help-block" ng-show="exampleForm.description.$invalid && !exampleForm.description.$pristine">
+                <textarea name="description" ng-model="<%= objectName %>.Description" ng-required="true" class="form-control" placeholder="Description" maxlength="1000" required ng-trim></textarea>
+                <p class="help-block" ng-show="<%= objectName %>Form.description.$invalid && !<%= objectName %>Form.description.$pristine">
                     Description is required.
                 </p>
             </div>
@@ -53,14 +53,14 @@
     </div>
     <div class="row">
         <div class="btn-toolbar pull-right">
-            <button type="button" class="btn btn-success btn-space" ng-disabled="exampleForm.$invalid" ng-click="UpdateExample()"><i class="glyphicon glyphicon-floppy-disk"></i> Save Changes</button>
-            <button type="button" class="btn btn-danger btn-space" ng-click="DeleteExample(example.ExampleId)" ng-show="CanDelete(example.ExampleId)"><i class="glyphicon glyphicon-remove"></i> Delete</button>
-            <button type="button" class="btn btn-space" ng-click="goToPage('examples')"><i class="glyphicon glyphicon-arrow-left"></i> Cancel</button>
+            <button type="button" class="btn btn-success btn-space" ng-disabled="<%= objectName %>Form.$invalid" ng-click="Update<%= extensionName %>()"><i class="glyphicon glyphicon-floppy-disk"></i> Save Changes</button>
+            <button type="button" class="btn btn-danger btn-space" ng-click="Delete<%= extensionName %>(<%= objectName %>.<%= extensionName %>Id)" ng-show="CanDelete(<%= objectName %>.<%= extensionName %>Id)"><i class="glyphicon glyphicon-remove"></i> Delete</button>
+            <button type="button" class="btn btn-space" ng-click="goToPage('<%= objectName %>s')"><i class="glyphicon glyphicon-arrow-left"></i> Cancel</button>
         </div>
     </div>
 </div>
 
-<script type="text/ng-template" id="DeleteExampleModal.html">
+<script type="text/ng-template" id="Delete<%= extensionName %>Modal.html">
     <div class="modal-header">
         <h3 class="modal-title">Please Confirm</h3>
     </div>

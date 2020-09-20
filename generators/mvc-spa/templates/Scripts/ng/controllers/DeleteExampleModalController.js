@@ -1,38 +1,38 @@
-﻿"use strict";
+"use strict";
 
-exampleApp.controller("DeleteExampleModalController", ["$scope", "$rootScope", "$modalInstance", "$location", "exampleId", "exampleServiceFactory", function ($scope, $rootScope, $modalInstance, $location, exampleId, exampleServiceFactory) {
+<%= objectName %>App.controller("Delete<%= extensionName %>ModalController", ["$scope", "$rootScope", "$modalInstance", "$location", "<%= objectName %>Id", "<%= objectName %>ServiceFactory", function ($scope, $rootScope, $modalInstance, $location, <%= objectName %>Id, <%= objectName %>ServiceFactory) {
 
-    var factory = exampleServiceFactory;
+    var factory = <%= objectName %>ServiceFactory;
     factory.init(appModuleId, appModuleName);
 
-    $scope.example = {};
+    $scope.<%= objectName %> = {};
 
-    factory.callGetService("GetExample?exampleId=" + exampleId)
+    factory.callGetService("Get<%= extensionName %>?<%= objectName %>Id=" + <%= objectName %>Id)
         .then(function (response) {
             var fullResult = angular.fromJson(response);
             var serviceResponse = JSON.parse(fullResult.data);
 
-            $scope.example = serviceResponse.Content;
+            $scope.<%= objectName %> = serviceResponse.Content;
 
             LogErrors(serviceResponse.Errors);
         },
         function (data) {
-            console.log("Unknown error occurred calling GetExample");
+            console.log("Unknown error occurred calling Get<%= extensionName %>");
             console.log(data);
         });
 
     $scope.ok = function () {
-        factory.callDeleteService("DeleteExample?exampleId=" + exampleId)
+        factory.callDeleteService("Delete<%= extensionName %>?<%= objectName %>Id=" + <%= objectName %>Id)
             .then(function (response) {
                 var fullResult = angular.fromJson(response);
                 var serviceResponse = JSON.parse(fullResult.data);
 
-                $scope.goToPage('examples');
+                $scope.goToPage('<%= objectName %>s');
 
                 LogErrors(serviceResponse.Errors);
             },
             function (data) {
-                console.log("Unknown error occurred calling DeleteExample");
+                console.log("Unknown error occurred calling Delete<%= extensionName %>");
                 console.log(data);
             });
 

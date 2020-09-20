@@ -1,28 +1,28 @@
-﻿"use strict";
+"use strict";
 
-$("body").attr("ng-app", "exampleApp");
+$("body").attr("ng-app", "<%= objectName %>App");
 
-var exampleApp = angular.module("exampleApp", ["ngRoute", "ngAnimate", "ui.bootstrap", "ui.sortable", "angularMoment", "flow", "exampleControllers"]);
+var <%= objectName %>App = angular.module("<%= objectName %>App", ["ngRoute", "ngAnimate", "ui.bootstrap", "ui.sortable", "angularMoment", "flow", "<%= objectName %>Controllers"]);
 
-var exampleControllers = angular.module("exampleControllers", []);
+var <%= objectName %>Controllers = angular.module("<%= objectName %>Controllers", []);
 
-exampleApp.config(["$routeProvider", 
+<%= objectName %>App.config(["$routeProvider", 
 	function ($routeProvider) {
 
 		$routeProvider
 		.when("/update", {
 			templateUrl: templatePath + "Templates/_default/update.html",
-			controller: "exampleController"
+			controller: "<%= objectName %>Controller"
         })
-        .when("/update/:exampleId", {
+        .when("/update/:<%= objectName %>Id", {
             templateUrl: templatePath + "Templates/_default/update.html",
-            controller: "exampleController"
+            controller: "<%= objectName %>Controller"
         })
-		.when("/examples", {
-            templateUrl: templatePath + "Templates/_default/examples.html",
-			controller: "exampleController"
+		.when("/<%= objectName %>s", {
+            templateUrl: templatePath + "Templates/_default/<%= objectName %>s.html",
+			controller: "<%= objectName %>Controller"
 		})
 		.otherwise({
-			redirectTo: "/examples"
+			redirectTo: "/<%= objectName %>s"
 		});
 	}]);

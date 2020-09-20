@@ -1,15 +1,15 @@
-﻿"use strict";
+"use strict";
 
-exampleControllers.controller("exampleController", ["$scope", "$routeParams", "$location", "$http", "$uibModal", "exampleServiceFactory", function ($scope, $routeParams, $location, $http, $uibModal, exampleServiceFactory) {
+<%= objectName %>Controllers.controller("<%= objectName %>Controller", ["$scope", "$routeParams", "$location", "$http", "$uibModal", "<%= objectName %>ServiceFactory", function ($scope, $routeParams, $location, $http, $uibModal, <%= objectName %>ServiceFactory) {
 
-    $scope.example = {};
+    $scope.<%= objectName %> = {};
     $scope.HasSuccess = false;
     $scope.HasErrors = false;
-    $scope.ExampleId = $routeParams.exampleId;
+    $scope.<%= extensionName %>Id = $routeParams.<%= objectName %>Id;
 
-    var factory = exampleServiceFactory;
+    var factory = <%= objectName %>ServiceFactory;
     factory.init(appModuleId, appModuleName);
-    $scope.exampleFilter = "";
+    $scope.<%= objectName %>Filter = "";
 
     $scope.userCanEdit = false;
 
@@ -23,12 +23,12 @@ exampleControllers.controller("exampleController", ["$scope", "$routeParams", "$
 
                 $scope.LoadEditPermissions();
 
-                if ($scope.ExampleId > -1) {
-                    $scope.LoadExample();
+                if ($scope.<%= extensionName %>Id > -1) {
+                    $scope.Load<%= extensionName %>();
                 }
                 else
                 {
-                    $scope.LoadExamples();
+                    $scope.Load<%= extensionName %>s();
                 }
 
                 LogErrors(serviceResponse.Errors);
@@ -39,46 +39,46 @@ exampleControllers.controller("exampleController", ["$scope", "$routeParams", "$
             });
     }
 
-    $scope.LoadExamples = function () {
-        factory.callGetService("GetExamples")
+    $scope.Load<%= extensionName %>s = function () {
+        factory.callGetService("Get<%= extensionName %>s")
             .then(function (response) {
                 var fullResult = angular.fromJson(response);
                 var serviceResponse = JSON.parse(fullResult.data);
 
-                $scope.examples = serviceResponse.Content;
+                $scope.<%= objectName %>s = serviceResponse.Content;
 
-                if ($scope.examples === null) {
-                    $scope.hasExamples = false;
+                if ($scope.<%= objectName %>s === null) {
+                    $scope.has<%= extensionName %>s = false;
                 } else {
-                    $scope.hasExamples = true;
+                    $scope.has<%= extensionName %>s = true;
                 }
 
                 LogErrors(serviceResponse.Errors);
             },
                 function (data) {
-                    console.log("Unknown error occurred calling GetExamples");
+                    console.log("Unknown error occurred calling Get<%= extensionName %>s");
                     console.log(data);
                 });
     }
 
-    $scope.LoadExample = function () {
-        factory.callGetService("GetExample?exampleId=" + $scope.ExampleId)
+    $scope.Load<%= extensionName %> = function () {
+        factory.callGetService("Get<%= extensionName %>?<%= objectName %>Id=" + $scope.<%= extensionName %>Id)
             .then(function (response) {
                     var fullResult = angular.fromJson(response);
                     var serviceResponse = JSON.parse(fullResult.data);
 
-                    $scope.example = serviceResponse.Content;
+                    $scope.<%= objectName %> = serviceResponse.Content;
 
                     LogErrors(serviceResponse.Errors);
                 },
                 function (data) {
-                    console.log("Unknown error occurred calling GetExample");
+                    console.log("Unknown error occurred calling Get<%= extensionName %>");
                     console.log(data);
                 });
     }
 
     $scope.LoadEditPermissions = function () {
-        factory.callGetService("UserCanEditExample")
+        factory.callGetService("UserCanEdit<%= extensionName %>")
             .then(function(response) {
                     var fullResult = angular.fromJson(response);
                     var serviceResponse = JSON.parse(fullResult.data);
@@ -88,19 +88,19 @@ exampleControllers.controller("exampleController", ["$scope", "$routeParams", "$
                     LogErrors(serviceResponse.Errors);
                 },
                 function(data) {
-                    console.log("Unknown error occurred calling UserCanEditExample");
+                    console.log("Unknown error occurred calling UserCanEdit<%= extensionName %>");
                     console.log(data);
                 });
     }
 
-    $scope.UpdateExample = function () {
-        var action = "CreateExample";
+    $scope.Update<%= extensionName %> = function () {
+        var action = "Create<%= extensionName %>";
 
-        if ($scope.example.ExampleId > 0) {
-            action = "UpdateExample";
+        if ($scope.<%= objectName %>.<%= extensionName %>Id > 0) {
+            action = "Update<%= extensionName %>";
         }
 
-        factory.callPostService(action, $scope.example)
+        factory.callPostService(action, $scope.<%= objectName %>)
             .success(function (data) {
                 $scope.HasSuccess = true;
 
@@ -117,26 +117,26 @@ exampleControllers.controller("exampleController", ["$scope", "$routeParams", "$
             });
     }
 
-    $scope.CanDelete = function (exampleId) {
-        return (exampleId > -1);
+    $scope.CanDelete = function (<%= objectName %>Id) {
+        return (<%= objectName %>Id > -1);
     }
 
-    $scope.DeleteExample = function (exampleId) {
+    $scope.Delete<%= extensionName %> = function (<%= objectName %>Id) {
         var modalInstance = $uibModal.open({
-            templateUrl: "DeleteExampleModal.html",
-            controller: "DeleteExampleModalController",
+            templateUrl: "Delete<%= extensionName %>Modal.html",
+            controller: "Delete<%= extensionName %>ModalController",
             size: "sm",
             backdrop: "static",
             scope: $scope,
             resolve: {
-                exampleId: function () {
-                    return exampleId;
+                <%= objectName %>Id: function () {
+                    return <%= objectName %>Id;
                 }
             }
         });
 
         modalInstance.result.then(function () {
-            $scope.goToPage('examples');
+            $scope.goToPage('<%= objectName %>s');
         }, function () {
             console.log("Modal dismissed at: " + new Date());
         });

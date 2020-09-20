@@ -2,12 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\generators",
-    "\\generators\\common",
-    "\\generators\\common\\csproj",
-    "\\generators\\common\\csproj\\App_LocalResources",
-    "\\generators\\mvc\\templates\\Models",
-    "\\generators\\mvc\\templates\\Views",
-    "\\generators\\mvc\\templates\\Views\\Example"
+    "\\generators\\mvc-spa",
+    "\\generators\\mvc-spa\\templates",
+    "\\generators\\mvc-spa\\templates\\Components",
+    "\\generators\\mvc-spa\\templates\\Controllers",
+    "\\generators\\mvc-spa\\templates\\Views\\Example",
+    "\\generators\\mvc-spa\\templates\\Views\\Shared"
   ],
   "SelectedNode": "\\package.json",
   "PreviewInSolutionExplorer": false

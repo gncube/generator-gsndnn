@@ -36,11 +36,11 @@
 
     ClientResourceManager.RegisterScript(Dnn.DnnPage, "~" + ViewBag.ModulePath + "Scripts/ng/app.js", defaultJsPriority, DnnFormBottomProvider.DefaultName);
     ClientResourceManager.RegisterScript(Dnn.DnnPage, "~" + ViewBag.ModulePath + "Scripts/Common.js", defaultJsPriority, DnnFormBottomProvider.DefaultName);
-    ClientResourceManager.RegisterScript(Dnn.DnnPage, "~" + ViewBag.ModulePath + "Scripts/ng/factories/exampleServiceFactory.js", defaultJsPriority, DnnFormBottomProvider.DefaultName);
+    ClientResourceManager.RegisterScript(Dnn.DnnPage, "~" + ViewBag.ModulePath + "Scripts/ng/factories/<%= objectName %>ServiceFactory.js", defaultJsPriority, DnnFormBottomProvider.DefaultName);
     ClientResourceManager.RegisterScript(Dnn.DnnPage, "~" + ViewBag.ModulePath + "Scripts/ng/directives/dateDirectives.js", defaultJsPriority, DnnFormBottomProvider.DefaultName);
     ClientResourceManager.RegisterScript(Dnn.DnnPage, "~" + ViewBag.ModulePath + "Scripts/ng/directives/confirmDirectives.js", defaultJsPriority, DnnFormBottomProvider.DefaultName);
-    ClientResourceManager.RegisterScript(Dnn.DnnPage, "~" + ViewBag.ModulePath + "Scripts/ng/controllers/ExampleController.js", defaultJsPriority, DnnFormBottomProvider.DefaultName);
-    ClientResourceManager.RegisterScript(Dnn.DnnPage, "~" + ViewBag.ModulePath + "Scripts/ng/controllers/DeleteExampleModalController.js", defaultJsPriority, DnnFormBottomProvider.DefaultName);
+    ClientResourceManager.RegisterScript(Dnn.DnnPage, "~" + ViewBag.ModulePath + "Scripts/ng/controllers/<%= extensionName %>Controller.js", defaultJsPriority, DnnFormBottomProvider.DefaultName);
+    ClientResourceManager.RegisterScript(Dnn.DnnPage, "~" + ViewBag.ModulePath + "Scripts/ng/controllers/Delete<%= extensionName %>ModalController.js", defaultJsPriority, DnnFormBottomProvider.DefaultName);
     ClientResourceManager.RegisterScript(Dnn.DnnPage, "~" + ViewBag.ModulePath + "Scripts/ng/controllers/TestController.js", defaultJsPriority, DnnFormBottomProvider.DefaultName);
 }
 

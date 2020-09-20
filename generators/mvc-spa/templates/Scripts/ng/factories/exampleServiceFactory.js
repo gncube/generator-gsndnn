@@ -1,4 +1,4 @@
-﻿"use strict";
+"use strict";
 
 exampleApp.factory("exampleServiceFactory", ["$http", function ($http) {
 
@@ -8,8 +8,8 @@ exampleApp.factory("exampleServiceFactory", ["$http", function ($http) {
             init: function (appModuleId, moduleName) {
                 if ($.ServicesFramework) {
                     var _sf = $.ServicesFramework(appModuleId);
-                    $self.ServiceRoot = "/DesktopModules/MVC/<%= fullNamespace %>/API/";
-                    $self.ServicePath = $self.ServiceRoot + "Example/";
+                  $self.ServiceRoot = "/DesktopModules/MVC/<%= namespace %>/<%= extensionName %>/API/";
+                    $self.ServicePath = $self.ServiceRoot + "<%= extensionName %>/";
                     $self.Headers = {
                         "ModuleId": appModuleId,
                         "TabId": _sf.getTabId(),
