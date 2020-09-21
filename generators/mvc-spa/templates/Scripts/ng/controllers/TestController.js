@@ -1,8 +1,8 @@
-﻿"use strict";
+"use strict";
 
-exampleControllers.controller("testController", ["$scope", "$routeParams", "$http", "exampleServiceFactory", function ($scope, $routeParams, $http, exampleServiceFactory) {
+<%= objectName %>Controllers.controller("testController", ["$scope", "$routeParams", "$http", "<%= objectName %>ServiceFactory", function ($scope, $routeParams, $http, <%= objectName %>ServiceFactory) {
 
-    var factory = exampleServiceFactory;
+    var factory = <%= objectName %>ServiceFactory;
     factory.init(appModuleId, appModuleName);
 
     factory.callGetService("Ping")

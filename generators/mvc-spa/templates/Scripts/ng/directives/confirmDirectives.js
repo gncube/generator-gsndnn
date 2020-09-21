@@ -1,7 +1,7 @@
-﻿(function() {
+(function() {
     "use strict";
 
-    exampleApp.directive("confirmDelete", confirmDelete);
+    <%= objectName %>App.directive("confirmDelete", confirmDelete);
 
     confirmDelete.$inject = [];
     

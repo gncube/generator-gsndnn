@@ -1,6 +1,6 @@
-﻿"user strict";
+"user strict";
 
-exampleApp.directive('dateFormatter', function (dateFilter, $parse) {
+<%= objectName %>App.directive('dateFormatter', function (dateFilter, $parse) {
     return {
         restrict: 'EAC',
         require: '?ngModel',
@@ -12,7 +12,7 @@ exampleApp.directive('dateFormatter', function (dateFilter, $parse) {
     }
 });
 
-exampleApp.directive("dateLowerThan", ["$filter", function ($filter) {
+<%= objectName %>App.directive("dateLowerThan", ["$filter", function ($filter) {
 
     return {
         require: "ngModel",
@@ -40,7 +40,7 @@ exampleApp.directive("dateLowerThan", ["$filter", function ($filter) {
 
 }]);
 
-exampleApp.directive("dateGreaterThan", ["$filter", function ($filter) {
+<%= objectName %>App.directive("dateGreaterThan", ["$filter", function ($filter) {
     return {
         require: "ngModel",
         link: function (scope, elm, attrs, ctrl) {

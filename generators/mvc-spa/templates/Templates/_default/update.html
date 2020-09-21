@@ -56,7 +56,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="btn-toolbar pull-right">
+        <div class="float-right">
           <button type="button" class="btn btn-default btn-space mr-2" ng-disabled="<%= objectName %>Form.$invalid" ng-click="Update<%= extensionName %>()">
             <i class="fa fa-floppy-o" aria-hidden="true"></i>
             Save Changes
@@ -88,8 +88,8 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="btn-toolbar pull-right">
-                        <button class="btn btn-sm btn-danger btn-space" type="button" ng-click="ok()">Delete</button>
-                        <button class="btn btn-sm btn-space" type="button" ng-click="cancel()">Cancel</button>
+                        <button class="btn btn-sm btn-danger btn-space mr-2" type="button" ng-click="ok()"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
+                        <button class="btn btn-sm btn-default btn-space mr-2" type="button" ng-click="cancel()">Cancel</button>
                     </div>
                 </div>
             </div>
