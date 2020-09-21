@@ -4,10 +4,9 @@
     "\\generators",
     "\\generators\\mvc-spa",
     "\\generators\\mvc-spa\\templates",
-    "\\generators\\mvc-spa\\templates\\Components",
-    "\\generators\\mvc-spa\\templates\\Controllers",
     "\\generators\\mvc-spa\\templates\\Views\\Example",
-    "\\generators\\mvc-spa\\templates\\Views\\Shared"
+    "\\generators\\mvc-spa\\templates\\Views\\Shared",
+    "\\generators\\webforms\\templates"
   ],
   "SelectedNode": "\\package.json",
   "PreviewInSolutionExplorer": false

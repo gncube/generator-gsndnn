@@ -1,19 +1,20 @@
-<div class="container" ng-show="!userCanEdit">
+<div class="container-fluid" ng-show="!userCanEdit">
     <div class="row">
         <div class="col-xs-12">
-            <div class="alert alert-danger">
-                <i class="glyphicon glyphicon-alert"></i>
-                You do not have permission to perform this action. Please login to continue.
-            </div>
+          <div class="alert alert-danger">
+            <i class="fa fa-exclamation-triangle fa-3x float-left" aria-hidden="true"></i>
+
+            You do not have permission to perform this action. Please login to continue.
+          </div>
         </div>
     </div>
 </div>
-<div class="container" ng-controller="<%= objectName %>Controller" ng-form="<%= objectName %>Form" ng-show="userCanEdit">
+<div class="container-fluid" ng-controller="<%= objectName %>Controller" ng-form="<%= objectName %>Form" ng-show="userCanEdit">
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h1><span ng-show="!CanDelete(<%= objectName %>.<%= extensionName %>Id)">Create</span><span ng-show="CanDelete(<%= objectName %>.<%= extensionName %>Id)">Update</span> Item</h1>
+                    <p class="lead"><span ng-show="!CanDelete(<%= objectName %>.<%= extensionName %>Id)">Create</span><span ng-show="CanDelete(<%= objectName %>.<%= extensionName %>Id)">Update</span> Item</p>
                 </div>
             </div>
         </div>
@@ -24,7 +25,10 @@
                 <h4>Well done!</h4>
                 <p>The <%= objectName %> was successfully saved!</p>
                 <p>
-                    <button type="button" class="btn btn-space" ng-click="goToPage('<%= objectName %>s')"><i class="glyphicon glyphicon-arrow-left"></i> Go Back</button>
+                  <button type="button" class="btn btn-success btn-space" ng-click="goToPage('<%= objectName %>s')">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                    Go Back
+                  </button>
                 </p>
             </div>
             <div class="alert alert-danger" ng-show="HasErrors">
@@ -53,9 +57,15 @@
     </div>
     <div class="row">
         <div class="btn-toolbar pull-right">
-            <button type="button" class="btn btn-success btn-space" ng-disabled="<%= objectName %>Form.$invalid" ng-click="Update<%= extensionName %>()"><i class="glyphicon glyphicon-floppy-disk"></i> Save Changes</button>
-            <button type="button" class="btn btn-danger btn-space" ng-click="Delete<%= extensionName %>(<%= objectName %>.<%= extensionName %>Id)" ng-show="CanDelete(<%= objectName %>.<%= extensionName %>Id)"><i class="glyphicon glyphicon-remove"></i> Delete</button>
-            <button type="button" class="btn btn-space" ng-click="goToPage('<%= objectName %>s')"><i class="glyphicon glyphicon-arrow-left"></i> Cancel</button>
+          <button type="button" class="btn btn-default btn-space mr-2" ng-disabled="<%= objectName %>Form.$invalid" ng-click="Update<%= extensionName %>()">
+            <i class="fa fa-floppy-o" aria-hidden="true"></i>
+            Save Changes
+          </button>
+          <button type="button" class="btn btn-default btn-space mr-2" ng-click="Delete<%= extensionName %>(<%= objectName %>.<%= extensionName %>Id)" ng-show="CanDelete(<%= objectName %>.<%= extensionName %>Id)">
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+            Delete
+          </button>
+            <button type="button" class="btn btn-default btn-space mr-2" ng-click="goToPage('<%= objectName %>s')"><i class="fa fa-arrow-left" aria-hidden="true"></i> Cancel</button>
         </div>
     </div>
 </div>
