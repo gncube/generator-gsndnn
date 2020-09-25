@@ -4,9 +4,12 @@
     "\\generators",
     "\\generators\\mvc-spa",
     "\\generators\\mvc-spa\\templates",
-    "\\generators\\mvc-spa\\templates\\Views\\Example",
-    "\\generators\\mvc-spa\\templates\\Views\\Shared",
-    "\\generators\\webforms\\templates"
+    "\\generators\\mvc-spa\\templates\\Scripts",
+    "\\generators\\mvc-spa\\templates\\Scripts\\ng",
+    "\\generators\\mvc-spa\\templates\\Scripts\\ng\\controllers",
+    "\\generators\\mvc-spa\\templates\\Scripts\\ng\\directives",
+    "\\generators\\mvc-spa\\templates\\Templates",
+    "\\generators\\mvc-spa\\templates\\Templates\\_default"
   ],
   "SelectedNode": "\\package.json",
   "PreviewInSolutionExplorer": false
