@@ -70,7 +70,7 @@ namespace <%= fullNamespace %>.Controllers
               catch (Exception ex)
               {
 
-                Log.ErrorFormat("An error occurred in saving the <%= objectName %> item. Exception: {0}", ex);
+                Log.ErrorFormat("An error occurred in saving the <%= extensionName %>. Exception: {0}", ex);
               }
 
               return RedirectToDefaultRoute();
