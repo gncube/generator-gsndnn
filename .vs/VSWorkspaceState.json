@@ -2,14 +2,16 @@
   "ExpandedNodes": [
     "",
     "\\generators",
-    "\\generators\\mvc-spa",
+    "\\generators\\mvc",
     "\\generators\\mvc-spa\\templates",
-    "\\generators\\mvc-spa\\templates\\Scripts",
-    "\\generators\\mvc-spa\\templates\\Scripts\\ng",
-    "\\generators\\mvc-spa\\templates\\Scripts\\ng\\controllers",
-    "\\generators\\mvc-spa\\templates\\Scripts\\ng\\directives",
     "\\generators\\mvc-spa\\templates\\Templates",
-    "\\generators\\mvc-spa\\templates\\Templates\\_default"
+    "\\generators\\mvc-spa\\templates\\Templates\\_default",
+    "\\generators\\mvc\\templates",
+    "\\generators\\mvc\\templates\\Controllers",
+    "\\generators\\mvc\\templates\\Data",
+    "\\generators\\mvc\\templates\\Models",
+    "\\generators\\mvc\\templates\\Views",
+    "\\generators\\mvc\\templates\\Views\\Example"
   ],
   "SelectedNode": "\\package.json",
   "PreviewInSolutionExplorer": false
