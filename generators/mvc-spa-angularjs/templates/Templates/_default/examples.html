@@ -30,22 +30,22 @@
 <div class="row" ng-show="<%= objectName %>s.length > 0">
   <div ng-repeat="<%= objectName %> in <%= objectName %>s | filter: <%= objectName %>Filter | orderBy: 'Title'">
     <div class="clearfix" ng-if="$index % 3 == 0">
-    </div>
-    <div class="col-12">
-      <div class="card">
-        <div class="card-body">
-          <h3 class="lead">
-            {{<%= objectName %>.Title}}
-          </h3>
-          <div>
-            {{<%= objectName %>.Description}}
-          </div>
-          <div class="clearfix" ng-show="userCanEdit">
-            <a class="btn btn-default" href="#/update/{{<%= objectName %>.<%= extensionName %>Id}}" ng-show="userCanEdit">
-              <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="lead">
+              {{<%= objectName %>.Title}}
+            </h3>
+            <div>
+              {{<%= objectName %>.Description}}
+            </div>
+            <div class="clearfix" ng-show="userCanEdit">
+              <a class="btn btn-default" href="#/update/{{<%= objectName %>.<%= extensionName %>Id}}" ng-show="userCanEdit">
+                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
 
-              Edit <%= extensionName %>
-            </a>
+                Edit <%= extensionName %>
+              </a>
+            </div>
           </div>
         </div>
       </div>
