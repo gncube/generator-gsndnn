@@ -2,11 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\generators",
-    "\\generators\\mvc",
+    "\\generators\\mvc-spa",
     "\\generators\\mvc-spa\\templates",
-    "\\generators\\mvc-spa\\templates\\Templates",
-    "\\generators\\mvc-spa\\templates\\Templates\\_default",
-    "\\generators\\mvc\\templates",
+    "\\generators\\mvc-spa\\templates\\Scripts",
     "\\generators\\mvc\\templates\\Controllers",
     "\\generators\\mvc\\templates\\Data",
     "\\generators\\mvc\\templates\\Models",
